@@ -10,6 +10,10 @@ Install it with:
 
     sudo pip install sphinx
 
+The Sphinx theme can be installed with:
+
+    sudo pip install sphinx-rtd-theme
+
 To generate a PDF version of the documentation, *LaTeX* is also required.
 
 ### Generating the docs

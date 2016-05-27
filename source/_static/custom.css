@@ -1,0 +1,27 @@
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+img.zmqmsg {
+    max-height: 35px;
+}
+
+.red {
+
+   color: FireBrick;
+
+ }
+
+.blue1 {
+
+   color: DarkCyan;
+
+ }
+ 
+/* .blue2 { */
+
+/*    color: MidnightBlue; */
+
+/*  } */
+ 

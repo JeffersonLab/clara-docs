@@ -1,0 +1,25 @@
+# Clara documentation
+
+Under construction...
+
+
+### Dependencies
+
+The CLARA documentation is generated using [Sphinx](http://sphinx-doc.org).
+Install it with:
+
+    sudo pip install sphinx
+
+To generate a PDF version of the documentation, *LaTeX* is also required.
+
+### Generating the docs
+
+To generate the documentation, run:
+
+    make clean html
+
+or
+
+    make clean latexpdf
+
+The output files will be located in `build/html` or `build/latex`.

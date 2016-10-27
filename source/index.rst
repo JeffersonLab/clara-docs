@@ -26,5 +26,6 @@ Welcome to CLARA
    threading
    examples
    handson
+   installation-running
    Javadoc <https://claraweb.jlab.org/api/clara/>
    publications

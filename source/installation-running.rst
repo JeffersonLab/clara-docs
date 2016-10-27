@@ -2,6 +2,7 @@
 *************
 Installation and data processing
 *************
+
 Installation and data processing instructions are presented for the Clara Java binding and for the JLAB CLAS12 services plugin.
 
 Before starting installation set the following env variables:
@@ -134,9 +135,25 @@ Local mode
 Farm mode
 ==========
 
+The following submits a job to run on a single farm node exclusively.
+
 .. code-block:: console
 
-    run-clara -m farm -n number-of-nodes-to-scale
+    run-clara -m farm
+
+By specifying -n or --nodes parameter the data processing will scale horizontally among n farm nodes.
+
+.. code-block:: console
+
+    run-clara -m farm -n number-of-nodes
+
+Customization
+=============
+
+
+
+
+
 
 
 

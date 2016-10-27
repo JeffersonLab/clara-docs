@@ -65,9 +65,9 @@ configuration files.
     └── plugins
         └── clas12
             ├── config
-            │   ├── dpe-clara.jsub
+            │   ├── clara_p.jsub
             │   ├── files.list
-            │   ├── process-clara.jsub
+            │   ├── clara_d.jsub
             │   └── services.yaml
             ├── etc
             ├── lib

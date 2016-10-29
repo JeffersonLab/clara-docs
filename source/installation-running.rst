@@ -1,45 +1,64 @@
 
-*************
+********************************
 Installation and data processing
-*************
+********************************
 
-Installation and data processing instructions are presented for the Clara Java binding and for the JLAB CLAS12 services plugin.
-
-Before starting installation set the following env variables:
-
-.. code-block:: console
-
-    > setenv CLARA_HOME = existing-directory/non-existent-dir_name
-
-Note that directory where the CLARA run-time will be installed is not required to exist.
-
-CLARA installation
-==================
+Installation and data processing instructions are presented for the Clara Java binding and for the JLAB CLAS12
+services plugin.
+First dedicate a directory where software will be installed. Lets call it `work-dir`.
+Next set the CLARA_HOME environmental variable that points to a virtual directory under the work-dir. This is
+a directory that will be created by the installation script and be populated with CLARA and plugin run-time environment.
 
 .. code-block:: console
 
-    > cd to-some-work dir
-    > git clone https://github.com/JeffersonLab/clara-java.git
-    > cd clara-java
-    > gradle deploy
+    > setenv CLARA_HOME = work-dir/run-time-dir_name
 
-Plugin installation
-===================
-The presented CLARA plugin (i.e. Clas12 data processing services plugin) was developed as two separate project:
-   a) CLAS12 detector specific orchestrator project
-   b) CLAS12 reconstruction services project
-Since the project a) was developed by the CLARA team member (S. Mancilla) installation of the that part of a
-plugin is quit similar:
+
+Installation Prerequisites
+==========================
+For CLARA successful installation, the following software components are required on the installation computer.
+
+#. Java 1.8
+
+#. Git
+
+#. Gradle
+
+We think that these software packages are most likely installed on majority of systems, yet the script is provided
+to perform prerequisite packages installation for Linux (different flavors) and OSX. (in development).
+
+CLARA and CLAS12 plugin installation
+====================================
+
+Download the following scripts from http://www.jlab.org/~gurjyan/scripts/:
+
+#. install-clara
+
+#. update-clara
+
+The script names are self explanatory.
+
+So, for CLARA and CLAS12 plugin installation cp downloaded scripts into the work-dir and type:
 
 .. code-block:: console
 
-    > cd back to-some-work dir
-    > git clone https://github.com/JeffersonLab/clasrec-orchestrators.git
-    > cd clasrec-orchestrators
-    > gradle deploy
-After these two installation steps ( i.e. CLARA installation and CLAS12 reconstruction orchestrator installation) you will
-get a structured directory pointed by the $CLARA_HOME env variable furnished with all necessary jars, scripts and example
-configuration files.
+    > cd work-dir
+    > install-clara
+
+Software update
+===============
+
+After receiving CLARA or CLAS12 software update notification the only thing you do is simply type:
+
+.. code-block:: console
+
+    > cd work-dir
+    > update-clara
+
+Under the hood
+==============
+After the successful installation steps you will get a structured directory pointed by the $CLARA_HOME
+env variable furnished with all necessary jars, scripts, data structures and configuration files.
 
 .. code-block:: console
 
@@ -76,64 +95,29 @@ configuration files.
             │   └── jsap-2.1.jar
             ├── log
             └── services
-In this directory structure plugin specific data structures and libraries (including) data processing services must be
-installed in three distinct subdirectories of the user specific plugin directory (plugins/clas12 as in this example),
-namely: lib - directory to store supporting libraries required for data processing services to function properly,
-services: directory to store data processing service libraries, abd etc - to store data processing specific data, such
-as data definitions, databases, etc. We recommend that user plugin build script populate suggested directory structure.
-But for now for the CLAS12 plugin installation we show a manual procedures as following:
 
-.. code-block:: console
-
-    Download from  https://userweb.jlab.org/~gavalian/software/coatjava/coatjava-3.0.tar.gz
-    > download in to-some-work dir
-    > tar -zxvf coatjava-3.0.tar.gz
-    > cd coatjava/lib/clas
-    > cp * $CLARA_HOME/plugins/clas12/lib/.
-    > cd ../plugins
-    > cp * $CLARA_HOME/plugins/clas12/services/.
-    > cd ../../etc
-    > cp -r bankdefs data $CLARA_HOME/plugins/clas12/etc/.
-At this point installation of the CLARA and user plugin is completed. The only thing is required to put $CLARA_HOME/bin
-into your PATH. This is most convenient to do in a shell startup script. Below is an example of setting CLARA_HOME
-and upgrading PATH evn variable in .zshrc startup file:
-
-.. code-block:: console
-
-    # clara runtime
-    export CLARA_HOME=/Users/gurjyan/group/da/vhg/Clas/clara-coat
-    export PATH=$CLARA_HOME/bin:$PATH
-
-Framework updates
-=================
-
-.. code-block:: console
-
-    > cd to-some-work/clara-java
-    > git pull
-    > gradle deploy
-
-    > cd to-some-work/clasrec-orchestrators
-    > git pull
-    > gradle deploy
-
+The presented dir structure does not show CLAS12 services jar files that are stored in plugins/clas12/services dir,
+and also support data structures stored in plugins/clas12/etc dir.
 
 Running
 =======
 Here we present two modes of running:
 a) local - data processing on a local computing resource and
 b) farm - processing on a batch farm system.
-JLAB farm PBS and Auger job scheduling systems will be used as a CLARA farm data processing example.
+JLAB farm PBS and Auger job scheduling systems will be used as a CLARA farm data processing example, so scripts will
+exit in case Jlab Auger commands are not accessible.
+To run CLAS12 data processing you use `run-clara` script.
+The following examples are for data processing with a default parameters.
 
 Local mode
-==========
+----------
 
 .. code-block:: console
 
     run-clara
 
 Farm mode
-==========
+---------
 
 The following submits a job to run on a single farm node exclusively.
 
@@ -141,16 +125,89 @@ The following submits a job to run on a single farm node exclusively.
 
     run-clara -m farm
 
-By specifying -n or --nodes parameter the data processing will scale horizontally among n farm nodes.
+By specifying -n or --nodes parameter the data processing will scale horizontally among n farm nodes. As a result a
+separate job will be scheduled for each requested node.
 
 .. code-block:: console
 
     run-clara -m farm -n number-of-nodes
 
+
 Customization
 =============
 
+Due to the nature of the micro-services environment CLARA data processing application is highly customizable , that does
+not require compilation. For example to build CLAS12 data processing you need to edit `services.yaml` file located in
+plugins/clas12/config dir.
 
+.. code-block:: console
+    services:
+      - class: org.jlab.service.dc.DCHBEngine
+        name: DCHB
+      - class: org.jlab.service.ftof.FTOFEngine
+        name: FTOF
+      - class: org.jlab.rec.cvt.services.CVTReconstruction
+        name: CVT
+      - class: org.jlab.service.htcc.HTCCReconstructionService
+        name: HTCC
+      - class: org.jlab.service.eb.EBEngine
+        name: EBHB
+      - class: org.jlab.service.dc.DCTBEngine
+        name: DCTB
+      - class: org.jlab.service.eb.EBEngine
+        name: EBTB
+
+Simply add or remove service or group of services and run.
+The names of files to be processed are stored in the `files.list` file located in plugins/clas12/config dir.
+
+.. code-block:: console
+    gemc_eklambda_A0043_gen.evio
+    gemc_eklambda_A0044_gen.evio
+    gemc_eklambda_A0045_gen.evio
+    gemc_eklambda_A0046_gen.evio
+    gemc_eklambda_A0047_gen.evio
+    gemc_eklambda_A0048_gen.evio
+
+The actual location of files are defined by the run-clara parameter, listed below
+
+Data processing parameters
+--------------------------
+.. code-block:: console
+    gurjyan% run-clara -h
+    Usage: run-clara [option <operand>]
+
+      [-h | --help]
+            Usage instructions
+
+      [-j | --java_home <java_home>]
+            JDK/JRE installation directory. (default: %JAVA_HOME)
+
+      [-c | --clara_home <clara_home>]
+            CLARA installation directory. (default: %CLARA_HOME)
+
+      [-p | --plugin <plugin>]
+            Plugin installation directory. (default: %CLARA_HOME/plugins/clas12)
+
+      [-s | --session <session>]
+            The data processing session. (default: $USER)
+
+      [-m | --mode <mode>]
+            The data processing mode. (default: local. Accepts local2 and farm operands)
+
+      [-i | --input_dir <inputDir>]
+            The input directory where the files to be processed are located.
+            (default: $CLARA_HOME/../data/in)
+
+      [-o | --output_dir <outputDir>]
+            The output directory where processed files will be saved.
+            (default: $CLARA_HOME/../data/out)
+
+      [-n | --nodes <maxNodes>]
+            The maximum number of processing nodes to be used. Farm mode only. (default: 1)
+
+      [-t | --threads <maxThreads>]
+            The maximum number of processing threads to be used per node.
+            (default: 36 for farm mode and local-node processor count otherwise))
 
 
 

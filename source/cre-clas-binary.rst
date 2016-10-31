@@ -20,13 +20,13 @@ Installation
 
 Download the following scripts:
 
-:download:` install-cdk-clas <http://www.jlab.org/~gurjyan/scripts/install-cre-clas>`
+`install-cre-clas <http://www.jlab.org/~gurjyan/scripts/install-cre-clas>`_
 
-:download:` update-cdk-clas <http://www.jlab.org/~gurjyan/scripts/update-cre-clas>`
+`update-cre-clas <http://www.jlab.org/~gurjyan/scripts/update-cre-clas>`_
 
-        Script names are self explanatory.
+Script names are self explanatory.
 
-    So, for CDK and CLAS12 plugin installation cp downloaded scripts into the work-dir and type:
+So, for CDK and CLAS12 plugin installation cp downloaded scripts into the work-dir and type:
 
 .. code-block:: console
 

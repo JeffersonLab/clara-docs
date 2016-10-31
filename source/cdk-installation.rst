@@ -31,11 +31,13 @@ Installation
 
 Download the following scripts:
 
-:download:` install-cdk-clas <http://www.jlab.org/~gurjyan/scripts/install-cdk-clas>`
-:download:` update-cdk-clas <http://www.jlab.org/~gurjyan/scripts/update-cdk-clas>`
 
-    Script names are self explanatory.
-    So, for CDK and CLAS12 plugin installation cp downloaded scripts into the work-dir and type:
+`install-cdk <http://www.jlab.org/~gurjyan/scripts/install-cdk>`_
+
+`update-cdk <http://www.jlab.org/~gurjyan/scripts/update-cdk>`_
+
+Script names are self explanatory.
+So, for CDK installation cp downloaded scripts into the work-dir and type:
 
 .. code-block:: console
 

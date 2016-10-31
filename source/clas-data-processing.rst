@@ -3,17 +3,22 @@
 CLAS12 Data processing
 **********************
 
-First set the CLARA_HOME env variable pointing to CLARA run-time environment directory.
+We assume that the CLARA_HOME env variable is pointing to the CLARA run-time environment directory.
 .. code-block:: console
 
-    > setenv CLARA_HOME = clara-run-time-dir
+    > setenv CLARA_HOME = work-dir/clara-cre
 
 Here we present two modes of running:
-a) local - data processing on a local computing resource and
-b) farm - processing on a batch farm system.
-JLAB farm PBS and Auger job scheduling systems will be used as a CLARA farm data processing example, so scripts will
-exit in case Jlab Auger commands are not accessible.
-To run CLAS12 data processing you use `run-clara` script.
+
+#. local - data processing on a local computing resource and
+
+#. farm - processing on a batch farm system.
+
+JLAB farm PBS and Auger job scheduling systems will be used as a CLARA farm data processing example, so data processing
+ will exit in case Jlab Auger commands are not accessible.
+
+Type `run-clara` to start CLAS12 data processing.
+
 The following examples are for data processing with a default parameters.
 
 Local mode
@@ -48,6 +53,7 @@ not require compilation. For example to build CLAS12 data processing you need to
 plugins/clas12/config dir.
 
 .. code-block:: console
+
     services:
       - class: org.jlab.service.dc.DCHBEngine
         name: DCHB
@@ -68,6 +74,7 @@ Simply add or remove service or group of services and run.
 The names of files to be processed are stored in the `files.list` file located in plugins/clas12/config dir.
 
 .. code-block:: console
+
     gemc_eklambda_A0043_gen.evio
     gemc_eklambda_A0044_gen.evio
     gemc_eklambda_A0045_gen.evio
@@ -80,6 +87,7 @@ The actual location of files are defined by the run-clara parameter, listed belo
 Data processing parameters
 --------------------------
 .. code-block:: console
+
     gurjyan% run-clara -h
     Usage: run-clara [option <operand>]
 

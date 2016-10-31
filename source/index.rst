@@ -26,6 +26,9 @@ Welcome to CLARA
    threading
    examples
    handson
-   installation-running
+   cdk-installation
+   cdk-clas-installation
+   cre-clas-installation
+   clas-data-processing
    Javadoc <https://claraweb.jlab.org/api/clara/>
    publications

@@ -1,106 +1,13 @@
 
-********************************
-Installation and data processing
-********************************
+**********************
+CLAS12 Data processing
+**********************
 
-Installation and data processing instructions are presented for the Clara Java binding and for the JLAB CLAS12
-services plugin.
-First dedicate a directory where software will be installed. Lets call it `work-dir`.
-Next set the CLARA_HOME environmental variable that points to a virtual directory under the work-dir. This is
-a directory that will be created by the installation script and be populated with CLARA and plugin run-time environment.
-
+First set the CLARA_HOME env variable pointing to CLARA run-time environment directory.
 .. code-block:: console
 
-    > setenv CLARA_HOME = work-dir/run-time-dir_name
+    > setenv CLARA_HOME = clara-run-time-dir
 
-
-Installation Prerequisites
-==========================
-For CLARA successful installation, the following software components are required on the installation computer.
-
-#. Java 1.8
-
-#. Git
-
-#. Gradle
-
-We think that these software packages are most likely installed on majority of systems, yet the script is provided
-to perform prerequisite packages installation for Linux (different flavors) and OSX. (in development).
-
-CLARA and CLAS12 plugin installation
-====================================
-
-Download the following scripts from http://www.jlab.org/~gurjyan/scripts/:
-
-#. install-clara
-
-#. update-clara
-
-The script names are self explanatory.
-
-So, for CLARA and CLAS12 plugin installation cp downloaded scripts into the work-dir and type:
-
-.. code-block:: console
-
-    > cd work-dir
-    > install-clara
-
-Software update
-===============
-
-After receiving CLARA or CLAS12 software update notification the only thing you do is simply type:
-
-.. code-block:: console
-
-    > cd work-dir
-    > update-clara
-
-Under the hood
-==============
-After the successful installation steps you will get a structured directory pointed by the $CLARA_HOME
-env variable furnished with all necessary jars, scripts, data structures and configuration files.
-
-.. code-block:: console
-
-    clara-coat/
-    ├── bin
-    │   ├── clara-batch-dpe
-    │   ├── clara-batch-processing
-    │   ├── clara-dpe
-    │   ├── clara-orchestrator
-    │   ├── j_dpe
-    │   ├── remove-dpe
-    │   └── run-cloud
-    ├── lib
-    │   ├── jclara-4.3-SNAPSHOT.jar
-    │   ├── jeromq-0.3.5.jar
-    │   ├── jopt-simple-4.9.jar
-    │   ├── json-20160212.jar
-    │   ├── jsr305-3.0.0.jar
-    │   ├── protobuf-java-2.6.1.jar
-    │   ├── snakeyaml-1.16.jar
-    │   └── xmsg-2.3-SNAPSHOT.jar
-    ├── log
-    └── plugins
-        └── clas12
-            ├── config
-            │   ├── clara_p.jsub
-            │   ├── files.list
-            │   ├── clara_d.jsub
-            │   └── services.yaml
-            ├── etc
-            ├── lib
-            │   ├── clasrec-orchestrators-0.8-SNAPSHOT.jar
-            │   ├── jevio-4.4.6.jar
-            │   └── jsap-2.1.jar
-            ├── log
-            └── services
-
-The presented dir structure does not show CLAS12 services jar files that are stored in plugins/clas12/services dir,
-and also support data structures stored in plugins/clas12/etc dir.
-
-Running
-=======
 Here we present two modes of running:
 a) local - data processing on a local computing resource and
 b) farm - processing on a batch farm system.
@@ -208,9 +115,3 @@ Data processing parameters
       [-t | --threads <maxThreads>]
             The maximum number of processing threads to be used per node.
             (default: 36 for farm mode and local-node processor count otherwise))
-
-
-
-
-
-

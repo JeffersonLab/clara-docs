@@ -15,7 +15,7 @@ Here we present two modes of running:
 #. farm - processing on a batch farm system.
 
 JLAB farm PBS and Auger job scheduling systems will be used as a CLARA farm data processing example, so data processing
- will exit in case Jlab Auger commands are not accessible.
+will exit in case Jlab Auger commands are not accessible.
 
 Type `run-clara` to start CLAS12 data processing.
 
@@ -94,14 +94,14 @@ Data processing parameters
       [-h | --help]
             Usage instructions
 
-      [-j | --java_home <java_home>]
-            JDK/JRE installation directory. (default: %JAVA_HOME)
+      [-j | --java-home <java-home>]
+            JDK/JRE installation directory. (default: $JAVA_HOME)
 
-      [-c | --clara_home <clara_home>]
-            CLARA installation directory. (default: %CLARA_HOME)
+      [-c | --clara-home <clara-home>]
+            CLARA installation directory. (default: $CLARA_HOME)
 
       [-p | --plugin <plugin>]
-            Plugin installation directory. (default: %CLARA_HOME/plugins/clas12)
+            Plugin installation directory. (default: $CLARA_HOME/plugins/clas12)
 
       [-s | --session <session>]
             The data processing session. (default: $USER)
@@ -109,11 +109,11 @@ Data processing parameters
       [-m | --mode <mode>]
             The data processing mode. (default: local. Accepts local2 and farm operands)
 
-      [-i | --input_dir <inputDir>]
+      [-i | --input-dir <inputDir>]
             The input directory where the files to be processed are located.
             (default: $CLARA_HOME/../data/in)
 
-      [-o | --output_dir <outputDir>]
+      [-o | --output-dir <outputDir>]
             The output directory where processed files will be saved.
             (default: $CLARA_HOME/../data/out)
 

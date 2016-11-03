@@ -21,10 +21,11 @@ CRE installation
 Download the following script:
 
 
-`install-cdk <http://www.jlab.org/~gurjyan/scripts/install-claracre>`_
+`install-cre <http://www.jlab.org/~gurjyan/clara-cre/install-claracre>`_
+
 In case you want to install CDK with CLAS12 software bundle, download the following:
 
-`install-cdk <http://www.jlab.org/~gurjyan/scripts/install-claracre-clas>`_
+`install-cre-clas <http://www.jlab.org/~gurjyan/clara-cre/install-claracre-clas>`_
 
 So, for CDK installation cp downloaded scripts into the work-dir and type:
 
@@ -64,10 +65,11 @@ CDK installation
 Download the following script:
 
 
-`install-cdk <http://www.jlab.org/~gurjyan/scripts/install-claradk>`_
+`install-cdk <http://www.jlab.org/~gurjyan/clara-cre/install-claradk>`_
+
 In case you want to install CDK with CLAS12 software bundle, download the following:
 
-`install-cdk <http://www.jlab.org/~gurjyan/scripts/install-claradk-clas>`_
+`install-cdk-clas <http://www.jlab.org/~gurjyan/clara-cre/install-claradk-clas>`_
 
 So, for CDK installation cp downloaded scripts into the work-dir and type:
 

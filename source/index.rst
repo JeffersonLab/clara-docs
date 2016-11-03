@@ -26,7 +26,7 @@ Welcome to CLARA
    threading
    examples
    handson
-   cre-clas
-   clas-data-processing
+   installation
+   data-processing
    Javadoc <https://claraweb.jlab.org/api/clara/>
    publications

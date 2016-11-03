@@ -1,7 +1,9 @@
 
-**********************
-CLAS12 Data processing
-**********************
+***************
+Data processing
+***************
+
+In this chapter we present instructions how to run CLARA based CLAS12 data processing application.
 
 We assume that the CLARA_HOME env variable is pointing to the CLARA run-time environment directory.
 .. code-block:: console

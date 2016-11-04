@@ -143,6 +143,7 @@ env variable furnished with all necessary jars, scripts, data structures and con
             ├── log
             └── services
 
+
 The presented dir structure does not show CLAS12 services jar files that are stored in plugins/clas12/services dir,
 and also support data structures stored in plugins/clas12/etc dir.
 

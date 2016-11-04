@@ -6,26 +6,26 @@ CLARA Run-time Environment (CRE)
 ================================
 
 Installation and data processing instructions are presented for the Clara Java binding.
-First dedicate a directory where software will be installed. Lets call it `work-dir`. This is a directory where CLARA
+First dedicate a directory where software will be installed. Lets call it *work-dir*. This is a directory where CLARA
 codebase will be installed.
 Next set the CLARA_HOME environmental variable that points to the CLARA run time environment (clara-cre) directory
-under the work-dir. This is a directory that will be created by the installation script.
+under the *work-dir*. This is a directory that will be created by the installation script.
 
-.. code-block:: console
 
-    > setenv CLARA_HOME = work-dir/clara-cre
+.. note:: setenv CLARA_HOME = *work-dir*/clara-cre
+
 
 CRE installation
 ----------------
 
-Download the following script:
+Download the following script
+
+:download:`install-cre <img/install-claracre>`
 
 
-`install-cre <http://www.jlab.org/~gurjyan/clara-cre/install-claracre>`_
+In case you want to install CDK with CLAS12 software as bundle, download the following:
 
-In case you want to install CDK with CLAS12 software bundle, download the following:
-
-`install-cre-clas <http://www.jlab.org/~gurjyan/clara-cre/install-claracre-clas>`_
+:download:`install-cre-clas <img/install-claracre-clas>`
 
 So, for CDK installation cp downloaded scripts into the work-dir and type:
 
@@ -64,12 +64,11 @@ CDK installation
 
 Download the following script:
 
-
-`install-cdk <http://www.jlab.org/~gurjyan/clara-cre/install-claradk>`_
+:download:`install-cdk <img/install-claradk>`
 
 In case you want to install CDK with CLAS12 software bundle, download the following:
 
-`install-cdk-clas <http://www.jlab.org/~gurjyan/clara-cre/install-claradk-clas>`_
+:download:`install-cdk-clas <img/install-claradk-clas>`
 
 So, for CDK installation cp downloaded scripts into the work-dir and type:
 

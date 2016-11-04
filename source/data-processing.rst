@@ -6,9 +6,8 @@ Data processing
 In this chapter we present instructions how to run CLARA based CLAS12 data processing application.
 
 We assume that the CLARA_HOME env variable is pointing to the CLARA run-time environment directory.
-.. code-block:: console
 
-    > setenv CLARA_HOME = work-dir/clara-cre
+.. note:: setenv CLARA_HOME = *work-dir*/clara-cre
 
 Here we present two modes of running:
 
@@ -19,7 +18,7 @@ Here we present two modes of running:
 JLAB farm PBS and Auger job scheduling systems will be used as a CLARA farm data processing example, so data processing
 will exit in case Jlab Auger commands are not accessible.
 
-Type `run-clara` to start CLAS12 data processing.
+Type *run-clara* to start CLAS12 data processing.
 
 The following examples are for data processing with a default parameters.
 

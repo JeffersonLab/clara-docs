@@ -2,6 +2,14 @@
 Installation
 ************
 
+ONE STEP INSTALLATION Y'ALL!!! Who's EXCITED? Who's PUMPED to run data processing of your lifetime without writing a single line of code?
+
+Nobody, of course. These days folks are excited either programming and performing code compilations or watching vicious political campaigns.
+You know what's exciting to people who've suffered through those things? The joy of focusing on less important problems
+like processing experimental data and extracting science from it.
+Right now, with a simple click or two, you can solve one of life's most boring petty problems: data analysis to understand how
+things are designed (if you are an atheist) or evolved.
+
 CLARA Run-time Environment (CRE)
 ================================
 

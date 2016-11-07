@@ -8,7 +8,7 @@ Nobody, of course. These days folks are excited either programming and performin
 You know what's exciting to people who've suffered through those things? The joy of focusing on less important problems
 like processing experimental data and extracting science from it.
 Right now, with a simple click or two, you can solve one of life's most boring petty problems: data analysis to understand how
-things are designed (if you are an atheist) or evolved.
+things are designed or (if you are an atheist) evolved.
 
 CLARA Run-time Environment (CRE)
 ================================

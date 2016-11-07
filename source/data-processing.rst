@@ -95,10 +95,10 @@ Data processing parameters
       [-h | --help]
             Usage instructions
 
-      [-j | --java-home <java-home>]
+      [-j | --java_home <java_home>]
             JDK/JRE installation directory. (default: $JAVA_HOME)
 
-      [-c | --clara-home <clara-home>]
+      [-c | --clara_home <clara_home>]
             CLARA installation directory. (default: $CLARA_HOME)
 
       [-p | --plugin <plugin>]
@@ -108,13 +108,13 @@ Data processing parameters
             The data processing session. (default: $USER)
 
       [-m | --mode <mode>]
-            The data processing mode. (default: local. Accepts local2 and farm operands)
+            The data processing mode. Accepts values = local, sqlite and farm (default: local)
 
-      [-i | --input-dir <inputDir>]
+      [-i | --input_dir <inputDir>]
             The input directory where the files to be processed are located.
             (default: $CLARA_HOME/../data/in)
 
-      [-o | --output-dir <outputDir>]
+      [-o | --output_dir <outputDir>]
             The output directory where processed files will be saved.
             (default: $CLARA_HOME/../data/out)
 
@@ -122,5 +122,13 @@ Data processing parameters
             The maximum number of processing nodes to be used. Farm mode only. (default: 1)
 
       [-t | --threads <maxThreads>]
-            The maximum number of processing threads to be used per node.
-            (default: 36 for farm mode and local-node processor count otherwise))
+            The maximum number of processing threads to be used per node. In case value = auto t=local-node processor count.
+            (default: 36 for farm mode and 2 for the local mode))
+
+      [-f | --file-list <fileList>]
+            Full path to the file containing the names of data-files to be processed. Note: actual files are located in the inputDir.
+            (default: $CLAS12DIR/config/files.list)
+
+      [-y | --yaml <yamlComposition>]
+            Full path to the file describing application service composition.
+            (default: $CLAS12DIR/config/services.yaml)

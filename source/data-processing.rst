@@ -2,6 +2,14 @@
 ***************
 Data processing
 ***************
+Really, though, do we need to get our hands dirty and start processing the raw data?
+After all we did our fair share when we were post-docs. Just sit back, relax and listen Erik Satie.
+The DST will be ready soon ....
+But OK, I know, I know you’re one of the small minority of scientists that can't wait, who need to process
+subset of data quickly, define and customize data processing conditions (I am not suggesting post-doc mistrust here),
+or you think you do, or (more accurately) feel like you do. We’re happy to exploit that feeling. I want to be clear though:
+we’re not here to tell you what you want. Still, something in our science DNA compels us to be honest about this:
+you should follow the following instructions to start data processing yourself.
 
 In this chapter we present instructions how to run CLARA based CLAS12 data processing application.
 
@@ -27,7 +35,7 @@ Local mode
 
 .. code-block:: console
 
-    run-clara
+    $CLARA_HOME/bin/run-clara
 
 Farm mode
 ---------
@@ -36,14 +44,14 @@ The following submits a job to run on a single farm node exclusively.
 
 .. code-block:: console
 
-    run-clara -m farm
+    $CLARA_HOME/bin/run-clara -m farm
 
 By specifying -n or --nodes parameter the data processing will scale horizontally among n farm nodes. As a result a
 separate job will be scheduled for each requested node.
 
 .. code-block:: console
 
-    run-clara -m farm -n number-of-nodes
+    $CLARA_HOME/bin/run-clara -m farm -n number-of-nodes
 
 
 Customization

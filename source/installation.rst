@@ -49,8 +49,9 @@ or
     > ./install-claracre-clas
 
 
-.. note:: Here are step by step instructions how to download and run the installer on OSX
-#. Ctrl_Click on the above link.
+.. note:: Here are step by step instructions how to download and run the installer for CLARA-CLAS on OSX
+
+#. Ctrl_Click on the above presented link.
 #. cd *work-dir*
 #. cp ~/Downloads/install-claracre-clas.txt install-claracre-clas
 #. chmod a+x install-claracre-clas
@@ -105,16 +106,30 @@ Software update
 
 After receiving CLARA or CLAS12 software update notification the only thing you do is simply type:
 
+If you only installed CLARA CRE
+
 .. code-block:: console
 
-    > cd work-dir
-    > update-claradk
+    > $CLARA_HOME/bin/install-claracre -u
 
 or
 
 .. code-block:: console
 
-    > update-claradk-clas
+    > $CLARA_HOME/bin/install-claracre-clas -u
+
+
+For CDK
+
+.. code-block:: console
+
+    > $CLARA_HOME/bin/update-claradk
+
+or
+
+.. code-block:: console
+
+    > $CLARA_HOME/bin/update-claradk-clas
 
 
 Under the hood

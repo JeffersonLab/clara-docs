@@ -15,7 +15,7 @@ In this chapter we present instructions how to run CLARA based CLAS12 data proce
 
 We assume that the CLARA_HOME env variable is pointing to the CLARA run-time environment directory.
 
-.. note:: setenv CLARA_HOME = *work-dir*/clara-cre
+.. note:: setenv CLARA_HOME *work-dir*/clara-cre
 
 Here we present two modes of running:
 
@@ -120,11 +120,11 @@ Data processing parameters
 
       [-i | --input_dir <inputDir>]
             The input directory where the files to be processed are located.
-            (default: $CLARA_HOME/../data/in)
+            (default: $CLARA_HOME/data/in)
 
       [-o | --output_dir <outputDir>]
             The output directory where processed files will be saved.
-            (default: $CLARA_HOME/../data/out)
+            (default: $CLARA_HOME/data/out)
 
       [-n | --nodes <maxNodes>]
             The maximum number of processing nodes to be used. Farm mode only. (default: 1)
@@ -135,8 +135,8 @@ Data processing parameters
 
       [-f | --file-list <fileList>]
             Full path to the file containing the names of data-files to be processed. Note: actual files are located in the inputDir.
-            (default: $CLAS12DIR/config/files.list)
+            (default: $CLARA_HOME/plugins/clas12/config/files.list)
 
       [-y | --yaml <yamlComposition>]
             Full path to the file describing application service composition.
-            (default: $CLAS12DIR/config/services.yaml)
+            (default: $CLARA_HOME/plugins/clas12/config/services.yaml)

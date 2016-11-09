@@ -20,7 +20,7 @@ Next set the CLARA_HOME environmental variable that points to the CLARA run time
 under the *work-dir*. This is a directory that will be created by the installation script.
 
 
-.. note:: setenv CLARA_HOME = *work-dir*/clara-cre
+.. note:: setenv CLARA_HOME *work-dir*/clara-cre
 
 
 CRE installation
@@ -39,14 +39,22 @@ So, for CDK installation cp downloaded scripts into the work-dir and type:
 
 .. code-block:: console
 
-    > cd work-dir
-    > install-claracre
+    > cd *work-dir*
+    > ./install-claracre
 
 or
 
 .. code-block:: console
 
-    > install-claracre-clas
+    > ./install-claracre-clas
+
+
+.. note:: Here are step by step instructions how to download and run the installer on OSX
+#. Ctrl_Click on the above link.
+#. cd *work-dir*
+#. cp ~/Downloads/install-claracre-clas.txt install-claracre-clas
+#. chmod a+x install-claracre-clas
+#. ./install-clara-cre
 
 
 CLARA Development Kit (CDK)

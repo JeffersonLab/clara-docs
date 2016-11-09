@@ -31,11 +31,11 @@ Download the following script
 :download:`install-cre <img/install-claracre>`
 
 
-In case you want to install CDK with CLAS12 software as bundle, download the following:
+In case you want to install CRE with CLAS12 software as a bundle, download the following:
 
 :download:`install-cre-clas <img/install-claracre-clas>`
 
-So, for CDK installation cp downloaded scripts into the work-dir and type:
+So, for CRE installation cp downloaded scripts into the work-dir and type:
 
 .. code-block:: console
 
@@ -49,7 +49,7 @@ or
     > ./install-claracre-clas
 
 
-.. note:: Here are step by step instructions how to download and run the installer for CLARA-CLAS on OSX
+.. note:: Here are step by step instructions how to download and run the installer for CRE-CLAS on OSX
 
 #. Ctrl_Click on the above presented link.
 #. cd *work-dir*

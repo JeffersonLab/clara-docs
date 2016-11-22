@@ -27,13 +27,19 @@ mkdir clara-work
 cd clara-work
 
 echo "Downloading and building xMsg package ..."
-git clone https://github.com/JeffersonLab/xmsg-java.git
+git clone --depth 1 https://github.com/JeffersonLab/xmsg-java.git
 cd xmsg-java
 ./gradlew install
 
 cd ..
+echo "Downloading and building jinflux package ..."
+git clone --depth 1 https://github.com/JeffersonLab/JinFlux.git
+cd JinFlux
+./gradlew deploy
+
+cd ..
 echo "Downloading and building clara-java package ..."
-git clone https://github.com/JeffersonLab/clara-java.git
+git clone --depth 1 https://github.com/JeffersonLab/clara-java.git
 cd clara-java
 ./gradlew install
 ./gradlew deploy
@@ -46,7 +52,8 @@ mkdir $CLARA_HOME/jre
 OS="`uname`"
 case $OS in
   'Linux')
-  if $(uname -a | grep 'x86_64'); then
+      MACHINE_TYPE=`uname -m`
+      if [ ${MACHINE_TYPE} == 'x86_64' ]; then
     wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-64.tar.gz
     mv linux-64.tar.gz $CLARA_HOME/jre
   else

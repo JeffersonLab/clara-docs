@@ -1,0 +1,19 @@
+# Setup
+title:        CLARA Framework
+tagline:      A service-oriented framework to provide a computing environment for efficient Big Data processing.
+baseurl:      "/clara-docs"
+
+# About/contact
+author:
+  name:       Vardan Gyurjyan
+  url:        "https://JeffersonLab.github.io"
+
+# Main Docs
+include: ["_pages"]
+
+# Gems
+gems:
+  - jekyll-paginate
+
+# Others
+markdown: kramdown

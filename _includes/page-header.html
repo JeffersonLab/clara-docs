@@ -2,13 +2,20 @@
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav col-xs-10">
+            <ul class="left-nav">
                 <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
                 <li><a href="{{ site.baseurl }}/_pages/about.html">About</a></li>
-                <li><a href="{{ site.baseurl }}/_pages/contact.html">Contact</a></li>
-            </ul>
-        </div>
-      </div>
+                {% if page.title == "Installation" %}
+			  		<li style="float: right !important"><a href="{{ site.baseurl }}/_pages/quickstart.html">Quickstart</a></li>
+					<li style="float: right !important"><a href="{{ site.baseurl }}/_pages/tutorials.html">Tutorials</a></li>
+					<li style="float: right !important"><a href="{{ site.baseurl }}/_pages/guides.html">Guides</a></li>
+					<li style="float: right !important"><a href="{{ site.baseurl }}/_pages/examples.html">Examples</a></li>
+				{% endif %}
+			</ul>
+	   </div>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#157878">
 </nav>
 </aside> 
 <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">

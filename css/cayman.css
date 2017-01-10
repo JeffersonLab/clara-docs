@@ -53,10 +53,11 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  background: #fff;
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957);
   width: 100%;
   z-index: 2;
-  border-bottom: 1px solid white;
+  /*border-bottom: 1px solid white;*/
   box-shadow: 0px 1px 1px RGBA(4, 25, 54, 0.1); }
   aside nav {
     float: left;
@@ -74,11 +75,11 @@ aside {
           display: block;
           padding: 15px;
           font-family: 'Muli', sans-serif;
+          color: #fff;
           line-height: 20px;
           margin-bottom: -1px;
           box-shadow: 0; }
           aside nav ul li a:hover, aside nav ul li a:active {
-            /*background: #1D1425;*/
             text-decoration: none;
             color: #19CCAA; }
     aside nav:after {

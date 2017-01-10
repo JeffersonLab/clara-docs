@@ -11,9 +11,5 @@ author:
 # Main Docs
 include: ["_pages"]
 
-# Gems
-gems:
-  - jekyll-paginate
-
 # Others
 markdown: kramdown

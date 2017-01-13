@@ -350,11 +350,21 @@ ul.footer-p {
     flex-direction: column;
     text-align: center;
   }
-  .landing-content-container .landing-row .landing-row-title {
+  .landing-content-container .landing-row .landing-row-left-title {
+    text-align: center;
     margin: 0 auto 30px;
     order: 1;
   }
-  .landing-content-container .landing-row .landing-image {
+  .landing-content-container .landing-row .landing-row-right-title {
+    text-align: center;
+    margin: 0 auto 30px;
+    order: 1;
+  }
+  .landing-content-container .landing-row .landing-left-image {
+    margin: 0 auto 30px;
+    order: 2;
+  }
+  .landing-content-container .landing-row .landing-right-image {
     margin: 0 auto 30px;
     order: 2;
   }

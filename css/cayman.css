@@ -334,13 +334,9 @@ ul.footer-p {
   height: auto;
   width: auto;
 }
-.landing-content-container .landing-row .landing-row-left-title {
+.landing-content-container .landing-row .landing-row-title {
   margin-bottom: 15px;
   text-align: left;
-}
-.landing-content-container .landing-row .landing-row-right-title {
-  margin-bottom: 15px;
-  text-align: right;
 }
 .landing-content-container .landing-row p {
   margin-bottom: 20px ;

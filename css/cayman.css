@@ -138,13 +138,12 @@ aside {
 
 .main-content {
   word-wrap: break-word;
-  margin-top: 50px;
   text-align: justify; }
   @media screen and (min-width: 64em) {
     .main-content {
       max-width: 64rem;
       padding: 2rem 6rem;
-      margin: 30px auto;
+      margin: 20px auto;
       font-size: 1.1rem; } }
   @media screen and (min-width: 42em) and (max-width: 64em) {
     .main-content {
@@ -162,7 +161,6 @@ aside {
   .main-content h4,
   .main-content h5,
   .main-content h6 {
-    margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
     color: #159957; }

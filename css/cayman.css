@@ -354,12 +354,7 @@ ul.footer-p {
     flex-direction: column;
     text-align: center;
   }
-  .landing-content-container .landing-row .landing-row-left-title {
-    text-align: center;
-    margin: 0 auto 30px;
-    order: 1;
-  }
-  .landing-content-container .landing-row .landing-row-right-title {
+  .landing-content-container .landing-row .landing-row-title {
     text-align: center;
     margin: 0 auto 30px;
     order: 1;

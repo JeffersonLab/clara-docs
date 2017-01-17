@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: document
 title: Installation
-
 ---
 
 Installation

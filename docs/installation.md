@@ -3,150 +3,144 @@ layout: document
 title: Installation
 ---
 
-Installation
-============
+ONE STEP INSTALLATION Y'ALL!!! Who's EXCITED?
+Who's PUMPED to run data processing of your lifetime
+without writing a single line of code?
 
-ONE STEP INSTALLATION Y'ALL!!! Who's EXCITED? Who's PUMPED to run data
-processing of your lifetime without writing a single line of code?
-
-Nobody, of course. These days folks are excited either programming and
-performing code compilations or watching vicious political campaigns.
+Nobody, of course.
+These days folks are excited either programming
+and performing code compilations
+or watching vicious political campaigns.
 You know what's exciting to people who've suffered through those things?
-The joy of focusing on less important problems like processing
-experimental data and extracting science from it. Right now, with a
-simple click or two, you can solve one of life's most boring petty
-problems: data analysis to understand how things are designed or (if you
-are an atheist) evolved.
+The joy of focusing on less important problems
+like processing experimental data and extracting science from it.
+Right now, with a simple click or two,
+you can solve one of life's most boring petty problems:
+data analysis to understand how things are designed
+or (if you are an atheist) evolved.
 
 CLARA Run-time Environment (CRE)
 --------------------------------
 
-Installation and data processing instructions are presented for the
-Clara Java binding. First dedicate a directory where software will be
-installed. Lets call it *work-dir*. This is a directory where CLARA
-codebase will be installed. Next set the CLARA\_HOME environmental
-variable that points to the CLARA run time environment (clara-cre)
-directory under the *work-dir*. This is a directory that will be created
-by the installation script.
+Installation and data processing instructions are presented
+for the Clara Java binding.
+First dedicate a directory where software will be installed.
+Lets call it *work-dir*.
+This is a directory where CLARA codebase will be installed.
+Next set the CLARA\_HOME environmental variable that points
+to the CLARA run time environment (clara-cre) directory under the *work-dir*.
+This is a directory that will be created by the installation script.
 
-> **note**
->
-> setenv CLARA\_HOME *work-dir*/clara-cre
+<div class="note info">
+<code>setenv CLARA_HOME <em>work-dir</em>/clara-cre</code>
+</div>
 
 ### CRE installation
 
-Download the following script
-
-install-cre &lt;img/install-claracre&gt;
+Download the following script:
+<div class=".download-link">
+  <a href="{{ site.baseurl }}/_downloads/install-claracre">install-cre</a>
+</div>
 
 In case you want to install CRE with CLAS12 software as a bundle,
 download the following:
+<div class=".download-link">
+  <a href="{{ site.baseurl }}/_downloads/install-claracre-clas">install-cre-clas</a>
+</div>
 
-install-cre-clas &lt;img/install-claracre-clas&gt;
-
-So, for CRE installation cp downloaded scripts into the work-dir and
-type:
-
+So, for CRE installation cp downloaded scripts into the work-dir and type:
 ```
 > cd *work-dir*
 > ./install-claracre
 ```
 
 or
-
 ```
 > ./install-claracre-clas
 ```
 
-> **note**
->
-> Here are step by step instructions how to download and run the
-> installer for CRE-CLAS on OSX
+<div class="note info">
+Here are step by step instructions how to download and run the installer
+for CRE-CLAS on OSX.
+</div>
 
-1.  Ctrl\_Click on the above presented link.
-2.  cd *work-dir*
-3.  cp \~/Downloads/install-claracre-clas.txt install-claracre-clas
-4.  chmod a+x install-claracre-clas
-5.  ./install-clara-cre
+1.  Ctrl-Click on the above presented link.
+2.  <code>cd <em>work-dir</em></code>
+3.  `cp ~/Downloads/install-claracre-clas.txt install-claracre-clas`
+4.  `chmod a+x install-claracre-clas`
+5.  `./install-clara-cre`
 
 CLARA Development Kit (CDK)
 ---------------------------
 
-If you are a prospective developer and would like to contribute in
-service development effort, you need to install the CDK. This will
-provide CLARA entire source base. However for CDK installation your
-system must be prepared.
+If you are a prospective developer and would like to contribute in service
+development effort, you need to install the CDK.
+This will provide CLARA entire source base.
+However for CDK installation your system must be prepared.
 
 ### Installation Prerequisites
 
-For the CDK successful installation, the following software components
-are required on the installation computer.
+For the CDK successful installation,
+the following software components are required on the installation computer.
 
 1.  Git
 2.  Gradle
 
-AS you can see prerequisite is not extensive and most likely they are
-already installed on majority of systems.
+As you can see prerequisite is not extensive
+and most likely they are already installed on majority of systems.
 
 ### CDK installation
 
 Download the following script:
+<div class=".download-link">
+  <a href="{{ site.baseurl }}/_downloads/install-claradk">install-cdk</a>
+</div>
 
-install-cdk &lt;img/install-claradk&gt;
+In case you want to install CDK with CLAS12 software bundle,
+download the following:
+<div class=".download-link">
+  <a href="{{ site.baseurl }}/_downloads/install-claradk-clas">install-cdk-clas</a>
+</div>
 
-In case you want to install CDK with CLAS12 software bundle, download
-the following:
-
-install-cdk-clas &lt;img/install-claradk-clas&gt;
-
-So, for CDK installation cp downloaded scripts into the work-dir and
-type:
-
+So, for CDK installation cp downloaded scripts into the work-dir and type:
 ```
 > cd work-dir
 > install-claradk
 ```
 
 or
-
 ```
 > install-claradk-clas
 ```
 
 ### Software update
 
-After receiving CLARA or CLAS12 software update notification the only
-thing you do is simply type:
+After receiving CLARA or CLAS12 software update notification
+the only thing you do is simply type:
 
 If you only installed CLARA CRE
-
 ```
 > $CLARA_HOME/bin/install-claracre -u
 ```
-
 or
-
 ```
 > $CLARA_HOME/bin/install-claracre-clas -u
 ```
 
 For CDK
-
 ```
 > $CLARA_HOME/bin/update-claradk
 ```
-
 or
-
 ```
 > $CLARA_HOME/bin/update-claradk-clas
 ```
 
 ### Under the hood
 
-After the successful installation steps you will get a structured
-directory pointed by the \$CLARA\_HOME env variable furnished with all
-necessary jars, scripts, data structures and configuration files.
+After the successful installation steps you will get a structured directory
+pointed by the \$CLARA\_HOME env variable furnished with all necessary
+jars, scripts, data structures and configuration files.
 
 ```
 clara-cre/
@@ -184,6 +178,6 @@ clara-cre/
         └── services
 ```
 
-The presented dir structure does not show CLAS12 services jar files that
-are stored in plugins/clas12/services dir, and also support data
-structures stored in plugins/clas12/etc dir.
+The presented dir structure does not show CLAS12 services jar files
+that are stored in plugins/clas12/services dir,
+and also support data structures stored in plugins/clas12/etc dir.

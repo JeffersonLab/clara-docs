@@ -19,8 +19,7 @@ you can solve one of life's most boring petty problems:
 data analysis to understand how things are designed
 or (if you are an atheist) evolved.
 
-CLARA Run-time Environment (CRE)
---------------------------------
+## CLARA Run-time Environment (CRE)
 
 Installation and data processing instructions are presented
 for the Clara Java binding.
@@ -38,23 +37,27 @@ This is a directory that will be created by the installation script.
 ### CRE installation
 
 Download the following script:
+
 <div class=".download-link">
   <a href="{{ site.baseurl }}/_downloads/install-claracre">install-cre</a>
 </div>
 
 In case you want to install CRE with CLAS12 software as a bundle,
 download the following:
+
 <div class=".download-link">
   <a href="{{ site.baseurl }}/_downloads/install-claracre-clas">install-cre-clas</a>
 </div>
 
-So, for CRE installation cp downloaded scripts into the work-dir and type:
+So, for CRE installation copy downloaded scripts into the *work-dir* and type:
+
 ```
 > cd *work-dir*
 > ./install-claracre
 ```
 
 or
+
 ```
 > ./install-claracre-clas
 ```
@@ -70,8 +73,7 @@ for CRE-CLAS on OSX.
 4.  `chmod a+x install-claracre-clas`
 5.  `./install-clara-cre`
 
-CLARA Development Kit (CDK)
----------------------------
+## CLARA Development Kit (CDK)
 
 If you are a prospective developer and would like to contribute in service
 development effort, you need to install the CDK.
@@ -92,51 +94,60 @@ and most likely they are already installed on majority of systems.
 ### CDK installation
 
 Download the following script:
+
 <div class=".download-link">
   <a href="{{ site.baseurl }}/_downloads/install-claradk">install-cdk</a>
 </div>
 
 In case you want to install CDK with CLAS12 software bundle,
 download the following:
+
 <div class=".download-link">
   <a href="{{ site.baseurl }}/_downloads/install-claradk-clas">install-cdk-clas</a>
 </div>
 
-So, for CDK installation cp downloaded scripts into the work-dir and type:
+So, for CDK installation copy downloaded scripts into the *work-dir* and type:
+
 ```
 > cd work-dir
 > install-claradk
 ```
 
 or
+
 ```
 > install-claradk-clas
 ```
 
-### Software update
+## Software update
 
 After receiving CLARA or CLAS12 software update notification
 the only thing you do is simply type:
 
 If you only installed CLARA CRE
+
 ```
 > $CLARA_HOME/bin/install-claracre -u
 ```
+
 or
+
 ```
 > $CLARA_HOME/bin/install-claracre-clas -u
 ```
 
 For CDK
+
 ```
 > $CLARA_HOME/bin/update-claradk
 ```
 or
+
 ```
 > $CLARA_HOME/bin/update-claradk-clas
 ```
 
-### Under the hood
+## Under the hood
 
 After the successful installation steps you will get a structured directory
 pointed by the \$CLARA\_HOME env variable furnished with all necessary
@@ -179,5 +190,5 @@ clara-cre/
 ```
 
 The presented dir structure does not show CLAS12 services jar files
-that are stored in plugins/clas12/services dir,
-and also support data structures stored in plugins/clas12/etc dir.
+that are stored in `plugins/clas12/services` dir,
+and also support data structures stored in `plugins/clas12/etc` dir.

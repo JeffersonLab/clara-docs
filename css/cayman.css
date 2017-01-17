@@ -4,7 +4,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #606c71; }
@@ -163,7 +163,8 @@ a {
   .main-content h6 {
     margin-bottom: 1rem;
     font-weight: normal;
-    color: #159957; }
+    color: #159957;
+    font-family: titlesFont; }
   .main-content p {
     margin-bottom: 1em; }
   .main-content code {
@@ -301,6 +302,10 @@ a[href^="https://"]:after:not(.github-img) {
   font-family: myFont;
   src: url('../font/Capsmall_clean.ttf'); }
 
+@font-face {
+  font-family: titlesFont;
+  src: url('../font/RobotoSlab-Bold.ttf'); }
+
 ul.footer-p {
   line-height: 40px;
   list-style-type: none; }
@@ -420,7 +425,15 @@ ul.footer-p {
 }
 .content {
 	padding: 0 270px 0 270px;
+	margin: 50px;
+	font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+	color: #606c71;
 }
+.content h1,
+.content h2,
+.content h3 {
+	font-family: titlesFont;
+	color: #159957; }
 .left-sidebar {
 	float: left;
 	width: 250px;

@@ -9,7 +9,7 @@ author:
   url:        "https://JeffersonLab.github.io"
 
 # Main Docs
-include: ["docs"]
+include: ["_downloads", "docs"]
 exclude: ["build", "source"]
 
 # Others

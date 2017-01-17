@@ -10,6 +10,7 @@ author:
 
 # Main Docs
 include: ["docs"]
+exclude: ["build", "source"]
 
 # Others
 markdown: kramdown

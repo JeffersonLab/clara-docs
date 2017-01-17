@@ -9,7 +9,7 @@ author:
   url:        "https://JeffersonLab.github.io"
 
 # Main Docs
-include: ["_pages"]
+include: ["docs"]
 
 # Others
 markdown: kramdown

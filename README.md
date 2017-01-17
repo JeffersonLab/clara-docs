@@ -15,6 +15,6 @@ the required Jekyll version inside a container.
 To generate the documentation, start the Jekyll server inside a Docker
 container:
 
-    docker compose-up
+    docker-compose up
 
 The output files will be located in `_site`.

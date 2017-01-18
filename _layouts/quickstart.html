@@ -1,0 +1,30 @@
+---
+layout: page
+title: Quick Start
+---
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/js/toc.js"></script>
+
+<aside class="left-sidebar"><div id="toc"></div></aside>
+
+<div class="container2">
+	<main class="content">
+		{{ content }}
+	</main>
+</div>
+
+<aside class="right-sidebar">
+	<ul>
+		<strong>Quick Start</strong>
+		{% assign current = page.url | downcase | split: '/' %}
+		<li><a href="{{ site.baseurl }}/docs/quickstart/cpp.html" {% if current[3] == 'cpp.html' %}class='current'{% endif %}>C++</a></li>
+		<li><a href="{{ site.baseurl }}/docs/quickstart/java.html" {% if current[3] == 'java.html' %}class='current'{% endif %}>Java</a></li>
+		<li><a href="{{ site.baseurl }}/docs/quickstart/python.html" {% if current[3] == 'python.html' %}class='current'{% endif %}>Python</a></li>
+	</ul>
+</aside>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#toc').toc();
+});
+</script>

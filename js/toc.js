@@ -5,7 +5,7 @@
       noBackToTopLinks: false,
       title: '<em>Contents</em>',
       minimumHeaders: 3,
-      headers: 'h1, h2, h3, h4, h5, h6',
+      headers: 'h2, h3, h4, h5, h6',
       listType: 'ol', // values: [ol|ul]
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
       showSpeed: 'slow', // set to 0 to deactivate effect
@@ -34,10 +34,16 @@
       }
       return this.id;
     }), output = $(this);
-    if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
+
+    /*if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
       $(this).hide();
       return;
-    }
+    }*/
+
+    if (!headers.length) {
+		$(this).hide();
+		return;
+	}
 
     if (0 === settings.showSpeed) {
       settings.showEffect = 'none';

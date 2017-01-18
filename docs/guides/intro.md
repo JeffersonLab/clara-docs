@@ -1,5 +1,5 @@
 ---
-layout: document
+layout: guide
 title: Background and Motivation
 ---
 

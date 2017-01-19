@@ -38,14 +38,14 @@ This is a directory that will be created by the installation script.
 
 Download the following script:
 
-<div class=".download-link">
+<div class="download">
   <a href="{{ site.baseurl }}/_downloads/install-claracre">install-cre</a>
 </div>
 
 In case you want to install CRE with CLAS12 software as a bundle,
 download the following:
 
-<div class=".download-link">
+<div class="download" id="hack">
   <a href="{{ site.baseurl }}/_downloads/install-claracre-clas">install-cre-clas</a>
 </div>
 
@@ -95,14 +95,14 @@ and most likely they are already installed on majority of systems.
 
 Download the following script:
 
-<div class=".download-link">
+<div class="download">
   <a href="{{ site.baseurl }}/_downloads/install-claradk">install-cdk</a>
 </div>
 
 In case you want to install CDK with CLAS12 software bundle,
 download the following:
 
-<div class=".download-link">
+<div class="download">
   <a href="{{ site.baseurl }}/_downloads/install-claradk-clas">install-cdk-clas</a>
 </div>
 

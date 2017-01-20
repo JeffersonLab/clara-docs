@@ -3,7 +3,7 @@
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,
-      title: '<em>Contents</em>',
+      title: '<p class="toc-title">Contents</p>',
       minimumHeaders: 3,
       headers: 'h2, h3, h4, h5, h6',
       listType: 'ol', // values: [ol|ul]

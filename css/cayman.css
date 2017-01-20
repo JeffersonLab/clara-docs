@@ -450,3 +450,8 @@ ul.footer-p {
 .download a:active, .download a:visited, .download a:hover {
   color: #BE81F7;
   padding: 3px 3px 10px 30px; }
+
+.highlighter-rouge {
+  color: #FA5858;
+  background-color: #f8f8f8;
+  padding: 0.2em; }

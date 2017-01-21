@@ -10,7 +10,7 @@ author:
 
 # Main Docs
 include: ["_downloads", "docs"]
-exclude: ["build", "source"]
+exclude: ["build", "source", "Makefile", "README.md", "scripts", "Dockerfile", "docker-compose.yml"]
 
 # Others
 markdown: kramdown

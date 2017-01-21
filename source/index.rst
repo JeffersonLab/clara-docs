@@ -28,5 +28,5 @@ Welcome to CLARA
    handson
    installation
    data-processing
-   Javadoc <https://claraweb.jlab.org/api/clara/>
+   Javadoc <https://claraweb.jlab.org/api/clara/java/>
    publications

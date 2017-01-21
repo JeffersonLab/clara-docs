@@ -52,7 +52,7 @@ download the following:
 So, for CRE installation copy downloaded scripts into the *work-dir* and type:
 
 ```
-> cd *work-dir*
+> cd work-dir
 > ./install-claracre
 ```
 
@@ -62,13 +62,14 @@ or
 > ./install-claracre-clas
 ```
 
+<p></p>
 <div class="note info">
 Here are step by step instructions how to download and run the installer
 for CRE-CLAS on OSX.
 </div>
 
 1.  Ctrl-Click on the above presented link.
-2.  <code>cd <em>work-dir</em></code>
+2.  <code class="highlighter-rouge">cd <em>work-dir</em></code>
 3.  `cp ~/Downloads/install-claracre-clas.txt install-claracre-clas`
 4.  `chmod a+x install-claracre-clas`
 5.  `./install-clara-cre`

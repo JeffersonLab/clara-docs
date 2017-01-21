@@ -21,11 +21,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.toc-title {
-  color: #155799;
-  padding-left: 30px;
-  font-weight: bold;
-}
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -474,6 +469,11 @@ ul.footer-p {
     height: 7rem;
     margin: -7rem 0 0;
   }
+}
+.toc-title {
+  color: #155799;
+  padding-left: 30px;
+  font-weight: bold;
 }
 .toctree {
   padding: 0;

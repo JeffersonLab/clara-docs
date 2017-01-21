@@ -331,7 +331,7 @@ ul.footer-p {
 }
 .landing-content-container .landing-left-image {
   height: auto;
-  margin-bottom: 10px;
+  margin-right: 3rem;
   display: flex;
   max-width: 300px;
   object-fit: contain;
@@ -346,7 +346,7 @@ ul.footer-p {
   object-fit: contain;
   object-position: top;
   float: right;
-  margin-right: 10px;
+  margin-left: 3rem;
   clear: both;
 }
 .middle {

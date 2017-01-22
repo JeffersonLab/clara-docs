@@ -3,15 +3,7 @@ layout: base
 title: Quick Start
 ---
 <div class="document-wrapper">
-  <div class="content-wrapper">
-    <div class="content-container">
-      <main class="content">
-      <h1>Get Started with CLARA</h1>
-      <p></p>
-      </main>
-    </div>
-  </div>
-  <aside class="right-sidebar">
+  <aside class="left-sidebar">
     <strong>Quick Start</strong>
     <ul>
       {% assign current = page.url | downcase | split: '/' %}
@@ -20,4 +12,12 @@ title: Quick Start
       <li><a href="{{ site.baseurl }}/docs/quickstart/python.html" {% if current[3] == 'python.html' %}class='current'{% endif %}>Python</a></li>
     </ul>
   </aside>
+  <div class="content-wrapper">
+    <div class="content-container">
+      <main class="content">
+      <h1>Get Started with CLARA</h1>
+      <p></p>
+      </main>
+    </div>
+  </div>
 </div>

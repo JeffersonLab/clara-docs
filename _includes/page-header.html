@@ -1,18 +1,32 @@
-<aside id="ph">
-  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul id="nav">
-          <li style="float: left !important"><a href="{{ site.baseurl }}/index.html"><font face=myFont><b>CLARA</b></font></a></li>
-          <li style="float: right !important"><a href="{{ site.baseurl }}/docs/reference.html">Reference</a></li>
-          <li style="float: right !important"><a href="{{ site.baseurl }}/docs/examples.html">Examples</a></li>
-          <li style="float: right !important"><a href="{{ site.baseurl }}/docs/tutorials.html">Tutorials</a></li>
-          <li style="float: right !important"><a href="{{ site.baseurl }}/docs/guides/index.html">Guides</a></li>
-          <li style="float: right !important"><a href="{{ site.baseurl }}/docs/quickstart/index.html">Quick Start</a></li>
-        </ul>
-      </div>
+<nav id="main-navbar-wrapper">
+  <ul class="main-navbar" id="main-navbar-list">
+    <div class="float-left">
+      <li><a href="{{ site.baseurl }}/index.html"><font face=myFont><b>CLARA</b></font></a></li>
     </div>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-  </nav>
-</aside>
+    <div class="float-right">
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/quickstart/index.html">Quick Start</a></li>
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/guides/index.html">Guides</a></li>
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/tutorials.html">Tutorials</a></li>
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/examples.html">Examples</a></li>
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/reference.html">Reference</a></li>
+      <li class="mobile-icon">
+        <div class="icon-container" onclick="toogleNavbar()">
+          <div class="icon-bar"></div>
+          <div class="icon-bar"></div>
+          <div class="icon-bar"></div>
+        </div>
+      </li>
+    </div>
+  </ul>
+</nav>
+
+<script>
+function toogleNavbar() {
+  var x = document.getElementById("main-navbar-list");
+  if (x.className === "main-navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "main-navbar";
+  }
+}
+</script>

@@ -41,9 +41,9 @@
     }*/
 
     if (!headers.length) {
-		$(this).hide();
-		return;
-	}
+      $(this).hide();
+      return;
+    }
 
     if (0 === settings.showSpeed) {
       settings.showEffect = 'none';

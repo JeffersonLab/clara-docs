@@ -4,23 +4,27 @@ title: Guides
 ---
 {% include toc.html %}
 
-<div class="container2">
-  <main class="content">
-    <h1>{{ page.title }}</h1>
-    {{ content }}
-  </main>
+<div class="document-wrapper">
+  <aside class="left-sidebar">
+    <div id="toc"></div>
+  </aside>
+  <div class="content-wrapper">
+    <div class="content-container">
+      <main class="content">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+      </main>
+    </div>
+  </div>
+  <aside class="right-sidebar">
+    <strong>Guides</strong>
+    <ul>
+      {% assign current = page.url | downcase | split: '/' %}
+      <li><a href="{{ site.baseurl }}/docs/guides/intro.html" {% if current[3] == 'intro.html' %}class='current'{% endif %}>Intro</a></li>
+      <li><a href="{{ site.baseurl }}/docs/guides/framework.html" {% if current[3] == 'framework.html' %}class='current'{% endif %}>Framework</a></li>
+      <li><a href="{{ site.baseurl }}/docs/guides/proxies.html" {% if current[3] == 'proxies.html' %}class='current'{% endif %}>Proxies</a></li>
+      <li><a href="{{ site.baseurl }}/docs/guides/engine.html" {% if current[3] == 'engine.html' %}class='current'{% endif %}>User Engines</a></li>
+      <li><a href="{{ site.baseurl }}/docs/guides/threading.html" {% if current[3] == 'threading.html' %}class='current'{% endif %}>Service Threading</a></li>
+    </ul>
+  </aside>
 </div>
-
-<aside class="left-sidebar"><div id="toc"></div></aside>
-
-<aside class="right-sidebar">
-  <strong>Guides</strong>
-  <ul>
-    {% assign current = page.url | downcase | split: '/' %}
-    <li><a href="{{ site.baseurl }}/docs/guides/intro.html" {% if current[3] == 'intro.html' %}class='current'{% endif %}>Intro</a></li>
-    <li><a href="{{ site.baseurl }}/docs/guides/framework.html" {% if current[3] == 'framework.html' %}class='current'{% endif %}>Framework</a></li>
-    <li><a href="{{ site.baseurl }}/docs/guides/proxies.html" {% if current[3] == 'proxies.html' %}class='current'{% endif %}>Proxies</a></li>
-    <li><a href="{{ site.baseurl }}/docs/guides/engine.html" {% if current[3] == 'engine.html' %}class='current'{% endif %}>User Engines</a></li>
-    <li><a href="{{ site.baseurl }}/docs/guides/threading.html" {% if current[3] == 'threading.html' %}class='current'{% endif %}>Service Threading</a></li>
-  </ul>
-</aside>

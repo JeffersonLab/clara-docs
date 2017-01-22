@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html>
+---
+layout: base
+title: Page
+---
+{% include toc.html %}
 
-  {% include head.html %}
-
-  <body>
-
-    {% include toc.html %}
-
-    {% include page-header.html %}
-
-    <section class="middle">
-
-      <div class="container2">
-        <main class="content">
-          <h1>{{ page.title }}</h1>
-          {{ content }}
-        </main>
-      </div>
-
-      <aside class="left-sidebar"><div id="toc"></div></aside>
-
-      <aside class="right-sidebar"></aside>
-
-      <div class="push"></div>
-
-    </section>
-
-    {% include footer.html %}
-
-  </body>
-
-</html>
+<div class="document-wrapper">
+  <aside class="left-sidebar">
+    <div id="toc"></div>
+  </aside>
+  <div class="content-wrapper">
+    <div class="content-container">
+      <main class="content">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+      </main>
+    </div>
+  </div>
+</div>

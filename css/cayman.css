@@ -453,6 +453,12 @@ ul.footer-p {
     margin-top: 5rem;
   }
 }
+.right-sidebar ul {
+  padding-left: 0;
+}
+.right-sidebar ul li  {
+  margin-left: 1em;
+}
 @media screen and (max-width: 42em) {
   .left-sidebar {
     display: none;

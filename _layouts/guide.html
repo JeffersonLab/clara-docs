@@ -14,8 +14,8 @@ title: Guides
 <aside class="left-sidebar"><div id="toc"></div></aside>
 
 <aside class="right-sidebar">
+  <strong>Guides</strong>
   <ul>
-    <strong>Guides</strong>
     {% assign current = page.url | downcase | split: '/' %}
     <li><a href="{{ site.baseurl }}/docs/guides/engine.html" {% if current[3] == 'engine.html' %}class='current'{% endif %}>Engine</a></li>
     <li><a href="{{ site.baseurl }}/docs/guides/framework.html" {% if current[3] == 'framework.html' %}class='current'{% endif %}>Framework</a></li>

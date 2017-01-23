@@ -693,6 +693,24 @@ a[href^="https://"]:after:not(.github-img) {
   color: #BE81F7;
   padding: 3px 3px 10px 30px;
 }
+
+.content .doc-lang-table {
+  border-collapse: separate;
+  border-spacing: 2rem 0;
+}
+.content .doc-lang-table th,
+.content .doc-lang-table td {
+  width: 16rem;
+  padding: 8px;
+  margin-right: 2rem;
+  border: none;
+  font-size: 90%;
+}
+.content .doc-lang-table th {
+  background-color: #eaf7e3;
+  font-size: 110%;
+  font-weight: normal;
+}
 .highlighter-rouge {
   background-color: #f8f8f8;
   padding: 0.1em 0.3em;

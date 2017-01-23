@@ -1,5 +1,5 @@
 ---
-layout: document
+layout: clas
 title: Installation
 ---
 

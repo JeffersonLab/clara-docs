@@ -1,4 +1,4 @@
 ---
 layout: quickstart
-title: Cpp
+title: C++
 ---

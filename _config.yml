@@ -1,6 +1,7 @@
 # Setup
 title:        CLARA
-tagline:      A service-oriented framework to provide a computing environment for efficient Big Data processing.
+tagline:      Data-stream processing framework
+description:  Microservices architecture for big data analytics
 baseurl:      "/clara-docs"
 
 # About/contact

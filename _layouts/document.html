@@ -5,7 +5,14 @@ layout: base
 
 <div class="document-wrapper">
   <aside class="left-sidebar">
-    <div id="toc"></div>
+    <strong>{{ page.type_desc }}</strong>
+    <ul>
+      {% assign current = page.url | downcase | split: '/' %}
+      {% assign words = current[3] | downcase | split: '.' %}
+      {% for doc in site.pages %} {% if doc.type == page.type and doc.id != 'index' %}
+        <li><a href="{{ site.baseurl }}/docs/{{ page.type }}/{{ doc.id }}.html" {% if words[0] == doc.id %}class='current'{% endif %}>{{ doc.title }}</a></li>
+      {% endif %}{% endfor %}
+    </ul>
   </aside>
   <div class="content-wrapper">
     <div class="content-container">
@@ -15,4 +22,9 @@ layout: base
       </main>
     </div>
   </div>
+  <aside class="right-sidebar">
+  {% unless page.notoc %}
+    <div id="toc"></div>
+  {% endunless %}
+  </aside>
 </div>

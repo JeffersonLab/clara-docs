@@ -1,5 +1,8 @@
 ---
-layout: clas
+layout: document
+type: clas
+type_desc: CLAS Data Processing
+id: resources
 title: Resources
 notoc: true
 ---

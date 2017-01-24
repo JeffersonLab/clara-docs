@@ -1,5 +1,8 @@
 ---
-layout: guide
+layout: document
+type: guides
+type_desc: Guides
+id: intro
 title: Background and Motivation
 ---
 

@@ -268,7 +268,7 @@ a[href^="https://"]:after:not(.github-img) {
 }
 @font-face {
   font-family: myFont;
-  src: url('../font/Capsmall_clean.ttf');
+  src: url('../font/Lumberjack.otf');
 }
 @font-face {
   font-family: titlesFont;

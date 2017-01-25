@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Documentation
+use_nav: 1
 ---
 
 ## Supported Languages

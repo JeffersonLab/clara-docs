@@ -2,9 +2,23 @@
   <h1 class="project-name" style="font-size: 4rem;">{{ site.title }}</h1>
   <h2 class="project-tagline">{{ site.tagline }}</h2>
   <h3 class="project-description">{{ site.description }}</h3>
+  <nav class="main-navbar-wrapper" id="header-navbar">
+    <ul class="main-navbar" id="main-navbar-list">
+      {% include header-navbar.html %}
+    </ul>
+  </nav>
   <ul>
-    <a href="{{ site.baseurl }}/docs/" class="btn">Documentation</a>
-    <a href="{{ site.baseurl }}/docs/clas/installation.html" class="btn">CLAS environment</a>
-    <a href="{{ site.baseurl }}/docs/about.html" class="btn">About</a>
+    <a href="{{ site.baseurl }}/docs/" class="btn">Get Started</a>
   </ul>
 </section>
+
+<script>
+function toogleNavbar() {
+  var x = document.getElementById("main-navbar-list");
+  if (x.className === "main-navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "main-navbar";
+  }
+}
+</script>

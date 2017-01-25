@@ -31,6 +31,7 @@ a:hover {
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  min-width: 10rem;
 }
 .btn:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -67,8 +68,19 @@ a:hover {
   }
 }
 
+#header-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  width: 100%;
+  z-index: 2;
+  margin: 0 auto;
+}
 
-#main-navbar-wrapper {
+.main-navbar-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -79,85 +91,147 @@ a:hover {
   box-shadow: 0px 1px 1px RGBA(4, 25, 54, 0.1);
   margin: 0 auto;
 }
-#main-navbar-wrapper ul {
+.main-navbar-wrapper ul {
   max-width: 82rem;
   margin: 0 auto 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
 }
-#main-navbar-wrapper ul li {
+.main-navbar-wrapper ul li {
   float: left;
 }
-#main-navbar-wrapper ul a {
+.main-navbar-wrapper ul a {
   text-decoration: none;
-  display: inline-block;
   padding: .9rem;
   font-family: 'Muli', sans-serif;
   color: #fff;
   line-height: 1.2rem;
   margin-bottom: -1px;
   box-shadow: 0;
+  display: inline-block;
 }
-#main-navbar-wrapper ul li a:hover,
-#main-navbar-wrapper ul li a:active {
+.main-navbar-wrapper ul li a:hover,
+.main-navbar-wrapper ul li a:active {
   text-decoration: none;
   color: #19CCAA;
 }
-#main-navbar-wrapper ul li.mobile-icon {
+.main-navbar-wrapper ul li.mobile-icon {
   display: none;
 }
-#main-navbar-wrapper .float-left {
+.main-navbar-wrapper .float-left {
   float:left;
 }
-#main-navbar-wrapper .float-right {
+.main-navbar-wrapper .float-right {
   float:right;
 }
-#main-navbar-wrapper .icon-container {
+.main-navbar-wrapper .icon-container {
   padding: 0.6rem 1rem 0.4rem;
   display: inline-block;
   cursor: pointer;
 }
-#main-navbar-wrapper .icon-bar {
+.main-navbar-wrapper .icon-bar {
   width: 1.6rem;
   height: .3rem;
   background-color: #fff;
   margin: .2rem 0;
 }
 @media screen and (max-width: 42em) {
-  #main-navbar-wrapper ul li.doc-link {
+  .main-navbar-wrapper ul li.doc-link {
     display: none;
   }
-  #main-navbar-wrapper ul li.mobile-icon {
+  .main-navbar-wrapper ul li.mobile-icon {
     float: right;
     display: inline-block;
   }
+  #header-navbar ul {
+    display: none;
+  }
 }
 @media screen and (max-width: 42em) {
-  #main-navbar-wrapper .float-left {
+  .main-navbar-wrapper .float-left {
     float: none;
   }
-  #main-navbar-wrapper .float-right {
+  .main-navbar-wrapper .float-right {
     float: none;
   }
-  #main-navbar-wrapper ul.responsive {
+  .main-navbar-wrapper ul.responsive {
     position: relative;
   }
-  #main-navbar-wrapper ul.responsive li.mobile-icon {
+  .main-navbar-wrapper ul.responsive li.mobile-icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  #main-navbar-wrapper ul.responsive li {
+  .main-navbar-wrapper ul.responsive li {
     float: none;
     display: inline;
   }
-  #main-navbar-wrapper ul.responsive li a {
+  .main-navbar-wrapper ul.responsive li a {
     display: block;
     text-align: left;
   }
 }
 
+#doc-navbar-wrapper {
+  margin: 0 auto;
+  max-width: 80rem;
+  min-height: 3.5rem;
+  position: relative;
+  padding: 2rem .5rem 0;
+}
+#doc-navbar-wrapper h1 {
+  margin: 0;
+}
+#doc-navbar-wrapper ul {
+  max-width: 82rem;
+  list-style: none;
+  overflow: hidden;
+  font-size: 75%;
+}
+#doc-navbar-wrapper ul li {
+  float: left;
+}
+#doc-navbar-wrapper ul a {
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  margin-right: 1.5rem;
+  margin-top: .7rem;
+  box-shadow: 0;
+  display: block;
+  color: #606c71;
+}
+#doc-navbar-wrapper ul li a:hover
+#doc-navbar-wrapper ul li a:active {
+  text-decoration: none;
+  color: #19CCAA;
+}
+
+#doc-navbar-wrapper .float-left {
+  float:left;
+}
+#doc-navbar-wrapper .float-right {
+  float:right;
+}
+
+@media screen and (max-width: 64em) {
+  #doc-navbar-wrapper ul li {
+    display: none;
+  }
+}
+@media screen and (max-width: 42em) {
+  #doc-navbar-wrapper .float-left {
+    float: none;
+  }
+  #doc-navbar-wrapper .float-right {
+    float: none;
+  }
+}
+hr {
+  width:100%;
+  height:1px;
+  background: #000000;
+}
 
 .project-header {
   color: #fff;
@@ -188,9 +262,6 @@ a:hover {
   padding: 0;
   list-style-type: none;
   text-align: center;
-}
-.project-header a {
-  min-width: 10rem;
 }
 .project-name {
   margin-top: 0;
@@ -449,6 +520,13 @@ a[href^="https://"]:not(.icon):after {
     position: relative;
   }
 }
+.document-header {
+  margin: 0 auto;
+  max-width: 80rem;
+  min-height: 3.5rem;
+  position: relative;
+  padding: 2rem .5rem 0;
+}
 .document-wrapper {
   margin: 0 auto;
   max-width: 80rem;
@@ -569,7 +647,7 @@ a[href^="https://"]:not(.icon):after {
   width: 16rem;
   margin-right: -16rem;
   overflow: hidden;
-  padding-top: .5rem;
+  margin-top: 1rem;
 }
 .right-sidebar {
   float: right;

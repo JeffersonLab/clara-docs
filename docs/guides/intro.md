@@ -1,5 +1,5 @@
 ---
-layout: document
+layout: clara
 type: guides
 type_desc: Guides
 id: intro

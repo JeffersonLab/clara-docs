@@ -285,13 +285,13 @@ a:hover {
   line-height: 2.5rem;
   list-style-type: none;
 }
-/* Make exception with icons like github */
 
-a[href^="http://"]:after,
-a[href^="https://"]:after:not(.github-img) {
+a[href^="http://"]:not(.icon):after,
+a[href^="https://"]:not(.icon):after {
   content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
   margin: 0 0 0 5px;
 }
+
 @font-face {
   font-family: myFont;
   src: url('../font/Lumberjack.otf');

@@ -1,7 +1,7 @@
 # Setup
 title:        CLARA
 tagline:      Distributed data-stream processing framework
-description:  Microservices architecture for big data analytics \n
+description:  Microservices architecture for big data analytics
 description2:  We become what we love and who we love shapes what we become
 baseurl:      "/clara-docs"
 

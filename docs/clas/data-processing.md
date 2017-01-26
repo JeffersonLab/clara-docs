@@ -33,34 +33,5 @@ $CLARA_HOME/bin/clara
 ```
 
 This will start Clara command line interactive interface.
-```
-leo% $CLARA_HOME/bin/clara
-  ________   ____         ________   _________    ________
- /        \ |    |       /        | |         \  /        | 4.3.0
-|    |    | |    |      |   _._   | |    |    | |   _._   |
-|    |____| |    |      |    |    | |        /  |    |    |
-|    |    | |    |____  |    |    | |    .   -| |    |    |
-|    |    | |         | |    |    | |    |    | |    |    |
-|________/  |_________| |____|____| |____|____| |____|____|
-
-clara>help
-
-               Help
-----------------------------------------
-
-  [-h | --help | help  <set>]
-        Parameter settings
-
-  [-h | --help | help  <edit>]
-        Edit data processing conditions
-
-  [-h | --help | help  <run>]
-        Start data processing
-
-  [-h | --help | help  <monitor>]
-        Monitor data processing
-clara>
-
-```
 Hierarchical help will navigate you through options to set, customize, run and monitor 
 Clas12 data processing applications.

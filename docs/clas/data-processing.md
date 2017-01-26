@@ -26,131 +26,41 @@ how to run CLARA based CLAS12 data processing application.
 We assume that the CLARA\_HOME env variable is pointing to
 the CLARA run-time environment directory.
 
-<div class="note info">
-<code>setenv CLARA_HOME <em>work-dir</em>/clara-cre</code>
-</div>
-
-Here we present two modes of running:
-
-1.  local - data processing on a local computing resource and
-2.  farm - processing on a batch farm system.
-
-JLAB farm PBS and Auger job scheduling systems will be used
-as a CLARA farm data processing example,
-so data processing will exit in case Jlab Auger commands are not accessible.
-
-Type *run-clara* to start CLAS12 data processing.
-
-The following examples are for data processing with a default parameters.
-
-### Local mode
+No just simply type 
 
 ```
-$CLARA_HOME/bin/run-clara
+$CLARA_HOME/bin/clara
 ```
 
-### Farm mode
+This will start Clara command line interactive interface.
+```
+leo% $CLARA_HOME/bin/clara
+  ________   ____         ________   _________    ________
+ /        \ |    |       /        | |         \  /        | 4.3.0
+|    |    | |    |      |   _._   | |    |    | |   _._   |
+|    |____| |    |      |    |    | |        /  |    |    |
+|    |    | |    |____  |    |    | |    .   -| |    |    |
+|    |    | |         | |    |    | |    |    | |    |    |
+|________/  |_________| |____|____| |____|____| |____|____|
 
-The following submits a job to run on a single farm node exclusively.
+clara>help
+
+               Help
+----------------------------------------
+
+  [-h | --help | help  <set>]
+        Parameter settings
+
+  [-h | --help | help  <edit>]
+        Edit data processing conditions
+
+  [-h | --help | help  <run>]
+        Start data processing
+
+  [-h | --help | help  <monitor>]
+        Monitor data processing
+clara>
 
 ```
-$CLARA_HOME/bin/run-clara -m farm
-```
-
-By specifying `-n` or `--nodes` parameter
-the data processing will scale horizontally among *N* farm nodes.
-As a result a separate job will be scheduled for each requested node.
-
-```
-$CLARA_HOME/bin/run-clara -m farm -n number-of-nodes
-```
-
-### Customization
-
-Due to the nature of the micro-services environment
-CLARA data processing application is highly customizable,
-that does not require compilation.
-For example to build CLAS12 data processing you need to edit `services.yaml`
-file located in `plugins/clas12/config` dir.
-
-```
-services:
-  - class: org.jlab.service.dc.DCHBEngine
-    name: DCHB
-  - class: org.jlab.service.ftof.FTOFEngine
-    name: FTOF
-  - class: org.jlab.rec.cvt.services.CVTReconstruction
-    name: CVT
-  - class: org.jlab.service.htcc.HTCCReconstructionService
-    name: HTCC
-  - class: org.jlab.service.eb.EBEngine
-    name: EBHB
-  - class: org.jlab.service.dc.DCTBEngine
-    name: DCTB
-  - class: org.jlab.service.eb.EBEngine
-    name: EBTB
-```
-
-Simply add or remove service or group of services and run.
-The names of files to be processed are stored in the `files.list` file
-located in `plugins/clas12/config` dir.
-
-```
-gemc_eklambda_A0043_gen.evio
-gemc_eklambda_A0044_gen.evio
-gemc_eklambda_A0045_gen.evio
-gemc_eklambda_A0046_gen.evio
-gemc_eklambda_A0047_gen.evio
-gemc_eklambda_A0048_gen.evio
-```
-
-The actual location of files are defined by the run-clara parameter,
-listed below.
-
-### Data processing parameters
-
-```
-gurjyan% run-clara -h
-Usage: run-clara [option <operand>]
-
-  [-h | --help]
-        Usage instructions
-
-  [-j | --java_home <java_home>]
-        JDK/JRE installation directory. (default: $JAVA_HOME)
-
-  [-c | --clara_home <clara_home>]
-        CLARA installation directory. (default: $CLARA_HOME)
-
-  [-p | --plugin <plugin>]
-        Plugin installation directory. (default: $CLARA_HOME/plugins/clas12)
-
-  [-s | --session <session>]
-        The data processing session. (default: $USER)
-
-  [-m | --mode <mode>]
-        The data processing mode. Accepts values = local, sqlite and farm (default: local)
-
-  [-i | --input_dir <inputDir>]
-        The input directory where the files to be processed are located.
-        (default: $CLARA_HOME/data/in)
-
-  [-o | --output_dir <outputDir>]
-        The output directory where processed files will be saved.
-        (default: $CLARA_HOME/data/out)
-
-  [-n | --nodes <maxNodes>]
-        The maximum number of processing nodes to be used. Farm mode only. (default: 1)
-
-  [-t | --threads <maxThreads>]
-        The maximum number of processing threads to be used per node. In case value = auto t=local-node processor count.
-        (default: 36 for farm mode and 2 for the local mode))
-
-  [-f | --file-list <fileList>]
-        Full path to the file containing the names of data-files to be processed. Note: actual files are located in the inputDir.
-        (default: $CLARA_HOME/plugins/clas12/config/files.list)
-
-  [-y | --yaml <yamlComposition>]
-        Full path to the file describing application service composition.
-        (default: $CLARA_HOME/plugins/clas12/config/services.yaml)
-```
+Hierarchical help will navigate you through options to set, customize, run and monitor 
+Clas12 data processing applications.

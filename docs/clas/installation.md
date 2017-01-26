@@ -26,57 +26,29 @@ or (if you are an atheist) evolved.
 
 Installation and data processing instructions are presented
 for the Clara Java binding.
-First dedicate a directory where software will be installed.
-Lets call it *work-dir*.
-This is a directory where CLARA codebase will be installed.
-Next set the CLARA\_HOME environmental variable that points
-to the CLARA run time environment (clara-cre) directory under the *work-dir*.
-This is a directory that will be created by the installation script.
 
+First set the CLARA\_HOME environmental variable that points
+to the CLARA CLAS12 distribution (UserHome/myClara or UserHome/clas12-v4)
+ 
 <div class="note info">
-<code>setenv CLARA_HOME <em>work-dir</em>/clara-cre</code>
+<code>setenv CLARA_HOME <em>UserHome</em>/myClara</code>
 </div>
 
 ### CRE installation
 
 Download the following script:
 
-<div class="download">
-  <a href="{{ site.baseurl }}/_downloads/install-claracre">install-cre</a>
-</div>
-
-In case you want to install CRE with CLAS12 software as a bundle,
-download the following:
-
+ 
 <div class="download" id="hack">
   <a href="{{ site.baseurl }}/_downloads/install-claracre-clas">install-cre-clas</a>
 </div>
 
-So, for CRE installation copy downloaded scripts into the *work-dir* and type:
-
-```
-> cd work-dir
-> ./install-claracre
-```
-
-or
+Change permission of this file to be able to execute and 
 
 ```
 > ./install-claracre-clas
 ```
-
-<p></p>
-<div class="note info">
-Here are step by step instructions how to download and run the installer
-for CRE-CLAS on OSX.
-</div>
-
-1.  Ctrl-Click on the above presented link.
-2.  <code class="highlighter-rouge">cd <em>work-dir</em></code>
-3.  `cp ~/Downloads/install-claracre-clas.txt install-claracre-clas`
-4.  `chmod a+x install-claracre-clas`
-5.  `./install-clara-cre`
-
+ 
 ## CLARA Development Kit (CDK)
 
 If you are a prospective developer and would like to contribute in service

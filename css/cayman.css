@@ -532,6 +532,7 @@ a[href^="https://"]:not(.icon):after {
   max-width: 80rem;
   position: relative;
   padding: 2rem .5rem 0;
+  overflow: auto;
 }
 .content-wrapper {
   float: left;

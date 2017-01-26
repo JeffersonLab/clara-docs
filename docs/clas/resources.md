@@ -1,5 +1,5 @@
 ---
-layout: document
+layout: doc_clas
 type: clas
 type_desc: CLAS Data Processing
 id: resources

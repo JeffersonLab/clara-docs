@@ -9,9 +9,13 @@ layout: base
     <ul>
       {% assign current = page.url | downcase | split: '/' %}
       {% assign words = current[3] | downcase | split: '.' %}
-      {% for doc in site.pages %} {% if doc.type == page.type and doc.id != 'index' %}
-        <li><a href="{{ site.baseurl }}/docs/{{ page.type }}/{{ doc.id }}.html" {% if words[0] == doc.id %}class='current'{% endif %}>{{ doc.title }}</a></li>
-      {% endif %}{% endfor %}
+      {% for doc in layout.documents %}
+        {% for md in site.pages %}
+          {% if doc == md.id and md.type == page.type %}
+            <li><a href="{{ site.baseurl }}/docs/{{ page.type }}/{{ doc }}.html" {% if words[0] == doc %}class='current'{% endif %}>{{ md.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
     </ul>
   </aside>
   <div class="content-wrapper">

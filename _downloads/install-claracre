@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 # author Vardan Gyurjyan
-# date 10.28.16
+# date 1.13.17
 
 if ! [ -n "$CLARA_HOME" ]; then
-    echo "CLARA_HOME is not defined. Exiting..."
+    echo "CLARA_HOME environmental variable is not defined. Exiting..."
     exit
 fi
-    case "$1" in
-      -u | --update)
-	  rm -rf $CLARA_HOME
-	  ;;
-	esac
 
 command_exists () {
     type "$1" &> /dev/null ;
@@ -60,5 +55,12 @@ esac
 
 echo "Installing jre ..."
 tar xvzf *.tar.*
+
+cd ../..
+echo `pwd`
+
+rm -rf $CLARA_HOME
+mv clara-cre $CLARA_HOME
+rm -rf clara-cre
 
 echo done

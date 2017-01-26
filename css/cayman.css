@@ -692,8 +692,8 @@ a[href^="https://"]:not(.icon):after {
 }
 @media screen and (max-width: 42em) {
   :target:before {
-    height: 7rem;
-    margin: -7rem 0 0;
+    height: 4.4rem;
+    margin: -4.4rem 0 0;
   }
 }
 .toc-title {

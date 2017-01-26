@@ -799,3 +799,23 @@ a[href^="https://"]:not(.icon):after {
   background-color: #f8f8f8;
   padding: 0.1em 0.3em;
 }
+.clara {
+  position: relative;
+  top: 0;
+}
+@media screen and (min-width: 68rem) {
+  .clara {
+    float: right;
+    margin: 1.5rem 10rem 0 1rem;
+    left: 0;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 68rem) {
+  .clara {
+    display: block;
+    margin: 0 auto;
+    width: 23%;
+    min-width: 7rem;
+  }
+}

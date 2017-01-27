@@ -29,9 +29,14 @@ for the Clara Java binding.
 
 First set the CLARA\_HOME environmental variable that points
 to the CLARA CLAS12 distribution (/UserHome/myClara or /UserHome/clas12-v4)
- 
+
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
+</div>
+Note: Previously recommended dir=clara-cre is no more available for use. 
+
+<div style="font-size:12pt;color:red;">
+      DO NOT set CLARA_HOME pointing to *clara-cre*.
 </div>
 
 ### CRE installation

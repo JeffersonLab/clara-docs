@@ -6,9 +6,9 @@ title: Reference
 
 Links to the language specific automatically generated API reference documentation.
 
-* [Java API](https://claraweb.jlab.org/api/clara/java/)
+* [Java API]({{ site.baseurl }}/api/java/)
 
-* [C++ API](https://claraweb.jlab.org/api/clara/cpp/)
+* [C++ API]({{ site.baseurl }}/api/cpp/)
 
-* [Python API](https://claraweb.jlab.org/api/clara/python/)
+* [Python API]({{ site.baseurl }}/api/python/)
 

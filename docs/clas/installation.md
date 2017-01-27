@@ -33,7 +33,7 @@ to the CLARA CLAS12 distribution (/UserHome/myClara or /UserHome/clas12-v4)
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
 </div>
-Note: Previously recommended dir=clara-cre is no more available for use. 
+Note: Previously recommended dir=clara-cre is no more available for use.
 
 <div style="font-size:12pt;color:red;">
       DO NOT set CLARA_HOME pointing to *clara-cre*.
@@ -43,17 +43,17 @@ Note: Previously recommended dir=clara-cre is no more available for use.
 
 Download the following script:
 
- 
+
 <div class="download" id="hack">
   <a href="{{ site.baseurl }}/_downloads/install-claracre-clas">install-cre-clas</a>
 </div>
 
-Change permission of this file to be able to execute and 
+Change permission of this file to be able to execute and
 
 ```
 > ./install-claracre-clas
 ```
- 
+
 ## CLARA Development Kit (CDK)
 
 If you are a prospective developer and would like to contribute in service

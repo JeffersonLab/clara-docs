@@ -2,7 +2,7 @@ version: '2'
 services:
   jekyll:
     image: jekyll/jekyll:pages
-    container_name: jekyll
+    container_name: jekyll_clara
     command: jekyll serve --watch --config _config.yml,_config_prod.yml
     ports:
       - 4000:4000

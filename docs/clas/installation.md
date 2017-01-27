@@ -135,7 +135,7 @@ pointed by the \$CLARA\_HOME env variable furnished with all necessary
 jars, scripts, data structures and configuration files.
 
 ```
-clara-cre/
+myClara/
 ├── bin
 │   ├── clara-batch-dpe
 │   ├── clara-batch-processing

@@ -26,12 +26,13 @@ how to run CLARA based CLAS12 data processing application.
 We assume that the CLARA\_HOME env variable is pointing to
 the CLARA run-time environment directory.
 
-No just simply type 
+Now just simply type 
 
 ```
 $CLARA_HOME/bin/clara
 ```
 
-This will start Clara command line interactive interface.
+This will start Clara command line interactive interface (CLI).
 Hierarchical help will navigate you through options to set, customize, run and monitor 
 Clas12 data processing applications.
+

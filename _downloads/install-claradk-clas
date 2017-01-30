@@ -112,7 +112,7 @@ git clone --depth 1 https://github.com/JeffersonLab/clasrec-orchestrators.git
 cd clasrec-orchestrators
 ./gradlew deploy
 
-cp $CLARA_HOME/plugins/clas12/etc/services/reconstruction.yaml $CLARA_HOME/plugins/clas12/config/services.yaml
+#cp $CLARA_HOME/plugins/clas12/etc/services/reconstruction.yaml $CLARA_HOME/plugins/clas12/config/services.yaml
 rm -rf $CLARA_HOME/plugins/clas12/etc/services
 
 cd ..
@@ -121,7 +121,6 @@ mkdir $CLARA_HOME/data
 mkdir $CLARA_HOME/data/in
 mkdir $CLARA_HOME/data/out
 
-#cp /group/da/vhg/data/* $CLARA_HOME/data/in/
 cp ~/group/da/vhg/data/* $CLARA_HOME/data/in/
 
 echo "Installing jre ..."

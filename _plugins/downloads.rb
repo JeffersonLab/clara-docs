@@ -15,7 +15,7 @@ class DownloadFileTag < Liquid::Tag
 
     # TODO load from a template
     output =  "<div class=\"download\">"
-    output += "<a href=\"#{baseurl}/_downloads/#{file_name}\">#{link_name}</a>"
+    output += "<a href=\"#{baseurl}/_downloads/#{file_name}\" download>#{link_name}</a>"
     output += "</div>"
 
     return output;

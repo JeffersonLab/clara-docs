@@ -23,7 +23,7 @@ a:hover {
 }
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #fff;
   background-color: rgba(170, 170, 170, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
@@ -230,7 +230,7 @@ a:hover {
 }
 @media screen and (min-width: 64em) {
   .project-header {
-    padding: 5rem 6rem;
+    padding: 3rem 6rem;
   }
 }
 @media screen and (min-width: 42em) and (max-width: 64em) {
@@ -251,7 +251,7 @@ a:hover {
 }
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.1px;
   text-align: center;
   font-family: myFont;
 }
@@ -271,6 +271,7 @@ a:hover {
   }
 }
 .project-tagline {
+  margin-top: -0.1rem;
   margin-bottom: 2rem;
   font-weight: normal;
   text-align: center;
@@ -292,7 +293,7 @@ a:hover {
   }
 }
 .project-description {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-weight: normal;
   text-align: center;
   color: #fff;

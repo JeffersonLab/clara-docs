@@ -226,7 +226,7 @@ a:hover {
   background-color: #0967D2;
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 70%;
+  background-size: 50% 100%;
 }
 @media screen and (min-width: 64em) {
   .project-header {

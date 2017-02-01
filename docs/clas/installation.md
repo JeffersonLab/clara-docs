@@ -44,9 +44,7 @@ DO NOT set CLARA_HOME pointing to <em>clara-cre</em>.
 Download the following script:
 
 
-<div class="download" id="hack">
-  <a href="{{ site.baseurl }}/_downloads/install-claracre-clas">install-cre-clas</a>
-</div>
+{% download file: install-claracre-clas, name: install-cre-class %}
 
 Change permission of this file to be able to execute and
 
@@ -76,16 +74,12 @@ and most likely they are already installed on majority of systems.
 
 Download the following script:
 
-<div class="download">
-  <a href="{{ site.baseurl }}/_downloads/install-claradk">install-cdk</a>
-</div>
+{% download file: install-claradk, name: install-cdk %}
 
 In case you want to install CDK with CLAS12 software bundle,
 download the following:
 
-<div class="download">
-  <a href="{{ site.baseurl }}/_downloads/install-claradk-clas">install-cdk-clas</a>
-</div>
+{% download file: install-claradk-clas, name: install-cdk-clas %}
 
 So, for CDK installation copy downloaded scripts into the *work-dir* and type:
 

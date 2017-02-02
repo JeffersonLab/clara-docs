@@ -1,0 +1,3 @@
+<FilesMatch "^install*">
+  ForceType application/octet-stream
+</FilesMatch>

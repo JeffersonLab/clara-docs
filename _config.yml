@@ -11,7 +11,7 @@ author:
   url:        "https://claraweb.jlab.org"
 
 # Main Docs
-include: ["_downloads", "docs"]
+include: [".htaccess", "_downloads", "docs"]
 exclude: ["build", "source", "pubs", "Makefile", "README.md", "scripts", "Dockerfile", "docker-compose.yml"]
 
 # Others

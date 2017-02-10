@@ -44,12 +44,12 @@ DO NOT set CLARA_HOME pointing to <em>clara-cre</em>.
 Download the following script:
 
 
-{% download file: install-claracre-clas, name: install-cre-class %}
+{% download file: install-claracre-clas.sh, name: install-claracre-clas %}
 
-Change permission of this file to be able to execute and
+Change permission of this file to make it executable and
 
 ```
-> ./install-claracre-clas
+> ./install-claracre-clas.sh
 ```
 
 ## CLARA Development Kit (CDK)
@@ -79,19 +79,19 @@ Download the following script:
 In case you want to install CDK with CLAS12 software bundle,
 download the following:
 
-{% download file: install-claradk-clas, name: install-cdk-clas %}
+{% download file: install-claradk-clas.sh, name: install-claradk-clas %}
 
 So, for CDK installation copy downloaded scripts into the *work-dir* and type:
 
 ```
 > cd work-dir
-> install-claradk
+> install-claradk.sh
 ```
 
 or
 
 ```
-> install-claradk-clas
+> install-claradk-clas.sh
 ```
 
 ## Software update
@@ -102,24 +102,24 @@ the only thing you do is simply type:
 If you only installed CLARA CRE
 
 ```
-> $CLARA_HOME/bin/install-claracre -u
+> $CLARA_HOME/bin/install-claracre.sh -u
 ```
 
 or
 
 ```
-> $CLARA_HOME/bin/install-claracre-clas -u
+> $CLARA_HOME/bin/install-claracre-clas.sh -u
 ```
 
 For CDK
 
 ```
-> $CLARA_HOME/bin/update-claradk
+> $CLARA_HOME/bin/update-claradk.sh
 ```
 or
 
 ```
-> $CLARA_HOME/bin/update-claradk-clas
+> $CLARA_HOME/bin/update-claradk-clas.sh
 ```
 
 ## Under the hood

@@ -105,7 +105,7 @@ if (input.mime_type() == CUSTOM_DATA_TYPE.mime_type()) {
 
 To create the response data, the *mime-type* and the value must be set:
 ```cpp
-auto output_value = OutputValue{};
+auto output_value = OutputType{};
 auto output = clara::EngineData{};
 output.set_data(OUTPUT_DATA_TYPE.mime_type(), output_value);
 ```

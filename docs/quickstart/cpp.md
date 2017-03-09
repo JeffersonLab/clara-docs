@@ -4,6 +4,14 @@ title: C++ Quickstart
 link: C++
 ---
 
+## Before you begin
+
+To install the C++ implementation of CLARA,
+follow the instructions to build from source
+[here](https://github.com/JeffersonLab/clara-cpp#build-notes).
+The preferred install directory is `$CLARA_HOME`.
+
+
 ## Creating a service engine
 
 To create a service engine, the class `clara::Engine` must be extended.

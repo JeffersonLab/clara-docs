@@ -52,15 +52,6 @@ public:
 #endif
 ```
 
-Services should be compiled and installed as shared libraries in
-`$CLARA_HOME`.
-These libraries should be named as the service engine they provide.
-For example: `libsimple_engine.so` or `libsimple_engine.dylib`.
-
-<div class="note info">
-Each service engine must be compiled into its own shared library.
-</div>
-
 In order to load the service into the C++ DPE,
 the library that contains the service must provide a specific factory function
 that will return a new instance of the service.
@@ -76,6 +67,62 @@ std::unique_ptr<clara::Engine> create_engine()
 {
     return std::make_unique<SimpleEngine>();
 }
+```
+
+
+## Compiling with CMake
+
+Services should be compiled and installed as shared libraries in
+`$CLARA_HOME`.
+These libraries should be named as the service engine they provide.
+For example: `libsimple_engine.so` or `libsimple_engine.dylib`.
+
+<div class="note info">
+Each service engine must be compiled into its own shared library.
+</div>
+
+[CMake](https://cmake.org/) is the recommended build system for services,
+as the CLARA installation provides the necessary targets to be used as
+dependencies.
+A basic `CMakeLists.txt` file should use C++14,
+find the CLARA library,
+create a shared library per service
+and install the libraries into `$CLARA_HOME`:
+
+```cmake
+project(SIMPLE C CXX)
+cmake_minimum_required(VERSION 3.0)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
+
+# Find CLARA (the CMAKE_INSTALL_PREFIX should be the same used when compiling CLARA)
+find_package(clara CONFIG REQUIRED)
+
+# List the services implementation files, without extension
+set(SERVICES
+  simple_service
+)
+
+# Create one shared library per service
+foreach(service ${SERVICES})
+  add_library(${service} SHARED ${service}.cpp)
+  target_link_libraries(${service} Clara::clara)
+endforeach()
+
+# Install the services
+install(TARGETS ${SERVICES} DESTINATION $ENV{CLARA_HOME}/plugins/simple/lib)
+```
+
+To compile and install the service run the following commands:
+
+```
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=$CLARA_HOME ..
+make
+make install
 ```
 
 

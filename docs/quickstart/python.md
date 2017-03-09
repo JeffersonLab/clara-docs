@@ -1,4 +1,5 @@
 ---
 layout: doc_quick
-title: Python
+title: Python Quickstart
+link: Python
 ---

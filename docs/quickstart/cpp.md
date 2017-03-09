@@ -1,6 +1,7 @@
 ---
 layout: doc_quick
-title: C++
+title: C++ Quickstart
+link: C++
 ---
 
 ## Creating an engine

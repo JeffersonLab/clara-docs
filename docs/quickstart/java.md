@@ -1,4 +1,5 @@
 ---
 layout: doc_quick
-title: Java
+title: Java Quickstart
+link: Java
 ---

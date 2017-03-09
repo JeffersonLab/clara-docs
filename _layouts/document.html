@@ -11,7 +11,8 @@ layout: base
         {% capture doc_url %}/docs/{{ layout.id }}/{{ doc }}.html{% endcapture %}
         {% for md in site.pages %}
           {% if doc_url == md.url %}
-            <li><a href="{{ site.baseurl }}/{{ doc_url }}" {% if doc_url == page.url %}class='current'{% endif %}>{{ md.title }}</a></li>
+            {% capture link_title %}{% if md.link %}{{ md.link }}{% else %}{{ md.title }}{% endif %}{% endcapture %}
+            <li><a href="{{ site.baseurl }}/{{ doc_url }}" {% if doc_url == page.url %}class='current'{% endif %}>{{ link_title }}</a></li>
           {% endif %}
         {% endfor %}
       {% endfor %}

@@ -1,8 +1,5 @@
 ---
 layout: doc_guide
-type: guides
-type_desc: Guides
-id: threading
 title: Service Threading
 ---
 

@@ -1,8 +1,5 @@
 ---
 layout: doc_clas
-type: clas
-type_desc: CLAS Data Processing
-id: data-processing
 title: Data processing
 ---
 

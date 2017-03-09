@@ -1,8 +1,5 @@
 ---
 layout: doc_clas
-type: clas
-type_desc: CLAS Data Processing
-id: resources
 title: Resources
 notoc: true
 ---

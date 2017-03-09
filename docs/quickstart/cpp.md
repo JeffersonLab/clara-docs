@@ -175,3 +175,12 @@ const clara::EngineDataType CUSTOM_DATA_TYPE{
         "binary/custom-type",
         std::make_unique<CustomTypeSerializer>()};
 ```
+
+
+# What's next
+
+* Read a more detailed tutorial in [C++ Tutorial][ct].
+* Explore the C++ API in the [reference documentation][cr].
+
+[ct]: {{ site.baseurl }}/docs/tutorials/cpp.html
+[cr]: {{ site.baseurl }}/api/cpp/

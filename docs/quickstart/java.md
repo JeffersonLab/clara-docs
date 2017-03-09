@@ -83,10 +83,71 @@ public class SimpleEngine implements Engine {
 }
 ```
 
+
+## Compiling with Gradle
+
 The CLARA services should be packaged into a JAR file and installed into
 `$CLARA_HOME/plugins/<name>/services/`.
 The JARs for all dependencies should go into
 `$CLARA_HOME/plugins/<name>/lib/`.
+
+The [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html)
+is the recommended build system.
+A basic `build.gradle` file should contain the CLAS Maven repository,
+the CLARA artifact as dependency,
+and a task to deploy the service into `$CLARA_HOME`.
+Note that both Maven and Gradle expect a
+[default layout](https://docs.gradle.org/current/userguide/java_plugin.html#sec:java_project_layout)
+for the project.
+
+```groovy
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group = 'org.jlab.clara.examples'
+archivesBaseName = 'simple-engine'
+version = '0.1'
+
+configurations {
+    testCompile.extendsFrom compileOnly
+}
+
+repositories {
+    maven {
+        url 'http://clasweb.jlab.org/clas12maven/'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.jlab.coda:jclara:4.3-SNAPSHOT'
+    compile 'org.json:json:20160810'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-library:1.3'
+}
+
+def deploySpec = copySpec {
+    into ('plugins/simple/lib') {
+        from configurations.runtime
+    }
+    into ('plugins/simple/services') {
+        from jar.archivePath
+    }
+}
+
+task deploy(type: Copy, overwrite: true, dependsOn: jar) {
+    into "$System.env.CLARA_HOME"
+    with deploySpec
+}
+```
+
+To compile and deploy the service run the following:
+
+```
+./gradlew deploy
+```
 
 
 ## Processing requests

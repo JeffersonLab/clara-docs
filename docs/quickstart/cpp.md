@@ -52,6 +52,9 @@ public:
 #endif
 ```
 
+The service developer must ensure that the engine is thread-safe.
+CLARA will use the same engine instance to process requests concurrently.
+
 In order to load the service into the C++ DPE,
 the library that contains the service must provide a specific factory function
 that will return a new instance of the service.

@@ -83,6 +83,9 @@ public class SimpleEngine implements Engine {
 }
 ```
 
+The service developer must ensure that the engine is thread-safe.
+CLARA will use the same engine instance to process requests concurrently.
+
 
 ## Compiling with Gradle
 

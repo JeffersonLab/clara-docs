@@ -4,10 +4,10 @@ title: C++ Quickstart
 link: C++
 ---
 
-## Creating an engine
+## Creating a service engine
 
-To create an engine, the class `clara::Engine` must be extended.
-As example, the header file for `simple_engine.hpp` would look like this:
+To create a service engine, the class `clara::Engine` must be extended.
+As example, the header file `simple_engine.hpp` would look like this:
 
 ```cpp
 #ifndef SIMPLE_SERVICE_HPP

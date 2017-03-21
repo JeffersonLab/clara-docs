@@ -28,7 +28,7 @@ for an introduction to writing services in your preferred language.
 [jq]: {{ site.baseurl }}/docs/quickstart/java.html
 [jt]: {{ site.baseurl }}/docs/tutorials/java.html
 [je]: {{ site.baseurl }}/docs/examples/java.html
-[jr]: {{ site.baseurl }}/api/java/
+[jr]: {{ site.baseurl }}/api/java/current/
 
 [cq]: {{ site.baseurl }}/docs/quickstart/cpp.html
 [ct]: {{ site.baseurl }}/docs/tutorials/cpp.html

@@ -251,4 +251,4 @@ public static final EngineDataType CUSTOM_DATA_TYPE =
 * Explore the Java API in the [reference documentation][jr].
 
 [jt]: {{ site.baseurl }}/docs/tutorials/java.html
-[jr]: {{ site.baseurl }}/api/java/
+[jr]: {{ site.baseurl }}/api/java/current/

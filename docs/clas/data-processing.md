@@ -26,7 +26,7 @@ the CLARA run-time environment directory.
 Now just simply type 
 
 ```
-$CLARA_HOME/bin/clara
+$CLARA_HOME/bin/clara-shell
 ```
 
 This will start Clara command line interactive interface (CLI).

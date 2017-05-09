@@ -9,25 +9,26 @@ if ! [ -n "$CLARA_HOME" ]; then
     exit
 fi
 
-rm -rf $CLARA_HOME
+rm -rf "$CLARA_HOME"
 
-mkdir $CLARA_HOME
-mkdir $CLARA_HOME/plugins
-mkdir $CLARA_HOME/plugins/clas12
-mkdir $CLARA_HOME/plugins/clas12/config
+mkdir "$CLARA_HOME"
+mkdir "$CLARA_HOME"/plugins
+mkdir "$CLARA_HOME"/plugins/clas12
+mkdir "$CLARA_HOME"/plugins/clas12/config
 
-PLUGIN=coatjava-4a.3.0
+PLUGIN=4a.4.0
+
 while :
 do
     case "$1" in
-      -u | --update)
-      if ! [ -z ${2+x} ]; then PLUGIN=$2; fi
-      echo $PLUGIN
-	  ;;
+        -u | --update)
+            if ! [ -z "${2+x}" ]; then PLUGIN=$2; fi
+            echo "$PLUGIN"
+            ;;
 
-     *)  # No more options
-	  break
-	  ;;
+        *)  # No more options
+            break
+            ;;
     esac
 done
 
@@ -36,99 +37,108 @@ command_exists () {
 }
 
 if ! command_exists git ; then
-echo "Can not run git. Exiting..."
-exit
+    echo "Can not run git. Exiting..."
+    exit
 fi
 
 rm -rf clara-dk
 
 echo "Creating clara working directory ..."
 mkdir clara-dk
-cd clara-dk
+cd clara-dk || exit
 
+(
 echo "Downloading and building xMsg package ..."
 git clone --depth 1 https://github.com/JeffersonLab/xmsg-java.git
-cd xmsg-java
+cd xmsg-java || exit
 ./gradlew install
+)
 
-cd ..
+(
 echo "Downloading and building jinflux package ..."
 git clone --depth 1 https://github.com/JeffersonLab/JinFlux.git
-cd JinFlux
+cd JinFlux || exit
 ./gradle deploy
+)
 
-cd ..
+(
 echo "Downloading and building clara-java package ..."
 git clone --depth 1 https://github.com/JeffersonLab/clara-java.git
-cd clara-java
+cd clara-java || exit
 ./gradlew install
 ./gradlew deploy
+)
 
-cd ..
 echo "Downloading coat-java and jre packages ..."
-mkdir $CLARA_HOME/jre
+mkdir "$CLARA_HOME"/jre
 
-OS="`uname`"
+OS=$(uname)
 case $OS in
-  'Linux')
-  wget http:/clasweb.jlab.org/clas12offline/distribution/coatjava/"$PLUGIN".tar.gz
-      MACHINE_TYPE=`uname -m`
-      if [ ${MACHINE_TYPE} == 'x86_64' ]; then
-    wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-64.tar.gz
-    mv linux-64.tar.gz $CLARA_HOME/jre
-  else
-     wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-i586.tar.gz
-    mv linux-i586.tar.gz $CLARA_HOME/jre
-  fi
-    ;;
-#  'WindowsNT')
-#    OS='Windows'
-#    ;;
-  'Darwin')
- curl "http://clasweb.jlab.org/clas12offline/distribution/coatjava/"$PLUGIN".tar.gz" -o "$PLUGIN".tar.gz
- curl "https://userweb.jlab.org/~gurjyan/clara-cre/macosx-64.tar.gz" -o macosx-64.tar.gz
-    mv macosx-64.tar.gz $CLARA_HOME/jre
-    ;;
-  *) ;;
+    'Linux')
+         wget https://userweb.jlab.org/~gurjyan/clara-cre/coatjava/coatjava-$PLUGIN.tar.gz
+        MACHINE_TYPE=$(uname -m)
+        if [ "$MACHINE_TYPE" == "x86_64" ]; then
+            wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-64.tar.gz
+            mv linux-64.tar.gz "$CLARA_HOME"/jre
+        else
+            wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-i586.tar.gz
+            mv linux-i586.tar.gz "$CLARA_HOME"/jre
+        fi
+        ;;
+
+    #  'WindowsNT')
+        #    OS='Windows'
+        #    ;;
+
+    'Darwin')
+        curl "https://userweb.jlab.org/~gurjyan/clara-cre/coatjava/coatjava-$PLUGIN.tar.gz" -o coatjava-$PLUGIN.tar.gz
+
+        curl "https://userweb.jlab.org/~gurjyan/clara-cre/macosx-64.tar.gz" -o macosx-64.tar.gz
+        mv macosx-64.tar.gz "$CLARA_HOME"/jre
+        ;;
+
+    *) ;;
 esac
 
-tar xvzf "$PLUGIN".tar.gz
+tar xvzf coatjava-$PLUGIN.tar.gz
 
-cd coatjava
-cp -r etc $CLARA_HOME/plugins/clas12/.
-cp -r bin $CLARA_HOME/plugins/clas12/.
-cp -r scripts $CLARA_HOME/plugins/clas12/.
-cp -r lib $CLARA_HOME/plugins/clas12/.
-rm -f $CLARA_HOME/plugins/clas12/bin/clara-rec
-rm -f $CLARA_HOME/plugins/clas12/README
+(
+cd coatjava || exit
+cp -r etc "$CLARA_HOME"/plugins/clas12/.
+cp -r bin "$CLARA_HOME"/plugins/clas12/.
+cp -r scripts "$CLARA_HOME"/plugins/clas12/.
+cp -r lib "$CLARA_HOME"/plugins/clas12/.
+rm -f "$CLARA_HOME"/plugins/clas12/bin/clara-rec
+rm -f "$CLARA_HOME"/plugins/clas12/README
+)
 
-cd ..
 echo "Downloading and building clasrec-io package ..."
 git clone --depth 1 https://github.com/JeffersonLab/clasrec-io.git
-cd clasrec-io
+(
+cd clasrec-io || exit
 ./gradlew deploy
+)
 
-cd ..
 echo "Downloading and building clasrec-orchestrators package ..."
 git clone --depth 1 https://github.com/JeffersonLab/clasrec-orchestrators.git
-cd clasrec-orchestrators
+(
+cd clasrec-orchestrators || exit
 ./gradlew deploy
+)
 
-rm -rf $CLARA_HOME/plugins/clas12/etc/services
+rm -rf "$CLARA_HOME"/plugins/clas12/etc/services
 
-cd ..
+mkdir "$CLARA_HOME"/data
+mkdir "$CLARA_HOME"/data/input
+mkdir "$CLARA_HOME"/data/output
 
-mkdir $CLARA_HOME/data
-mkdir $CLARA_HOME/data/input
-mkdir $CLARA_HOME/data/output
-
-cp /group/da/vhg/data/* $CLARA_HOME/data/input/
+cp /group/da/vhg/data/* "$CLARA_HOME"/data/input/
 
 echo "Installing jre ..."
-cd $CLARA_HOME/jre
-tar xvzf *.tar.*
-rm -f *.tar.*
+cd "$CLARA_HOME"/jre || exit
+tar xvzf ./*.tar.*
+rm -f ./*.tar.*
 
 hash -r
 
-echo done
+echo "Done!"

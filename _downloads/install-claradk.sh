@@ -15,68 +15,73 @@ command_exists () {
 }
 
 if ! command_exists git ; then
-echo "Can not run git. Exiting..."
-exit
+    echo "Can not run git. Exiting..."
+    exit
 fi
 
 rm -rf clara-dk
 
 echo "Creating clara working directory ..."
 mkdir clara-dk
-cd clara-dk
+cd clara-dk || exit
 
+(
 echo "Downloading and building xMsg package ..."
 git clone --depth 1 https://github.com/JeffersonLab/xmsg-java.git
-cd xmsg-java
+cd xmsg-java || exit
 ./gradlew install
+)
 
-cd ..
+(
 echo "Downloading and building jinflux package ..."
 git clone --depth 1 https://github.com/JeffersonLab/JinFlux.git
-cd JinFlux
+cd JinFlux || exit
 ./gradle deploy
+)
 
-cd ..
+(
 echo "Downloading and building clara-java package ..."
 git clone --depth 1 https://github.com/JeffersonLab/clara-java.git
-cd clara-java
-./gradlew install
-./gradlew deploy
+cd clara-java || exit
+./gradlew install && ./gradlew deploy
+)
 
 
-cd ..
 echo "Downloading jre packages ..."
-rm -rf $CLARA_HOME/clara-cre/jre
-mkdir $CLARA_HOME/clara-cre/jre
+rm -rf "$CLARA_HOME"/clara-cre/jre
+mkdir "$CLARA_HOME"/clara-cre/jre
 
-OS="`uname`"
+OS=$(uname)
 case $OS in
-  'Linux')
-      MACHINE_TYPE=`uname -m`
-      if [ ${MACHINE_TYPE} == 'x86_64' ]; then
-    wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-64.tar.gz
-    mv linux-64.tar.gz $CLARA/clara-cre/jre
-  else
-     wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-i586.tar.gz
-    mv linux-i586.tar.gz $CLARA_HOME/clara-cre/jre
-  fi
-    ;;
-#  'WindowsNT')
-#    OS='Windows'
-#    ;;
-  'Darwin')
- curl "https://userweb.jlab.org/~gurjyan/clara-cre/macosx-64.tar.gz" -o macosx-64.tar.gz
-    mv macosx-64.tar.gz $CLARA_HOME/clara-cre/jre
-    ;;
-  *) ;;
+    'Linux')
+        MACHINE_TYPE=$(uname -m)
+        if [ "$MACHINE_TYPE" == "x86_64" ]; then
+            wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-64.tar.gz
+            mv linux-64.tar.gz "$CLARA_HOME"/clara-cre/jre
+        else
+            wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-i586.tar.gz
+            mv linux-i586.tar.gz "$CLARA_HOME"/clara-cre/jre
+        fi
+        ;;
+
+    #  'WindowsNT')
+        #    OS='Windows'
+        #    ;;
+
+    'Darwin')
+        curl "https://userweb.jlab.org/~gurjyan/clara-cre/macosx-64.tar.gz" -o macosx-64.tar.gz
+        mv macosx-64.tar.gz "$CLARA_HOME"/clara-cre/jre
+        ;;
+
+    *) ;;
 esac
 
-mkdir $CLARA_HOME/clara-cre/plugins
+mkdir "$CLARA_HOME"/clara-cre/plugins
 
 echo "Installing jre ..."
-cd $CLARA_HOME/clara-cre/jre
-tar xvzf *.tar.*
-rm -f *.tar.*
+cd "$CLARA_HOME"/clara-cre/jre || exit
+tar xvzf ./*.tar.*
+rm -f ./*.tar.*
 
-echo `pwd`
-echo done
+pwd
+echo "Done!"

@@ -48,7 +48,11 @@ Change permission of this file to make it executable and
 ```
 > ./install-claracre-clas.sh
 ```
-
+This will install default version of the clas12 software (4a.5.5). In case you want to install specific version xx.x.x
+```
+> ./install-claracre-clas.sh -v xx.x.x
+```
+ 
 ## CLARA Development Kit (CDK)
 
 If you are a prospective developer and would like to contribute in service
@@ -99,13 +103,13 @@ the only thing you do is simply type:
 If you only installed CLARA CRE
 
 ```
-> $CLARA_HOME/bin/install-claracre.sh -u
+> $CLARA_HOME/bin/install-claracre.sh 
 ```
 
 or
 
 ```
-> $CLARA_HOME/bin/install-claracre-clas.sh -u
+> $CLARA_HOME/bin/install-claracre-clas.sh -v xx.x.x
 ```
 
 For CDK

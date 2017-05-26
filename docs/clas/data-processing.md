@@ -32,4 +32,30 @@ $CLARA_HOME/bin/clara-shell
 This will start Clara command line interactive interface (CLI).
 Hierarchical help will navigate you through options to set, customize, run and monitor 
 Clas12 data processing applications.
-
+```
+ vem:~ gurjyan$ clara-shell
+ 
+    ██████╗██╗      █████╗ ██████╗  █████╗
+   ██╔════╝██║     ██╔══██╗██╔══██╗██╔══██╗ 4.3.0
+   ██║     ██║     ███████║██████╔╝███████║
+   ██║     ██║     ██╔══██║██╔══██╗██╔══██║
+   ╚██████╗███████╗██║  ██║██║  ██║██║  ██║
+    ╚═════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+ 
+ 
+  Run 'help' to show available commands.
+ 
+ clara> help
+ Commands:
+ 
+    run           Start CLARA data processing
+    edit          Edit data processing conditions
+    set           Parameter settings
+    show          Show values
+    save          Export configuration to file
+    source        Read and execute commands from file
+ 
+ Use help <command> for details about each command.
+ 
+ clara>
+```

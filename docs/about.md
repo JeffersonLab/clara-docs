@@ -4,6 +4,21 @@ title: About CLARA
 ---
 ## *We become what we love and who we love shapes what we become*
 
+#### Why CLARA?
+
+Some of the contemporary scientific problems require multidisciplinary and/or trans-disciplinary 
+approach to achieve satisfactory answers. Traditional intra-disciplinary research had evolved in 
+quasi-isolation, providing scientists theoretical canons, methodologies and frameworks unique for 
+a specific field of study.  Increasing importance of issues concerning the linked nature of the 
+physical world coupled with a growing understanding of system complexity leave traditional scientific 
+disciplines often struggling. Even within the same discipline different research groups have difficulties 
+linking together different studies.   Unification of software tools, algorithms and computational 
+strategies across multiple disciplines is unimaginable, yet common; machine interpretable data 
+description is quite feasible. So, if we can imagine a software application, build as network of 
+“black box” independent processes that exchange data only, the design a software application for 
+an inter-disciplinary study suddenly becomes a reality. 
+
+
 ## CLARA related publications
 ![Figure 1. Santa Clara]({{ site.baseurl }}/img/clara.png){: .clara}
 

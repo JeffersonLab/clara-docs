@@ -5,9 +5,20 @@ title: Framework
 
 ## Programming paradigm
 
-The CLARA framework uses a service-oriented architecture (SOA)
-to enhance the efficiency, agility, and productivity of data processing activities.
+Software systems, including scientific data processing applications have a distinct 
+component based structure. Most data processing and data mining applications are divided 
+into more or less autonomous cooperating software units, cooperating to achieve data processing 
+goals. So, by considering science data processing application as an organization of cooperating 
+autonomous components, we can potentially improve SDP application agility in terms of deployment, 
+customization, distribution, and scalability. 
+Software systems component-based approach is important simply because it adds a unique 
+value through simplifying the complexity in systems. By breaking apart a data processing 
+application into smaller parts, we demonstrate ways of reducing duplication, increasing 
+cohesion, and lowering coupling between parts, thus making overall system parts easier to 
+understand, more mobile, scalable, and easier to change. 
 
+The CLARA framework uses a micro-services architecture
+to enhance the efficiency, agility, and productivity of data processing activities.
 Services are the primary means through which data processing logic is implemented.
 Data processing applications, developed using the CLARA framework,
 consist of services running in a context that is agnostic

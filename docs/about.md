@@ -4,7 +4,8 @@ title: About CLARA
 ---
 ## *We become what we love and who we love shapes what we become*
 
-#### Why CLARA?
+### Why CLARA?
+![Figure 1. Santa Clara]({{ site.baseurl }}/img/clara.png){: .clara}
 
 Some of the contemporary scientific problems require multidisciplinary and/or trans-disciplinary 
 approach to achieve satisfactory answers. Traditional intra-disciplinary research had evolved in 
@@ -19,8 +20,8 @@ description is quite feasible. So, if we can imagine a software application, bui
 an inter-disciplinary study suddenly becomes a reality. 
 
 
-## CLARA related publications
-![Figure 1. Santa Clara]({{ site.baseurl }}/img/clara.png){: .clara}
+
+#### CLARA related publications
 
 * "CLARA: A Contemporary Approach to Physics Data Processing", 2011 [J. Phys.: Conf. Ser. 331 032013 doi:10.1088/1742-6596/331/3/032013](http://iopscience.iop.org/article/10.1088/1742-6596/331/3/032013/pdf;jsessionid=4B3784968BBFB640E965178DC4FA1A2E.c3.iopscience.cld.iop.org)
 * "Development of A Clara Service for Neutron Reconstruction", 2011 [APS: 2011APS..DNP.EA024C ](http://adsabs.harvard.edu/abs/2011APS..DNP.EA024C)
@@ -29,7 +30,7 @@ an inter-disciplinary study suddenly becomes a reality.
 * "CLARA: The CLAS12 Reconstruction and Analysis framework", 2016 [J. Phys.: Conf. Ser. 762 012009 doi:10.1088/1742-6596/762/1/012009](http://meetings.aps.org/Meeting/CAL13/Session/H3.6)
 
 
-## License
+#### License
 
 CLARA is released with the following license:
 

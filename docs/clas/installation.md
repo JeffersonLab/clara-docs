@@ -30,11 +30,6 @@ to the CLARA CLAS12 distribution (/UserHome/myClara or /UserHome/clas12-v4)
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
 </div>
-Note: Previously recommended dir=clara-cre is no more available for use.
-
-<div class="warning">
-DO NOT set CLARA_HOME pointing to <em>clara-cre</em>.
-</div>
 
 ### CRE installation
 

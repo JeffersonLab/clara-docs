@@ -228,19 +228,16 @@ DPE subscribes control requests, such as "create a container".
 DPE can create multiple containers.
 Every container defines a map of locally deployed service objects.
 Each service object creates and manages object and thread pools
-for every service-engine object, ready to run within a service.
-The number of service-engine objects and the size of the thread pool is set by the user,
+for a specific service engine and engine execute method, ready to run within a service.
+The size of the thread pool is set by the user,
 that is recommended to be less or equal to the number of the processor cores.
 
 Container forwards request for a service to an object from the service-map.
 An appropriate service object from the map
-dispatches the request to one of it's service-engine objects.
-The dispatching process itself is a process of retrieving an available service-engine object
-from the object pool and a thread from a thread pool,
-and passing a request to it.
-It is important to mention that service-engine object has a reference to a same Engine object,
-provided by the engine developer.
-Thus, it is critical requirement to have Engine code thread enabled.
+dispatches the request to one of it's service-engine execute methods.
+The dispatching process itself is a process of retrieving a thread from a thread pool,
+and passing transient data object to engine execute method.
+It is important to mention that it is critical requirement to have Engine code thread enabled.
 Service containers and services, including xMsg registration service,
 are threads within a single process we call DPE.
 However, note that the proxy (xMsgProxy) is a separate process

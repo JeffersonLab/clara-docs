@@ -43,3 +43,7 @@ for an introduction to writing services in your preferred language.
 ## Use cases
 
 TODO.
+
+## Multi-language application demo
+
+[Java-C++](https://github.com/JeffersonLab/clara-demo)

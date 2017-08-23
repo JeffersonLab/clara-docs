@@ -1,6 +1,6 @@
 ---
 layout: doc_clas
-title: CLARA farm memory request
+title: Farm memory request
 ---
 ## Farm memory request
 

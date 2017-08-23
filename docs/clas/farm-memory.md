@@ -12,7 +12,7 @@ title: CLARA farm memory request
 
 
 
-## Multi-threading over 4 cores
+### Multi-threading over 4 cores
 
 ```
 set farm.cpu 4
@@ -24,7 +24,7 @@ set farm.track debug
 set farm.system jlab
 ```
 
-## Multi-threading over 8 cores
+### Multi-threading over 8 cores
 
 ```
 set farm.cpu 8
@@ -36,7 +36,7 @@ set farm.track debug
 set farm.system jlab
 ```
 
-## Multi-threading over 16 cores
+### Multi-threading over 16 cores
 
 ```
 set farm.cpu 16
@@ -47,7 +47,8 @@ set farm.os centos7
 set farm.track debug
 set farm.system jlab
 ```
-## Multi-threading over 32 cores
+
+### Multi-threading over 32 cores
 
 ```
 set farm.cpu 32

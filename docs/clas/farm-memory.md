@@ -5,9 +5,9 @@ title: CLARA farm memory request
 ## Farm memory request
 
 
-   Here are data batch processing configuration option settings for
-   different vertical scaling values ( i.e. number of requested cores).
-    These CLI settings can be stored in a file and be sourced in CLARA
+   Here are CLARA configuration settings for data batch-processing in
+   case of different vertical scaling requests  ( i.e. number of requested cores).
+    These CLI settings can be stored in a file and be sourced in the CLARA
     CLI shell.
 
 

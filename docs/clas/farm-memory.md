@@ -1,62 +1,59 @@
 ---
 layout: doc_clas
-title: Farm memory request
+title: Farm deployment
 ---
-## Farm memory request
+## Farm deployment
 
 
-   Here are CLARA configuration settings for data batch-processing in
-   case of different vertical scaling requests  ( i.e. number of requested cores).
-    These CLI settings can be stored in a file and be sourced in the CLARA
-    CLI shell.
+   CLARA CLI default values were set to values that will work properly
+   for majority of JLAB farm deployments.
+    <div class="note info">
+    <code>Do not change default settings for *farm.memory,
+    farm.disk, farm.os, farm.track, farm.system*, etc unless
+    you are absolutely positive.</code>
+    </div>
 
 
 
-### Multi-threading over 4 cores
+### Basic steps
+
+First define your data set.
+```
+clara> show files
+clara> edit files
+```
+Make sure application description, data-set metadata, and an actual
+repository of data files are visible to the farm nodes.
 
 ```
-set farm.cpu 4
-set farm.memory 16
-set farm.disk 5
-set farm.time 1440
-set farm.os centos7
-set farm.track debug
-set farm.system jlab
+servicesFile:        "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/services.yaml"
+fileList:                 "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/files.list"
+inputDir:              "/group/da/vhg/testbed/clara/myClara/data/input"
+outputDir:           "/group/da/vhg/testbed/clara/myClara/data/output"
 ```
 
-### Multi-threading over 8 cores
+Set data processing session and description.
+<div class="note info">
+    <code> Note that session and description MUST be unique for every farm deployment</code>
+    </div>
 
 ```
-set farm.cpu 8
-set farm.memory 16
-set farm.disk 5
-set farm.time 1440
-set farm.os centos7
-set farm.track debug
-set farm.system jlab
+clara> set session gurjyan1
+clara> set session test1
 ```
 
-### Multi-threading over 16 cores
+Set  desired vertical and horizontal scaling parameters. For *farm.cpu* request
+<=4 we recommend setting *farm.memory 37*. We also suggest
+setting horizontal scaling (*farm.scaling*) >=2, due to the JIT compiler, requiring
+time to setup environment for data-processing.
 
 ```
-set farm.cpu 16
-set farm.memory 18
-set farm.disk 5
-set farm.time 1440
-set farm.os centos7
-set farm.track debug
-set farm.system jlab
+clara> set farm.cpu 8
+clara> set farm.scaling 2
 ```
 
-### Multi-threading over 32 cores
-
+Start farm deployment
 ```
-set farm.cpu 32
-set farm.memory 30
-set farm.disk 5
-set farm.time 1440
-set farm.os centos7
-set farm.track debug
-set farm.system jlab
+clara> run farm
+clara> sho farmStatus
 ```
-

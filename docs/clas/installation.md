@@ -26,7 +26,6 @@ for the Clara Java binding.
 
 First set the CLARA\_HOME environmental variable that points
 to the CLARA CLAS12 distribution (/UserHome/myClara or /UserHome/clas12-v4)
-
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
 </div>

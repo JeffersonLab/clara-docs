@@ -7,12 +7,11 @@ title: Farm deployment
 
    CLARA CLI default values were set to values that will work properly
    for majority of JLAB farm deployments.
-    <div class="note info">
+<div class="note info">
     <code>Do not change default settings for *farm.memory,
-    farm.disk, farm.os, farm.track, farm.system*, etc unless
+    farm.disk, farm.os, farm.track, farm.system*, etc. unless
     you are absolutely positive.</code>
     </div>
-
 
 
 ### Basic steps
@@ -26,15 +25,15 @@ Make sure application description, data-set metadata, and an actual
 repository of data files are visible to the farm nodes.
 
 ```
-servicesFile:        "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/services.yaml"
-fileList:                 "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/files.list"
-inputDir:              "/group/da/vhg/testbed/clara/myClara/data/input"
-outputDir:           "/group/da/vhg/testbed/clara/myClara/data/output"
+servicesFile:  "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/services.yaml"
+fileList:      "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/files.list"
+inputDir:      "/group/da/vhg/testbed/clara/myClara/data/input"
+outputDir:     "/group/da/vhg/testbed/clara/myClara/data/output"
 ```
 
 Set data processing session and description.
 <div class="note info">
-    <code> Note that session and description MUST be unique for every farm deployment</code>
+    <code> Note that session and description MUST be unique for every farm deployment.</code>
     </div>
 
 ```

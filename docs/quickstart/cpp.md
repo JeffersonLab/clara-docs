@@ -148,7 +148,7 @@ and then cast the internal `clara::any` object to the proper type
 ```cpp
 // input is of type clara::EngineData
 if (input.mime_type() == CUSTOM_DATA_TYPE.mime_type()) {
-    const auto& value = input.data<CustomType>();
+    const auto& value = clara::data_cast<CustomType>(input);
     // use value
 }
 ```

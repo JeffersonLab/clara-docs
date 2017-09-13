@@ -176,12 +176,12 @@ For this, services must list what data-types they accept and return:
 ```cpp
 std::vector<clara::EngineDataType> SimpleEngine::input_data_types() const
 {
-    return { clara::type::JSON, CUSTOM_DATA_TYPE };
+    return {clara::type::JSON, CUSTOM_DATA_TYPE};
 }
 
 std::vector<clara::EngineDataType> SimpleEngine::output_data_types() const
 {
-    return { clara::type::JSON, OUTPUT_DATA_TYPE };
+    return {clara::type::JSON, OUTPUT_DATA_TYPE};
 }
 ```
 

@@ -18,7 +18,7 @@ time they become available. So, we throw dice at the very beginning of a researc
 and choose a technology to aid our research. From that point on we are attached at the hip
 to the technology of our choice. Note that a research project can last for a very long time,
 for e.g. high energy and nuclear physics experiment can run for years and data can be analyzed
-and re-analyzed event long after experiment is over. But new technologies that appear during
+and re-analyzed even long after experiment is over. But new technologies that appear during
 a long research time period can offer substantial productivity boost, thus increasing scientific
 outcomes. It is tempting to adopt new technologies if it wasn’t for the roadblock that demand
 recoding legacy code base (for e.g. Spark suggests Scala as a programming language, when we

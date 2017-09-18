@@ -7,18 +7,29 @@ title: About CLARA
 ### Why CLARA?
 ![Figure 1. Santa Clara]({{ site.baseurl }}/img/clara.png){: .clara}
 
-Some of the contemporary scientific problems require multidisciplinary and/or trans-disciplinary 
-approach to achieve satisfactory answers. Traditional intra-disciplinary research had evolved in 
-quasi-isolation, providing scientists theoretical canons, methodologies and frameworks unique for 
-a specific field of study.  Increasing importance of issues concerning the linked nature of the 
-physical world coupled with a growing understanding of system complexity leave traditional scientific 
-disciplines often struggling. Even within the same discipline different research groups have difficulties 
-linking together different studies.   Unification of software tools, algorithms and computational 
-strategies across multiple disciplines is unimaginable, yet common; machine interpretable data 
-description is quite feasible. So, if we can imagine a software application, build as network of 
-“black box” independent processes that exchange data only, the design a software application for 
-an inter-disciplinary study suddenly becomes a reality. 
+Compare to commercial data processing frameworks, such as Apache Spark, Storm or other Hadoop based
+data engines, Clara was designed specifically for scientific data processing needs.
+Even though tools are of paramount importance in science, we think that one’s focus should
+not be on the tool itself, but what you build with that tool. During the past decades,
+we witnessed innovations in software and hardware technologies that improve, and the
+same time confuse our research. In fact, software tools and technologies are developing
+at a pace that will minimize overall scientific results if we adopt new technologies every
+time they become available. So, we throw dice at the very beginning of a research process
+and choose a technology to aid our research. From that point on we are attached at the hip
+to the technology of our choice. Note that a research project can last for a very long time,
+for e.g. high energy and nuclear physics experiment can run for years and data can be analyzed
+and re-analyzed event long after experiment is over. But new technologies that appear during
+a long research time period can offer substantial productivity boost, thus increasing scientific
+outcomes. It is tempting to adopt new technologies if it wasn’t for the roadblock that demand
+recoding legacy code base (for e.g. Spark suggests Scala as a programming language, when we
+still have software components written in Fortran).
 
+So, how Clara is different?
+* Clara offers a micro-services environment where an existing data processing application
+decomposition will help gradual transition to a new technology (new and old technology
+based micro-services can coexist in a single application).
+* Clara allows tools to wrap legacy code in a micro-service. It can present Fortran, C++,
+Python, or Java legacy code segments as a Clara micro-services.
 
 
 #### CLARA related publications

@@ -59,3 +59,16 @@ Clas12 data processing applications.
  
  clara>
 ```
+
+In some cases the wrong terminal settings will affect proper functionality
+of the CLI. Comment the following line (or something similar) in your .login file:
+
+<div class="note info">
+ Stay erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop tabs
+</div>
+
+Also look comment in the .login files, such as:
+
+<div class="note info">
+      # Uncomment this if you are using an NCD Xterminal keyboard.
+</div>

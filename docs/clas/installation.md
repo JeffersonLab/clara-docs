@@ -3,8 +3,8 @@ layout: doc_clas
 title: Installation
 ---
 
-ONE STEP INSTALLATION Y'ALL!!! Who's EXCITED?
-Who's PUMPED to run data processing of your lifetime
+One step installation y'all!!! Who's excited?
+Who's pumped to run data processing of your lifetime
 without writing a single line of code?
 
 Nobody, of course.

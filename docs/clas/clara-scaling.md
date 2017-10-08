@@ -6,32 +6,33 @@ title: Clara scaling
 
 ### Introduction
 
-   CLARA framework is multi-dimensional elastic system, and is capable
-   of auto-scaling vertically as well as horizontally. For example CLARA
-   will multi-thread services within an application to utilize all
-   available cores of a node (vertical scaling), and the same time will
-   also expand to available nodes in the network ( accessible LAN or WAN)
-   to consume cores on network distributed nodes (horizontal scaling).
-   However, it is
-   understood that this multi-dimensional scaling cannot go linearly
-   forever, due to the data/event provisioning system latency. So, to
-   guarantee linear scalability we must process in parallel data/events
-   from different data sources or data provisioning systems.
+CLARA framework is multi-dimensional elastic system,
+and is capable of auto-scaling vertically as well as horizontally.
+For example CLARA will multi-thread services within an application
+to utilize all available cores of a node (vertical scaling),
+and the same time will also expand to available nodes in the network
+(accessible LAN or WAN)
+to consume cores on network distributed nodes (horizontal scaling).
+However, it is understood that this multi-dimensional scaling
+cannot go linearly forever,
+due to the data/event provisioning system latency.
+So, to guarantee linear scalability we must process in parallel
+data/events from different data sources or data provisioning systems.
 
 ### Controlled horizontal scaling
 
-   The CLARA CLI is designed to auto configure horizontal scaling,
-   ensuring linear scalability of entire data processing. As usually
-   *files.list* contains multiple data files to be processed. If the CLI
-   parameter: *farm.scaling* is set to 0, then the entire data set will
-   be processed in a single CLARA DPE (single node), multi-threaded
-   (vertically scaled) over all available cores of that single node.
-   However, this processing will not be horizontally scaled, meaning
-   that the data files in the *files.list* will be processed sequentially.
-   Yet, in case user sets *farm.scaling = n*, that will tell CLARA to
-   process group of n files from the *files.list* data-set in parallel,
-   on different farm nodes. This will speed up processing of the entire
-   data-set n times.
+The CLARA CLI is designed to auto configure horizontal scaling,
+ensuring linear scalability of entire data processing.
+As usually *files.list* contains multiple data files to be processed.
+If the CLI parameter: *farm.scaling* is set to 0,
+then the entire data set will be processed in a single CLARA DPE (single node),
+multi-threaded (vertically scaled) over all available cores of that single node.
+However, this processing will not be horizontally scaled,
+meaning that the data files in the *files.list* will be processed sequentially.
+Yet, in case user sets *farm.scaling = n*, that will tell CLARA
+to process group of n files from the *files.list* data-set in parallel,
+on different farm nodes.
+This will speed up processing of the entire data-set n times.
 
 ### Example
 
@@ -78,8 +79,8 @@ farm.track:          "debug"
 farm.system:         "jlab"
 farm.scaling:        0
 ```
-The files.list contains 11 files.
 
+The files.list contains 11 files.
 ```
 clara> show files
 sidisSkim100k.hipo
@@ -127,6 +128,7 @@ farm.track:          "debug"
 farm.system:         "jlab"
 farm.scaling:        "2"
 ```
+
 This will tell CLARA to split the *files.list* data-set in 6 separate data
 sets, where first 5 will have 2 files and the last 6th will have
 only a single data file, i.e. sidisSkim100k.hipo. Metadata for this data sets

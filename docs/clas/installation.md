@@ -19,6 +19,7 @@ you can solve one of life's most boring petty problems:
 data analysis to understand how things are designed
 or (if you are an atheist) evolved.
 
+
 ## CLARA Run-time Environment (CRE)
 
 Installation and data processing instructions are presented
@@ -34,19 +35,19 @@ to the CLARA CLAS12 distribution (/UserHome/myClara or /UserHome/clas12-v4)
 
 Download the following script:
 
-
 {% download file: install-claracre-clas.sh, name: install-claracre-clas %}
 
 Change permission of this file to make it executable and
-
 ```
 > ./install-claracre-clas.sh
 ```
-This will install default version of the clas12 software (4a.5.5). In case you want to install specific version xx.x.x
+This will install default version of the clas12 software (4a.5.5).
+In case you want to install specific version xx.x.x
 ```
 > ./install-claracre-clas.sh -v xx.x.x
 ```
- 
+
+
 ## CLARA Development Kit (CDK)
 
 If you are a prospective developer and would like to contribute in service
@@ -82,12 +83,11 @@ So, for CDK installation copy downloaded scripts into the *work-dir* and type:
 > cd work-dir
 > install-claradk.sh
 ```
-
 or
-
 ```
 > install-claradk-clas.sh
 ```
+
 
 ## Software update
 
@@ -95,34 +95,29 @@ After receiving CLARA or CLAS12 software update notification
 the only thing you do is simply type:
 
 If you only installed CLARA CRE
-
 ```
 > $CLARA_HOME/bin/install-claracre.sh 
 ```
-
 or
-
 ```
 > $CLARA_HOME/bin/install-claracre-clas.sh -v xx.x.x
 ```
 
 For CDK
-
 ```
 > $CLARA_HOME/bin/update-claradk.sh
 ```
 or
-
 ```
 > $CLARA_HOME/bin/update-claradk-clas.sh
 ```
+
 
 ## Under the hood
 
 After the successful installation steps you will get a structured directory
 pointed by the \$CLARA\_HOME env variable furnished with all necessary
 jars, scripts, data structures and configuration files.
-
 ```
 myClara/
 ├── bin

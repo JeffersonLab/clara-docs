@@ -12,30 +12,38 @@ title: About CLARA
 Compared to commercial data processing frameworks, such as Apache Spark,
 Storm or other Hadoop based data engines, CLARA was designed specifically
 for scientific data processing needs. Even though tools are of paramount
-importance in science, we think that one’s focus should not be on the tool
-itself, but what you build with that tool. During the past decades, we
+importance in science, we think that one's focus should not be on the tool
+itself, but what you build with that tool.
+
+During the past decades, we
 witnessed innovations in software and hardware technologies that improve,
 and the same time confuse our research. In fact, software tools and technologies
 are developing at a pace that will minimize overall scientific results if
 we adopt new technologies every time they become available. So, we throw
 dice at the very beginning of a research process and choose a technology
 to aid our research. From that point on we are attached at the hip to the
-technology of our choice. Note that a research projects can last for a very
+technology of our choice.
+
+Note that a research projects can last for a very
 long time, for example high energy and nuclear physics experiments can run
 for years and data can be analyzed and re-analyzed long after experiment is
 over. However, new technologies that appear during this time period can offer
 a substantial productivity boost, thus increasing scientific outcomes.
 Often adoption of new technologies is stopped by the roadblock of recoding
-a legacy code base (for example. Spark suggests Scala as a programming
+a legacy code base (for example, Spark suggests Scala as a programming
 language, when we still have software components written in Fortran).
 
 
 So, how Clara is different?
-* Clara offers a micro-services environment where an existing data processing application
-decomposition will help gradual transition to a new technology (new and old technology
-based micro-services can coexist in a single application).
-* Clara allows tools to wrap legacy code in a micro-service. It can present Fortran, C++,
-Python, or Java legacy code segments as a Clara micro-services.
+
+* Clara offers a micro-services environment
+  where an existing data processing application decomposition
+  will help gradual transition to a new technology
+  (new and old technology based micro-services can coexist in a single application).
+
+* Clara allows tools to wrap legacy code in a micro-service.
+  It can present Fortran, C++, Python, or Java legacy code segments
+  as a CLARA micro-services.
 
 
 ## CLARA related publications

@@ -4,9 +4,8 @@ title: Farm deployment
 ---
 ## Farm deployment
 
-
-   CLARA CLI default values were set to values that will work properly
-   for majority of JLAB farm deployments.
+CLARA CLI default values were set to values that will work properly
+for majority of JLAB farm deployments.
 
 <div class="note info">
     <code>Do not change default settings for *farm.memory,
@@ -22,6 +21,7 @@ First define your data set.
 clara> show files
 clara> edit files
 ```
+
 Make sure application description, data-set metadata, and an actual
 repository of data files are visible to the farm nodes.
 

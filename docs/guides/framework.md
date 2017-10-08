@@ -275,7 +275,7 @@ and its algorithmic implementation (the private view of the service).
 A CLARA service interface provides the following functionality:
 
 -   Hides the details of the implementation
--   Expresses the service’s functions
+-   Expresses the service's functions
 -   Provides parameters for the service operations
 
 A CLARA service is a software component that offers functionality on a semantic level

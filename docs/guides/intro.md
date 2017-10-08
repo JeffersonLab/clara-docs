@@ -11,7 +11,7 @@ disciplines often struggling. Even within the same discipline different research
 linking together different studies.   Unification of software tools, algorithms and computational
 strategies across multiple disciplines is unimaginable, yet common; machine interpretable data
 description is quite feasible. So, if we can imagine a software application, build as network of
-“black box” independent processes that exchange data only, the design a software application for
+"black box" independent processes that exchange data only, the design a software application for
 an inter-disciplinary study suddenly becomes a reality.
 
 The principal goal of CLARA is to provide a computing environment for efficient Big Data processing.

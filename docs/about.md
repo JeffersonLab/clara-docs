@@ -2,9 +2,11 @@
 layout: page
 title: About CLARA
 ---
-## *We become what we love and who we love shapes what we become*
 
-### Why CLARA?
+{: style="font-size: 1.3em" }
+> *We become what we love and who we love shapes what we become*
+
+## Why CLARA?
 ![Figure 1. Santa Clara]({{ site.baseurl }}/img/clara.png){: .saint-clara}
 
 Compared to commercial data processing frameworks, such as Apache Spark,
@@ -36,7 +38,7 @@ based micro-services can coexist in a single application).
 Python, or Java legacy code segments as a Clara micro-services.
 
 
-#### CLARA related publications
+## CLARA related publications
 
 {: style="text-align: left" }
 * *CLARA: A Contemporary Approach to Physics Data Processing*, 2011,
@@ -55,7 +57,7 @@ Python, or Java legacy code segments as a Clara micro-services.
   [J. Phys.: Conf. Ser. 762 012009 doi:10.1088/1742-6596/762/1/012009](http://meetings.aps.org/Meeting/CAL13/Session/H3.6)
 
 
-#### License
+## License
 
 CLARA is released with the following license:
 

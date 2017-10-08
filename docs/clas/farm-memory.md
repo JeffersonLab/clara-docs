@@ -10,7 +10,7 @@ for majority of JLAB farm deployments.
 {: .note .warning }
 Do not change default settings for *farm.memory*,
 *farm.disk*, *farm.os*, *farm.track*, *farm.system*, etc. unless
-you are absolutely positive.
+you are absolutely sure of the new values.
 
 ### Basic steps
 
@@ -40,17 +40,16 @@ clara> set description test1
 {: .note .info }
 Note that *session* and *description* MUST be unique for every farm deployment.
 
-Set  desired vertical and horizontal scaling parameters. For *farm.cpu* request
-<=4 we recommend setting *farm.memory 37*. We also suggest
-setting horizontal scaling (*farm.scaling*) >=2, due to the JIT compiler, requiring
-time to setup environment for data-processing.
-
+Set desired vertical and horizontal scaling parameters.
+For *farm.cpu* of 4 or more, we recommend setting *farm.memory* to 37.
+We also suggest setting an horizontal scaling (*farm.scaling*) of 2 or more,
+due to the JIT compiler requiring time to setup environment for data-processing.
 ```
 clara> set farm.cpu 8
 clara> set farm.scaling 2
 ```
 
-Start farm deployment
+Start farm deployment:
 ```
 clara> run farm
 clara> sho farmStatus

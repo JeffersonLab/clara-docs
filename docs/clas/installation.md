@@ -25,8 +25,10 @@ or (if you are an atheist) evolved.
 Installation and data processing instructions are presented
 for the CLARA Java binding.
 
-First set the CLARA\_HOME environmental variable that points
-to the CLARA CLAS12 distribution (/UserHome/myClara or /UserHome/clas12-v4)
+First set the `CLARA_HOME` environmental variable that will point
+to the directory where the CLARA CLAS12 distribution will be installed
+(`/UserHome/myClara` or `/UserHome/clas12-v4`)
+
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
 </div>
@@ -37,14 +39,15 @@ Download the following script:
 
 {% download file: install-claracre-clas.sh, name: install-claracre-clas %}
 
-Change permission of this file to make it executable and
+Change permission of this file to make it executable, and run:
 ```
-> ./install-claracre-clas.sh
+./install-claracre-clas.sh
 ```
+
 This will install default version of the CLAS12 software (4a.5.5).
-In case you want to install specific version xx.x.x
+In case you want to install specific version:
 ```
-> ./install-claracre-clas.sh -v xx.x.x
+./install-claracre-clas.sh -v <version>
 ```
 
 
@@ -77,15 +80,14 @@ download the following:
 
 {% download file: install-claradk-clas.sh, name: install-claradk-clas %}
 
-So, for CDK installation copy downloaded scripts into the *work-dir* and type:
+So, for CDK installation copy downloaded scripts into your `<work_dir>` and type:
 
 ```
-> cd work-dir
-> install-claradk.sh
+./install-claradk.sh
 ```
 or
 ```
-> install-claradk-clas.sh
+./install-claradk-clas.sh
 ```
 
 
@@ -94,40 +96,37 @@ or
 After receiving CLARA or CLAS12 software update notification
 the only thing you do is simply type:
 
-If you only installed CLARA CRE
+If you only installed CLARA CRE:
 ```
-> $CLARA_HOME/bin/install-claracre.sh 
+$CLARA_HOME/bin/install-claracre.sh
 ```
 or
 ```
-> $CLARA_HOME/bin/install-claracre-clas.sh -v xx.x.x
+$CLARA_HOME/bin/install-claracre-clas.sh -v <version>
 ```
 
-For CDK
+For CDK:
 ```
-> $CLARA_HOME/bin/update-claradk.sh
+$CLARA_HOME/bin/update-claradk.sh
 ```
 or
 ```
-> $CLARA_HOME/bin/update-claradk-clas.sh
+$CLARA_HOME/bin/update-claradk-clas.sh
 ```
 
 
 ## Under the hood
 
 After the successful installation steps you will get a structured directory
-pointed by the \$CLARA\_HOME env variable furnished with all necessary
-jars, scripts, data structures and configuration files.
+pointed by the `$CLARA_HOME` environment variable
+furnished with all necessary jars, scripts, data and configuration files.
 ```
 myClara/
 ├── bin
-│   ├── clara-batch-dpe
-│   ├── clara-batch-processing
-│   ├── clara-dpe
 │   ├── clara-orchestrator
+│   ├── clara-shell
 │   ├── j_dpe
-│   ├── remove-dpe
-│   └── run-cloud
+│   └── kill-dpes
 ├── lib
 │   ├── jclara-4.3-SNAPSHOT.jar
 │   ├── jeromq-0.3.5.jar
@@ -136,7 +135,7 @@ myClara/
 │   ├── jsr305-3.0.0.jar
 │   ├── protobuf-java-2.6.1.jar
 │   ├── snakeyaml-1.16.jar
-│   └── xmsg-2.3-SNAPSHOT.jar
+│   └── xmsg-2.3.jar
 ├── log
 └── plugins
     └── clas12
@@ -147,13 +146,12 @@ myClara/
         │   └── services.yaml
         ├── etc
         ├── lib
-        │   ├── clasrec-orchestrators-0.8-SNAPSHOT.jar
         │   ├── jevio-4.4.6.jar
         │   └── jsap-2.1.jar
         ├── log
         └── services
 ```
 
-The presented dir structure does not show CLAS12 services jar files
-that are stored in `plugins/clas12/services` dir,
-and also support data structures stored in `plugins/clas12/etc` dir.
+The presented directory tree does not show CLAS12 services jar files
+that are stored in `plugins/clas12/services` directory,
+and also support data structures stored in `plugins/clas12/etc`.

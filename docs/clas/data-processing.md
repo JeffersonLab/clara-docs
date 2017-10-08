@@ -17,22 +17,23 @@ we're not here to tell you what you want.
 Still, something in our science DNA compels us to be honest about this:
 you should follow the following instructions to start data processing yourself.
 
+## CLARA CLI
+
 In this chapter we present instructions
 how to run CLARA based CLAS12 data processing application.
 
-We assume that the CLARA\_HOME env variable is pointing to
+We assume that the `$CLARA_HOME` env variable is pointing to
 the CLARA run-time environment directory.
 
-Now just simply type
+Now just simply type:
 ```
 $CLARA_HOME/bin/clara-shell
 ```
 
 This will start CLARA command line interactive interface (CLI).
-Hierarchical help will navigate you through options to set, customize, run and monitor
+Hierarchical help will navigate you through commands to configure, run and monitor
 CLAS12 data processing applications.
 ```
-vem:~ gurjyan$ clara-shell
 
    ██████╗██╗      █████╗ ██████╗  █████╗
   ██╔════╝██║     ██╔══██╗██╔══██╗██╔══██╗ 4.3.0
@@ -88,12 +89,11 @@ stty erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop t
 </div>
 
 
-## CLI Options
+## CLI commands
 
-Short description of the data processing options can be obtained by executing
-CLI *help* command.
+Short description of the data processing commands can be obtained
+with the *help* command.
 ```
-clara> help set
 clara> help edit
 
   edit services
@@ -112,10 +112,9 @@ clara> help run
 
 ```
 
-### Set Options
+### The set command
 
-*Set* options are designed to configure data processing application that
-is going to be executed on the local or cloud/farm environment.
+The *set* command is used to configure the data processing application.
 ```
 clara> help set
 
@@ -205,27 +204,28 @@ clara> help set
 ```
 {: .scrolling-pre }
 
-#### servicesFile
+#### The services YAML file
 
-This is known as CLARA YAML file. this describes application micro-services and
-their engine details, transient data format and service configuration details.
-One can specify the *servicesFile* location in the CLI by:
+This is known as the CLARA YAML file.
+It describes the application micro-services,
+their transient data format and their configuration parameters.
+The *servicesFile* location can by specified in the CLI by:
 ```
-clara> set servicesFile <path>
+clara> set servicesFile ~/clas12/exp1/services.yml
 ```
 
-You can also edit/modify *servicesFile* while in the CLI environment:
+You can also modify the *servicesFile* from inside the CLI environment:
 ```
 clara> edit services
 ```
 
-Editing is a useful tool, that demonstrates micro-services based application
-flexibility. For e.g. you can comment-out specific services in the
-*servicesFile* to debug specific set of services, and/or add new services,
-expanding functionality of a data processing application.
+This editing command is a useful tool,
+that demonstrates the flexibility of micro-services applications.
+For example, you can comment most of the services
+to debug just a few specific ones,
+or add new services to expand the functionality of the application.
 
-To verify application service composition that will be used to deploy and run
-a data processing application run:
+To verify the application services composition run:
 ```
 clara> show services
 io-services:
@@ -272,11 +272,13 @@ mime-types:
 ```
 {: .scrolling-pre }
 
-#### files, fileList, inputDir and outputDir
+#### Data set options
 
-These options are used to define a data set to be processed. The *inputDir*
-is the path where data files are located. After *inputDir* option is set, one can
-list the directory by:
+The options *files*, *fileList*, *inputDir* and *outputDir* are used
+to define the data-set to be processed.
+
+The *inputDir* is the path where the data files are located.
+After this option is set, one can list the input directory with:
 ```
 clara> show inputDir
 total 241400
@@ -297,11 +299,13 @@ total 241400
 -rwx------  1 gurjyan  JLAB\da    14M Sep 15 15:51 sidis_0100_11.hipo
 -rwx------  1 gurjyan  JLAB\da    14M Sep 15 15:51 sidis_0100_12.hipo
 -rwx------  1 gurjyan  JLAB\da    14M Sep 15 15:51 sidis_0100_13.hipo
-
 ```
-The *fileList* is a path to a
-file (files.list) containing metadata of the data set (at the moment file names only).
-Here is an example of a file.list:
+
+The *fileList* options accepts a path to a text file
+containing metadata of the data set (at the moment file names only),
+one file per line.
+
+Here is an example of the content of this file:
 ```
 clara> show files
 dvcs_35.hipo
@@ -317,15 +321,16 @@ dvcs_44.hipo
 dvcs_45.hipo
 dvcs_46.hipo
 ```
-The *files* option allows to select a set of files for processing from
-a specific data directory. This will set proper *fileLsit* and *inputDir* options automatically.
-For e.g.
+
+The *files* option allows to select a set of files for processing
+from a specific data directory.
+This will set both *fileList* and *inputDir* options automatically.
 
 ```
 clara> set files /lustre/expphy/volatile/clas12/sidis*
 
 clara> show files
-# auto-generated by: set files /Users/gurjyan/Testbed/clara/myClara/data/input/sidis*
+# auto-generated by: set files /lustre/expphy/volatile/clas12/sidis*
 sidis_0100_0.hipo
 sidis_0100_10.hipo
 sidis_0100_11.hipo
@@ -333,29 +338,28 @@ sidis_0100_12.hipo
 sidis_0100_13.hipo
 ```
 
-The *outputDir* option is a path to a directory where processed files
-will be stored.
+The *outputDir* option is the path to the directory
+where processed files will be stored.
 
-#### threads and farm.cpu
+#### Vertical scaling
 
-These two options define vertical scaling factor, i.e. how many events
-will be processed in parallel within a single CLARA DPE. The option *threads*
-defines vertical scaling for the local CLARA deployment and processing, while
-*farm.cpu* defines the same for farm node/DPE/PBS-job deployment. Note that *farm.xxx*
-options are for farm deployment only and are independent from settings for the
-local processing.
+The options *threads* and *farm.cpu* define the **vertical scaling** factor, i.e.
+how many events will be processed in parallel within a single CLARA DPE.
 
-#### farm.scaling
+The option *threads* defines vertical scaling for the local CLARA DPE,
+while *farm.cpu* defines the same for DPEs running on farm jobs.
 
-This option is for batch horizontal scaling only. Horizontal scaling on the cloud
-environment is done elastically by the application orchestrator.
-the *farm.scaling* option in reality defines a data set splitting factor,
-where each subst of the data-set will be processed on a single DPE/farm-node.
-For e.g. for the data set defined by the files.list presented above, the choice of
+#### Horizontal scaling
+
+The option *farm.scaling* sets the batch **horizontal scaling** factor.
+It defines a data set splitting factor into subsets of *N* files,
+where each subset of the input files will be processed on a single DPE/farm-node.
+
+For example, for the data set of twelve files defined above, the command
 ```
 clara> set farm.scaling 3
 ```
-will tell CLARA to request 4 PBS jobs with the following file processing assignments:
+will tell CLARA to request four jobs with the following file processing assignments:
 ```
 Job-1:
   dvcs_35.hipo
@@ -378,14 +382,14 @@ Job-4:
   dvcs_46.hipo
 ```
 
-#### monHost
+#### The data processing monitoring server
 
-One can use this option to define a CLARA data processing monitoring server host IP.
-Periodically every CLARA DPE reports runtime and registration information to a
-monitoring server. Monitoring server must be running to accept these messages.
-User can run it's own monitoring server by executing *$CLARA_HOME/bin/j_mproxy*.
+The option *monHost* sets the IP address of the CLARA monitoring server
+to which the processing DPEs will send periodic runtime and registration reports.
+
+Users can run it's own monitoring server by executing *$CLARA_HOME/bin/j_mproxy*.
 ```
-gurjyan@clara1601:~/Devel/naiads-srb$ $CLARA_HOME/bin/j_mproxy --help
+$ $CLARA_HOME/bin/j_mproxy --help
 usage: jx_proxy [options]
 
   Options:
@@ -394,11 +398,11 @@ usage: jx_proxy [options]
   -verbose                print debug information
 ```
 
-Also, for data visualization the CLARA data archiving and visualization service must
-be running, by executing *$CLARA_HOME/bin/j_idr*
+Also, for data archiving and visualization,
+the CLARA data reporting orchestrator must be running:
 ```
-gurjyan@clara1601:~$ $CLARA_HOME/bin/j_idr --help
-usage: idr [options]
+$ $CLARA_HOME/bin/j_idr --help
+usage: j_idr [options]
 
   Options:
   --m-host <hostname>        use given host for the monitor xMsg-proxy
@@ -408,11 +412,11 @@ usage: idr [options]
 
 {: .note .info }
 For the JLAB farm DPE reporting, as well as for user specific
-online data quality monitoring, default CLARA monitoring server and data
-archiving and visualization service is running that visualizes data at the front end:
-<http://claraweb.jlab.org:3000/dashboard/db/pdp-b>.
+online data quality monitoring,
+the default CLARA monitoring server and data visualization dashboard is running at
+<http://claraweb.jlab.org:3000/dashboard/db/pdp-b>
 
-### Edit Options
+### The edit command
 
 ```
 clara> help edit
@@ -425,7 +429,7 @@ clara> help edit
 
 ```
 
-### Run Options
+### The run command
 
 ```
 clara> help run
@@ -438,7 +442,7 @@ clara> help run
 
 ```
 
-### Show Options
+### The show command
 
 ```
 clara> help show
@@ -474,7 +478,7 @@ clara> help show
     Show farm job submission file.
  ```
 
-### Save Option
+### The save command
 
 ```
  clara> help save
@@ -483,7 +487,7 @@ clara> help show
      Export configuration to file .
 ```
 
-### Source Option
+### The source command
 
 ```
 clara> help source

@@ -2,9 +2,6 @@
 layout: doc_clas
 title: CLARA scaling
 ---
-## CLARA scaling
-
-### Introduction
 
 CLARA framework is multi-dimensional elastic system,
 and is capable of auto-scaling vertically as well as horizontally.
@@ -19,7 +16,7 @@ due to the data/event provisioning system latency.
 So, to guarantee linear scalability we must process in parallel
 data/events from different data sources or data provisioning systems.
 
-### Controlled horizontal scaling
+## Controlled horizontal scaling
 
 The CLARA CLI is designed to auto configure horizontal scaling,
 ensuring linear scalability of entire data processing.
@@ -40,7 +37,7 @@ For example a user prepares a data processing with the following CLARA
 CLI settings
 
 ```
-gurjyan@clara1602:~$ $CLARA_HOME/bin/clara-shell
+gurjyan@clara1602$ $CLARA_HOME/bin/clara-shell
 
    ██████╗██╗      █████╗ ██████╗  █████╗
   ██╔════╝██║     ██╔══██╗██╔══██╗██╔══██╗ 4.3.0
@@ -100,45 +97,20 @@ Now let us require processing groups of 2 files in parallel in different
 farm nodes.
 ```
 clara> set farm.scaling 2
-
-clara> show config
-servicesFile:        "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/services.yaml"
-fileList:            "/group/da/vhg/testbed/clara/myClara/plugins/clas12/config/files.list"
-inputDir:            "/group/da/vhg/testbed/clara/myClara/data/input"
-outputDir:           "/group/da/vhg/testbed/clara/myClara/data/output"
-threads:             32
-reportEvents:        NO VALUE
-skipEvents:          NO VALUE
-maxEvents:           NO VALUE
-logDir:              "/group/da/vhg/testbed/clara/myClara/log"
-feHost:              NO VALUE
-fePort:              NO VALUE
-session:             "gurjyan"
-description:         "clara"
-useFE:               true
-javaMemory:          NO VALUE
-javaOptions:         NO VALUE
-farm.cpu:            32
-farm.memory:         30
-farm.disk:           3
-farm.time:           1440
-farm.os:             "centos7"
-farm.stage:          NO VALUE
-farm.track:          "debug"
-farm.system:         "jlab"
-farm.scaling:        "2"
 ```
 
-This will tell CLARA to split the *files.list* data-set in 6 separate data
-sets, where first 5 will have 2 files and the last 6th will have
-only a single data file, i.e. sidisSkim100k.hipo. Metadata for this data sets
-will be stored in the temporary directory in the $CLARA_HOME/plugins/clas12/config
-under the name .<session> (in the presented example it would be
-$CLARA_HOME/plugins/clas12/config/.clara)
+This will tell CLARA to split the *files.list* data-set in six subsets,
+where the first five will have two files
+and the last one will have a single file.
+
+The internal metadata description for this sub data-sets will be stored
+in a temporary directory inside `$CLARA_HOME/plugins/clas12/config`,
+under the name `.<session>` (in the presented example it would be
+`$CLARA_HOME/plugins/clas12/config/.gurjyan`).
 
 ```
-gurjyan@clara1602:~$ cd $CLARA_HOME/plugins/clas12/config/.clara/
-gurjyan@clara1602:config/.clara$ ls
+gurjyan@clara1602$ cd $CLARA_HOME/plugins/clas12/config/.gurjyan
+gurjyan@clara1602$ ls
 clara_0  clara_1  clara_2  clara_3  clara_4  clara_5
 ```
 
@@ -168,5 +140,4 @@ JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME 
 42398577  gurjyan     A    priority    --         ...urjyan-clara   Aug 22 16:21  --         --         clas12
 42398579  gurjyan     A    priority    --         ...urjyan-clara   Aug 22 16:21  --         --         clas12
 ```
-
 

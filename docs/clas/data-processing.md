@@ -59,18 +59,34 @@ Use help <command> for details about each command.
 clara>
 ```
 
-In some cases the wrong terminal settings will affect proper functionality
-of the CLI. Comment the following line (or something similar) in your .login file:
+#### JLab terminal settings
 
-<div class="note info">
- Stay erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop tabs
+<div class="note warning">
+In some cases the wrong terminal settings
+will affect proper functionality of the CLI.
+
+<p>You may be affected by this problem when the <code>run</code> command
+returns to the prompt without doing anything apparently.</p>
+
+<div class="highlighter-rouge"><pre class="highlight">
+clara> run local
+clara>
+</pre></div>
+
+<p>To fix this, make sure the following line (or something similar)
+<b>is commented</b> in your <code>~/.login</code> file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight">
+stty erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop tabs
+</pre></div>
+
+<p>That line should be after a comment such as:</p>
+
+<div class="highlighter-rouge"><pre class="highlight">
+# Uncomment this if you are using an NCD Xterminal keyboard.
+</pre></div>
 </div>
 
-Also look comment in the .login files, such as:
-
-<div class="note info">
-      # Uncomment this if you are using an NCD Xterminal keyboard.
-</div>
 
 ## CLI Options
 

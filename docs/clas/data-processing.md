@@ -187,6 +187,7 @@ clara> help set
   set farm.system
     Farm batch system. Accepts pbs and jlab.
 ```
+{: .scrolling-pre }
 
 #### servicesFile
 
@@ -253,6 +254,7 @@ configuration:
 mime-types:
   - binary/data-hipo
 ```
+{: .scrolling-pre }
 
 #### files, fileList, inputDir and outputDir
 

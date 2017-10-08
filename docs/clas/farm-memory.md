@@ -7,12 +7,10 @@ title: Farm deployment
 CLARA CLI default values were set to values that will work properly
 for majority of JLAB farm deployments.
 
-<div class="note info">
-    <code>Do not change default settings for *farm.memory,
-    farm.disk, farm.os, farm.track, farm.system*, etc. unless
-    you are absolutely positive.</code>
-    </div>
-
+{: .note .warning }
+Do not change default settings for *farm.memory*,
+*farm.disk*, *farm.os*, *farm.track*, *farm.system*, etc. unless
+you are absolutely positive.
 
 ### Basic steps
 
@@ -34,14 +32,13 @@ outputDir:     "/group/da/vhg/testbed/clara/myClara/data/output"
 
 Set data processing session and description.
 
-<div class="note info">
-    <code> Note that session and description MUST be unique for every farm deployment.</code>
-    </div>
-
 ```
 clara> set session gurjyan1
 clara> set description test1
 ```
+
+{: .note .info }
+Note that *session* and *description* MUST be unique for every farm deployment.
 
 Set  desired vertical and horizontal scaling parameters. For *farm.cpu* request
 <=4 we recommend setting *farm.memory 37*. We also suggest

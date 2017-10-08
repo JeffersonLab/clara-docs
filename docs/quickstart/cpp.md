@@ -80,9 +80,8 @@ Services should be compiled and installed as shared libraries in
 These libraries should be named as the service engine they provide.
 For example: `libsimple_engine.so` or `libsimple_engine.dylib`.
 
-<div class="note info">
+{: .note .info }
 Each service engine must be compiled into its own shared library.
-</div>
 
 [CMake](https://cmake.org/) is the recommended build system for services,
 as the CLARA installation provides the necessary targets to be used as

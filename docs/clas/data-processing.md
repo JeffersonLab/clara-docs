@@ -389,13 +389,12 @@ usage: idr [options]
   --m-port <port>            use given port for the monitor xMsg-proxy
   --db-host <hostname>       the host where InfluxDB is running
 ```
-<div class="note info">
-<code>For the JLAB farm DPE reporting, as well as for user specific
+
+{: .note .info }
+For the JLAB farm DPE reporting, as well as for user specific
 online data quality monitoring, default CLARA monitoring server and data
 archiving and visualization service is running that visualizes data at the front end:
-
-http://claraweb.jlab.org:3000/dashboard/db/pdp-b</code>
-</div>
+<http://claraweb.jlab.org:3000/dashboard/db/pdp-b>.
 
 ### Edit Options
 

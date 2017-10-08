@@ -34,14 +34,14 @@ a legacy code base (for example, Spark suggests Scala as a programming
 language, when we still have software components written in Fortran).
 
 
-So, how Clara is different?
+So, how CLARA is different?
 
-* Clara offers a micro-services environment
+* CLARA offers a micro-services environment
   where an existing data processing application decomposition
   will help gradual transition to a new technology
   (new and old technology based micro-services can coexist in a single application).
 
-* Clara allows tools to wrap legacy code in a micro-service.
+* CLARA allows tools to wrap legacy code in a micro-service.
   It can present Fortran, C++, Python, or Java legacy code segments
   as a CLARA micro-services.
 

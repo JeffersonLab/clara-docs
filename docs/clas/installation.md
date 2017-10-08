@@ -23,7 +23,7 @@ or (if you are an atheist) evolved.
 ## CLARA Run-time Environment (CRE)
 
 Installation and data processing instructions are presented
-for the Clara Java binding.
+for the CLARA Java binding.
 
 First set the CLARA\_HOME environmental variable that points
 to the CLARA CLAS12 distribution (/UserHome/myClara or /UserHome/clas12-v4)
@@ -41,7 +41,7 @@ Change permission of this file to make it executable and
 ```
 > ./install-claracre-clas.sh
 ```
-This will install default version of the clas12 software (4a.5.5).
+This will install default version of the CLAS12 software (4a.5.5).
 In case you want to install specific version xx.x.x
 ```
 > ./install-claracre-clas.sh -v xx.x.x

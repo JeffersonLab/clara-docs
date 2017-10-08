@@ -1,4 +1,4 @@
-# Clara documentation
+# CLARA documentation
 
 ### Dependencies
 

@@ -1,6 +1,6 @@
 ---
 layout: doc_clas
-title: Clara scaling
+title: CLARA scaling
 ---
 ## CLARA scaling
 

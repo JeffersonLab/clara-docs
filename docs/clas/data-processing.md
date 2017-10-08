@@ -28,9 +28,9 @@ Now just simply type
 $CLARA_HOME/bin/clara-shell
 ```
 
-This will start Clara command line interactive interface (CLI).
+This will start CLARA command line interactive interface (CLI).
 Hierarchical help will navigate you through options to set, customize, run and monitor
-Clas12 data processing applications.
+CLAS12 data processing applications.
 ```
 vem:~ gurjyan$ clara-shell
 
@@ -191,7 +191,7 @@ clara> help set
 
 #### servicesFile
 
-This is known as Clara YAML file. this describes application micro-services and
+This is known as CLARA YAML file. this describes application micro-services and
 their engine details, transient data format and service configuration details.
 One can specify the *servicesFile* location in the CLI by:
 ```
@@ -323,8 +323,8 @@ will be stored.
 #### threads and farm.cpu
 
 These two options define vertical scaling factor, i.e. how many events
-will be processed in parallel within a single Clara DPE. The option *threads*
-defines vertical scaling for the local Clara deployment and processing, while
+will be processed in parallel within a single CLARA DPE. The option *threads*
+defines vertical scaling for the local CLARA deployment and processing, while
 *farm.cpu* defines the same for farm node/DPE/PBS-job deployment. Note that *farm.xxx*
 options are for farm deployment only and are independent from settings for the
 local processing.
@@ -339,7 +339,7 @@ For e.g. for the data set defined by the files.list presented above, the choice 
 ```
 clara> set farm.scaling 3
 ```
-will tell Clara to request 4 PBS jobs with the following file processing assignments:
+will tell CLARA to request 4 PBS jobs with the following file processing assignments:
 ```
 Job-1:
   dvcs_35.hipo
@@ -364,8 +364,8 @@ Job-4:
 
 #### monHost
 
-One can use this option to define a Clara data processing monitoring server host IP.
-Periodically every Clara DPE reports runtime and registration information to a
+One can use this option to define a CLARA data processing monitoring server host IP.
+Periodically every CLARA DPE reports runtime and registration information to a
 monitoring server. Monitoring server must be running to accept these messages.
 User can run it's own monitoring server by executing *$CLARA_HOME/bin/j_mproxy*.
 ```
@@ -378,7 +378,7 @@ usage: jx_proxy [options]
   -verbose                print debug information
 ```
 
-Also, for data visualization the Clara data archiving and visualization service must
+Also, for data visualization the CLARA data archiving and visualization service must
 be running, by executing *$CLARA_HOME/bin/j_idr*
 ```
 gurjyan@clara1601:~$ $CLARA_HOME/bin/j_idr --help
@@ -391,7 +391,7 @@ usage: idr [options]
 ```
 <div class="note info">
 <code>For the JLAB farm DPE reporting, as well as for user specific
-online data quality monitoring, default Clara monitoring server and data
+online data quality monitoring, default CLARA monitoring server and data
 archiving and visualization service is running that visualizes data at the front end:
 
 http://claraweb.jlab.org:3000/dashboard/db/pdp-b</code>

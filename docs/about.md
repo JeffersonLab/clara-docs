@@ -50,7 +50,7 @@ So, how Clara is different?
 
 {: style="text-align: left" }
 * *CLARA: A Contemporary Approach to Physics Data Processing*, 2011,
-  [J. Phys.: Conf. Ser. 331 032013 doi:10.1088/1742-6596/331/3/032013](http://iopscience.iop.org/article/10.1088/1742-6596/331/3/032013/pdf;jsessionid=4B3784968BBFB640E965178DC4FA1A2E.c3.iopscience.cld.iop.org)
+  [J. Phys.: Conf. Ser. 331 032013 doi:10.1088/1742-6596/331/3/032013](http://iopscience.iop.org/article/10.1088/1742-6596/331/3/032013/pdf)
 
 * *Development of A Clara Service for Neutron Reconstruction*, 2011,
   [APS: 2011APS..DNP.EA024C](http://adsabs.harvard.edu/abs/2011APS..DNP.EA024C)
@@ -62,7 +62,7 @@ So, how Clara is different?
   [IEEE DOI: 10.1109/BigData.2015.7363972, ISBN: 978 1-4799-9926-2](http://ieeexplore.ieee.org/document/7363972/)
 
 * *CLARA: The CLAS12 Reconstruction and Analysis framework*, 2016,
-  [J. Phys.: Conf. Ser. 762 012009 doi:10.1088/1742-6596/762/1/012009](http://meetings.aps.org/Meeting/CAL13/Session/H3.6)
+  [J. Phys.: Conf. Ser. 762 012009 doi:10.1088/1742-6596/762/1/012009](http://iopscience.iop.org/article/10.1088/1742-6596/762/1/012009/pdf)
 
 
 ## License

@@ -9,6 +9,7 @@ if ! [ -n "$CLARA_HOME" ]; then
     exit
 fi
 
+
 rm -rf "$CLARA_HOME"
 
 PLUGIN=5a.2.0

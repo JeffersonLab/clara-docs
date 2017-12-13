@@ -19,7 +19,6 @@ you can solve one of life's most boring petty problems:
 data analysis to understand how things are designed
 or (if you are an atheist) evolved.
 
-
 ## CLARA Run-time Environment (CRE)
 
 Installation and data processing instructions are presented
@@ -75,8 +74,7 @@ Download the following script:
 
 {% download file: install-claradk, name: install-cdk %}
 
-In case you want to install CDK with CLAS12 software bundle,
-download the following:
+In case you want to install CDK with CLAS12 software bundle, download the following:
 
 {% download file: install-claradk-clas.sh, name: install-claradk-clas %}
 

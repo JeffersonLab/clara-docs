@@ -9,7 +9,7 @@ for majority of JLAB farm deployments.
 
 {: .note .warning }
 Do not change default settings for *farm.memory*,
-*farm.disk*, *farm.os*, *farm.track*, *farm.system*, etc. unless
+*farm.disk*, *farm.os*, and *farm.track*, unless
 you are absolutely sure of the new values.
 
 ### Basic steps
@@ -47,6 +47,7 @@ due to the JIT compiler requiring time to setup environment for data-processing.
 ```
 clara> set farm.cpu 8
 clara> set farm.scaling 2
+clara> set farm.stage /scartch/clara
 ```
 
 Start farm deployment:
@@ -54,3 +55,24 @@ Start farm deployment:
 clara> run farm
 clara> sho farmStatus
 ```
+### Clara CLI JLAB farm setting example
+
+Memory requests are for virtual memory. The requests will be factor 2-3 less in case
+farm control software will react on actual physical memory usage.
+```
+set session gurjyan
+set description test
+set useFE true
+set javaMemory 2
+set farm.cpu    4  (8,   16,  32, 64)
+set farm.memory 16 (16,  20,  30, 40)
+set farm.disk 5
+set farm.time 1440
+set farm.os centos7
+set farm.track debug
+set farm.system jlab
+set farm.stage /scratch/clara
+
+```
+
+

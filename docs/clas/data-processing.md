@@ -118,89 +118,87 @@ The *set* command is used to configure the data processing application.
 ```
 clara> help set
 
-  set servicesFile
+set servicesFile
     Path to the file describing application service composition.
 
-  set files
+set files
     Set the input files to be processed (example: /mnt/data/files/*.evio).
     This will set both fileList and inputDir variables.
 
-  set fileList
-    Path to the file containing the names of data-files to be processed.
+set fileList
+   Path to the file containing the names of data-files to be processed.
 
-  set inputDir
+set inputDir
     The input directory where the files to be processed are located.
 
-  set outputDir
+set outputDir
     The output directory where processed files will be saved.
 
-  set threads
+set threads
     The maximum number of processing threads to be used per node.
 
-  set reportEvents
+set reportEvents
     The frequency to report finished events.
 
-  set skipEvents
+set skipEvents
     The number of events to skip from the input file.
 
-  set maxEvents
+set maxEvents
     The maximum number of events to be processed.
 
-  set logDir
+set logDir
     The directory where log files will be saved.
 
-  set feHost
+set feHost
     The IP address to be used by the front-end DPE.
 
-  set fePort
+set fePort
     The port to be used by the front-end DPE.
 
-  set session
-    The data processing session.
+set session
+    A single word (no spaces) identifying the data processing.
 
-  set description
+set description
     A single word (no spaces) describing the data processing.
 
-  set useFE
-    Use the front-end DPE for reconstruction.
-
-  set javaMemory
+set javaMemory
     DPE JVM memory size (in GB)
 
-  set javaOptions
-    DPE JVM options (overrides javaMemory)
+set javaOptions
+   DPE JVM options (overrides javaMemory)
 
-  set monHost
+set monHost
     The IP address where DPE monitor server is running.
 
-  set farm.cpu
+set farm.cpu
     Farm resource core number request.
 
-  set farm.memory
+set farm.memory
     Farm job memory request (in GB).
 
-  set farm.disk
+set farm.disk
     Farm job disk space request (in GB).
 
-  set farm.time
+set farm.time
     Farm job wall time request (in min).
 
-  set farm.os
+set farm.os
     Farm resource OS.
 
-  set farm.stage
+set farm.stage
     Local directory to stage reconstruction files.
 
-  set farm.track
+set farm.track
     Farm job track.
 
-  set farm.scaling
+set farm.scaling
     Farm horizontal scaling factor. Split the list of input files into
     chunks of the given size to be processed in parallel within separate
     farm jobs.
 
-  set farm.system
+set farm.system
     Farm batch system. Accepts pbs and jlab.
+
 ```
 {: .scrolling-pre }
 
@@ -232,45 +230,74 @@ io-services:
   reader:
     class: org.jlab.clas.std.services.convertors.HipoToHipoReader
     name: HipoToHipoReader
+    # class: org.jlab.clas.std.services.convertors.EtRingToHipoReader
+    # name: EtRingToHipoReader
   writer:
     class: org.jlab.clas.std.services.convertors.HipoToHipoWriter
     name: HipoToHipoWriter
 services:
-  - class: org.jlab.rec.ft.cal.FTCALEngine
-    name: FTCAL
-  - class: org.jlab.rec.ft.hodo.FTHODOEngine
-    name: FTHODO
-  - class: org.jlab.rec.ft.FTEBEngine
-    name: FTEB
-  - class: org.jlab.service.dc.DCHBEngine
-    name: DCHB
-  - class: org.jlab.service.dc.DCTBEngine
-    name: DCTB
-  - class: org.jlab.service.ftof.FTOFEngine
-    name: FTOF
-  - class: org.jlab.rec.cvt.services.CVTReconstruction
+   - class: org.jlab.rec.ft.cal.FTCALEngine
+     name: FTCAL
+   - class: org.jlab.rec.ft.hodo.FTHODOEngine
+     name: FTHODO
+   - class: org.jlab.rec.ft.FTEBEngine
+     name: FTEB
+   - class: org.jlab.service.dc.DCHBEngine
+     name: DCHB
+   - class: org.jlab.service.dc.DCTBEngine
+     name: DCTB
+   - class: org.jlab.service.ftof.FTOFEngine
+     name: FTOF
+   - class: org.jlab.rec.cvt.services.CVTReconstruction
 #  - class: org.jlab.rec.cvt.services.CVTCosmicsReconstruction
-    name: CVT
-  - class: org.jlab.service.ctof.CTOFEngine
-    name: CTOF
-  - class: org.jlab.service.htcc.HTCCReconstructionService
-    name: HTCC
-  - class: org.jlab.service.ltcc.LTCCEngine
-    name: LTCC
-  - class: org.jlab.service.ec.ECEngine
-    name: EC
-  - class: org.jlab.service.eb.EBHBEngine
-    name: EBHB
-  - class: org.jlab.service.eb.EBTBEngine
-    name: EBTB
+     name: CVT
+   - class: org.jlab.service.ctof.CTOFEngine
+     name: CTOF
+   - class: org.jlab.service.htcc.HTCCReconstructionService
+     name: HTCC
+   - class: org.jlab.service.ltcc.LTCCEngine
+     name: LTCC
+   - class: org.jlab.service.ec.ECEngine
+     name: EC
+   - class: org.jlab.service.eb.EBHBEngine
+     name: EBHB
+   - class: org.jlab.service.eb.EBTBEngine
+     name: EBTB
 configuration:
+  global:
+    magnet:
+      torus: -1
+      solenoid: -1
+    ccdb:
+      run: 101
+      variation: custom
+    runtype: mc
+    runmode: calibration
   io-services:
+    reader:
+      system: /tmp/clara-et-system
+      host: localhost
+      port: 11111
+      torus: -1.0
+      solenoid: -1.0
     writer:
       compression: 2
+  services:
+    EC:
+      variation: cosmic
+      timestamp: 333
 mime-types:
   - binary/data-hipo
+
 ```
-{: .scrolling-pre }
+Note that if you need to remove a service from a composition you comment out the service description,
+as shown in the presented composition:
+
+```
+    # class: org.jlab.clas.std.services.convertors.EtRingToHipoReader
+    # name: EtRingToHipoReader
+ ```
+
 
 #### Data set options
 

@@ -1,7 +1,7 @@
 # Setup
 title:        CLARA
-tagline:      Distributed data-stream processing framework
-description:  Microservices architecture for big data analytics
+tagline:      Reactive data-stream processing framework
+description:  Micro-services architecture for data analytics
 baseurl:      "/clara"
 
 # About/contact

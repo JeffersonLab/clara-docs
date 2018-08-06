@@ -13,6 +13,9 @@ For an overview of CLARA,
 read the [**Guides**]({{ site.baseurl }}/docs/guides/) section.
 Or visit [Quick Start]({{ site.baseurl }}/docs/quickstart/)
 for an introduction to writing services in your preferred language.
+If you want your hands get dirty follow this step-by-step instruction
+to develop [multi-lingual application]({{ site.baseurl }}/docs/demo/steps.html).
+
 
 
 ## Supported Languages
@@ -43,7 +46,3 @@ for an introduction to writing services in your preferred language.
 ## Use cases
 
 TODO.
-
-## Multi-language application demo
-
-[Java-C++](https://github.com/JeffersonLab/clara-demo)

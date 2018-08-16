@@ -550,7 +550,7 @@ N is the number defined based on the size of the data set.
 
 #### farm18
 
-The current suggestion (before implementing Slurm workload namager) is to use
+The current suggestion (before implementing Slurm workload manager) is to use
 farm18 nodes in the `exclusive` mode, hence use the following settings:
 
 ```

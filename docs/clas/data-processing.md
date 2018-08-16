@@ -134,6 +134,10 @@ set inputDir
 set outputDir
     The output directory where processed files will be saved.
 
+set outputFilePrefix
+    A single word (no spaces, preferably ending with _) as an
+    output/processed file name prefix.
+
 set threads
     The maximum number of processing threads to be used per node.
 
@@ -184,6 +188,9 @@ set farm.time
 
 set farm.os
     Farm resource OS.
+
+set farm.node
+    Preferred farm node name (JLAB specific, e.g. farm16, farm14, etc.)
 
 set farm.stage
     Local directory to stage reconstruction files.
@@ -522,3 +529,35 @@ clara> help source
   source <file_path>
     Read and execute commands from file .
 ```
+
+## JLAB farm running tips
+
+#### farm13, farm14 and farm16
+
+We suggest for an efficient utilization of the farm to use default core and memory settings:
+`farm.cpu = 16, farm.memory = 40G`.
+These are the suggested settings:
+
+```
+clara> set farm.node farm16
+clara> set farm.stage /scratch/xyz
+clara> set outFilePrefix xyz_
+clara> set farm.disk 25
+clara> set farm.scaling N
+```
+
+N is the number defined based on the size of the data set.
+
+#### farm18
+
+The current suggestion (before implementing Slurm workload namager) is to use
+farm18 nodes in the `exclusive` mode, hence use the following settings:
+
+```
+clara> set farm.node farm18
+clara> set farm.stage /scratch/xyz
+clara> set outFilePrefix xyz_
+clara> set farm.disk 25
+clara> set farm.cpu 80
+```
+No need to set the memory since in the exclusive mode the memory request is ignored.

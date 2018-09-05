@@ -39,14 +39,19 @@ Download the following script:
 {% download file: install-claracre-clas.sh, name: install-claracre-clas %}
 
 Change permission of this file to make it executable, and run:
-```
-./install-claracre-clas.sh
-```
 
-This will install default version of the CLAS12 software (4a.5.5).
-In case you want to install specific version:
 ```
-./install-claracre-clas.sh -v <version>
+./install-claracre-clas.sh -v <CLAS12 plugin version> -f <CLARA distribution version>
+```
+CLAS12 plugin distributions will be accessed from: https://clasweb.jlab.org/clas12offline/distribution/coatjava/
+
+CLARA framework distributions are accessed from: https://userweb.jlab.org/~gurjyan/clara-cre/
+
+E.g. if you plat to install CLARA clara-cre-4.3.2 distribution and CLAS12
+coatjava-5c.6.3 plugin, you should run the installation script with the following options:
+
+```
+./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3
 ```
 
 

@@ -41,11 +41,16 @@ Download the following script:
 Change permission of this file to make it executable, and run:
 
 ```
-./install-claracre-clas.sh -v <CLAS12 plugin version> -f <CLARA distribution version>
+./install-claracre-clas.sh -v <CLAS12 plugin version>
+                           -f <CLARA distribution version>
 ```
-CLAS12 plugin distributions will be accessed from: https://clasweb.jlab.org/clas12offline/distribution/coatjava/
+CLAS12 plugin distributions will be accessed at:
 
-CLARA framework distributions are accessed from: https://userweb.jlab.org/~gurjyan/clara-cre/
+https://clasweb.jlab.org/clas12offline/distribution/coatjava/
+
+CLARA framework distributions are accessed at:
+
+https://userweb.jlab.org/~gurjyan/clara-cre/
 
 E.g. if you plat to install CLARA clara-cre-4.3.2 distribution and CLAS12
 coatjava-5c.6.3 plugin, you should run the installation script with the following options:
@@ -53,8 +58,27 @@ coatjava-5c.6.3 plugin, you should run the installation script with the followin
 ```
 ./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3
 ```
+Information about the framework and the plugin versions, used during the data processing, will be shown and logged:
 
+```
+Distribution  :    clara-cre-4.3.2
+CLAS12 plugin :    coatjava-5c.6.3
 
+==========================================
+               CLARA FE/DPE
+==========================================
+ Name             = 129.57.70.24%7520_java
+ Session          = gurjyan_clara
+ Start time       = 2018-09-05 10:53:46
+ Version          = 4.3
+ Lang             = Java
+ Pool size        = 10
+
+ Proxy Host       = 129.57.70.24
+ Proxy Port       = 7520
+==========================================
+
+```
 ## CLARA Development Kit (CDK)
 
 If you are a prospective developer and would like to contribute in service

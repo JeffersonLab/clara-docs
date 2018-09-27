@@ -34,7 +34,7 @@
     'h4:hover .anchor span:before,',
     'h5:hover .anchor span:before,',
     'h6:hover .anchor span:before {',
-      'content: url("../../img/permalink.png");',
+      'content: url("/clara/assets/images/permalink.png");',
       'position: absolute;',
       'left: 0;',
     '}}'].join('').replace(/\.anchor/g, '.' + className);

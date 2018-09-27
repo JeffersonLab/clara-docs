@@ -7,7 +7,7 @@ title: About CLARA
 > *We become what we love and who we love shapes what we become*
 
 ## Why CLARA?
-![Figure 1. Santa Clara]({{ site.baseurl }}/img/clara.png){: .saint-clara}
+![Figure 1. Santa Clara]({{ site.baseurl }}/assets/images/clara.png){: .saint-clara}
 
 Compared to commercial data processing frameworks, such as Apache Spark,
 Storm or other Hadoop based data engines, CLARA was designed specifically

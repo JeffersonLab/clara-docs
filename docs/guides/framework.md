@@ -117,7 +117,7 @@ adapting a data processing application to changes in one of its components becom
 and simplifies data transfer security (for example by deploying a specialized access control service).
 The CLARA architecture consists of tree layers:
 
-![Figure 1. CLARA architecture]({{ site.baseurl }}/img/Slide14.jpg){: .align-center }
+![Figure 1. CLARA architecture]({{ site.baseurl }}/assets/images/Slide14.jpg){: .align-center }
 
 The first layer is a service bus that provides an abstraction
 of the xMsg publish-subscribe messaging system.
@@ -167,13 +167,13 @@ It hosts the registration service and the shared memory that is used by service 
 to communicate transient data between services within the same DPE.
 This prevents unnecessary copying of the data during service communications.
 
-![Figure 2. Data processing environment]({{ site.baseurl }}/img/Slide11.jpg){: .align-center }
+![Figure 2. Data processing environment]({{ site.baseurl }}/assets/images/Slide11.jpg){: .align-center }
 
 DPE starts service containers that are designed for logical grouping of services.
 Each service container starts one or many services,
 presenting their computing algorithms encapsulated in service engines.
 
-![Figure 3. CLARA basic components]({{ site.baseurl }}/img/dpe.jpg){: .align-center }
+![Figure 3. CLARA basic components]({{ site.baseurl }}/assets/images/dpe.jpg){: .align-center }
 
 ## Service engine
 
@@ -220,7 +220,7 @@ as well as notifying when a successful execution of a particular service (or its
 
 This is the descriptive diagram of the CLARA DPE process that shows inner workings of the system.
 
-![Figure 4. Data processing environment]({{ site.baseurl }}/img/Slide10.jpg){: .align-center }
+![Figure 4. Data processing environment]({{ site.baseurl }}/assets/images/Slide10.jpg){: .align-center }
 
 Every data processing environment contains proxy, shared memory map,
 as well as registration databases for both publishers and subscribers.
@@ -256,7 +256,7 @@ Figure 5 below shows data flow of an application composed of sequentially linked
 The diagram illustrates the use of the shared memory
 to minimize data serialization and copying.
 
-![Figure 5. CLARA Cloud formation. Red arrow indicates serialization of the data.]({{ site.baseurl }}/img/Slide17.jpg){: .align-center }
+![Figure 5. CLARA Cloud formation. Red arrow indicates serialization of the data.]({{ site.baseurl }}/assets/images/Slide17.jpg){: .align-center }
 
 Scalability and flexibility are the most important features
 driving the emergence of Cloud computing.
@@ -300,7 +300,7 @@ In case the service requester is remote
 the transient data envelope will contain the copy of the message,
 thus making 4 frame transient data envelope.
 
-![Figure 6. Transient envelope structure]({{ site.baseurl }}/img/Slide09.jpg){: .align-center }
+![Figure 6. Transient envelope structure]({{ site.baseurl }}/assets/images/Slide09.jpg){: .align-center }
 
 The first field of the envelope is the pub/sub topic that defines the service:
 data consuming service.
@@ -315,7 +315,7 @@ When we say CLARA services are loosely coupled
 we mean that this transient data object is the one and only physical coupling between CLARA services.
 In the Figure 7 is illustrated transient data envelope.
 
-![Figure 7. Transient data envelope to and from a services container with a single service engine]({{ site.baseurl }}/img/Slide01.jpg){: .align-center }
+![Figure 7. Transient data envelope to and from a services container with a single service engine]({{ site.baseurl }}/assets/images/Slide01.jpg){: .align-center }
 
 The metadata segment of the transient data structure defines
 the data type, version, and the author of the transient data object.
@@ -371,12 +371,12 @@ the front-end DPE (FE) registration service controlled database.
 Each registration service (except of the FE registration service)
 periodically pushes it's entire database to FE.
 
-![Figure 8. CLARA service distributed registration database]({{ site.baseurl }}/img/Slide05.jpg){: .align-center }
+![Figure 8. CLARA service distributed registration database]({{ site.baseurl }}/assets/images/Slide05.jpg){: .align-center }
 
 So, now orchestrator has an option querying local DPE for local service discovery
 or accessing FE for registration information of services and/or containers of entire CLARA cloud.
 
-![Figure 9. CLARA service registration and discovery]({{ site.baseurl }}/img/Slide04.jpg){: .align-center }
+![Figure 9. CLARA service registration and discovery]({{ site.baseurl }}/assets/images/Slide04.jpg){: .align-center }
 
 ## More on services
 
@@ -529,7 +529,7 @@ The following CLARA application design operators are used to compose a service b
     Example 2: S1 **,** S2 **+** S3 indicates that
     output from S1 or S2 services will trigger S3 service engine.
 
-    ![Figure 10. CLARA multiplexing or logical OR operator]({{ site.baseurl }}/img/Slide02.jpg){: .align-center }
+    ![Figure 10. CLARA multiplexing or logical OR operator]({{ site.baseurl }}/assets/images/Slide02.jpg){: .align-center }
 
 **&**
 
@@ -544,7 +544,7 @@ The following CLARA application design operators are used to compose a service b
 :   data branching operator indicating the end of a statement.
     For example S1 **+** S2 **+** S3 **+** S4 **;** S3 **+** S5 **+** S6
 
-    ![Figure 11. CLARA logical AND and branching operators]({{ site.baseurl }}/img/Slide03.jpg){: .align-center }
+    ![Figure 11. CLARA logical AND and branching operators]({{ site.baseurl }}/assets/images/Slide03.jpg){: .align-center }
 
 Let us discuss in more details CLARA routing statements.
 CLARA defines two types of routing statements: simple and conditional.
@@ -634,7 +634,7 @@ This is a common scenario
 in high energy or nuclear physics data processing applications,
 when a service needs some sort of calibration data from the calibration service.
 
-![Figure 12. Simple routing with calibration]({{ site.baseurl }}/img/Slide12.jpg){: .align-center }
+![Figure 12. Simple routing with calibration]({{ site.baseurl }}/assets/images/Slide12.jpg){: .align-center }
 
 We accomplish the described routing schema
 by the help of the following CLARA application programming coe:

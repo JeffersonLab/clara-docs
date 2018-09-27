@@ -15,7 +15,7 @@ The xMsg proxy functions like a simple stateless message switch,
 much like http proxy, forwarding network packets between ports.
 xMsg proxy can run as a separate process or within a DPE.
 
-![Figure13. CLARA proxy with the registration and discovery service.]({{ site.baseurl }}/img/Slide13.jpg){: .align-center }
+![Figure13. CLARA proxy with the registration and discovery service.]({{ site.baseurl }}/images/Slide13.jpg){: .align-center }
 
 TCP port 7771 is used by CLARA application orchestrator/s,
 as well as exception and data monitors,

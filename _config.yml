@@ -2,16 +2,26 @@
 title:        CLARA
 tagline:      Reactive data-stream processing framework
 description:  Micro-services architecture for data analytics
-baseurl:      "/clara"
+baseurl:      /clara
 
 # About/contact
 author:
   name:       Vardan Gyurjyan
-  url:        "https://claraweb.jlab.org"
+  url:        https://claraweb.jlab.org
 
 # Main Docs
-include: [".htaccess", "_downloads", "docs"]
-exclude: ["build", "source", "pubs", "Makefile", "README.md", "scripts", "Dockerfile", "docker-compose.yml"]
+include:
+- _downloads
+
+exclude:
+  - build
+  - source
+  - pubs
+  - Makefile
+  - README.md
+  - scripts
+  - Dockerfile
+  - docker-compose.yml
 
 # Others
 markdown: kramdown

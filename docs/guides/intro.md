@@ -1,5 +1,4 @@
 ---
-layout: doc_guide
 title: Background and Motivation
 ---
 Some of the contemporary scientific problems require multidisciplinary and/or trans-disciplinary

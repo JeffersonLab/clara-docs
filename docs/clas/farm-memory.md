@@ -1,5 +1,4 @@
 ---
-layout: doc_clas
 title: Farm deployment
 ---
 ## Farm deployment

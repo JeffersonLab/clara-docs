@@ -1,5 +1,4 @@
 ---
-layout: doc_quick
 title: C++ Quickstart
 link: C++
 ---

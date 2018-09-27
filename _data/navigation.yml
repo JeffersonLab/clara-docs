@@ -1,0 +1,30 @@
+clas:
+  title: CLAS Data Processing
+  documents:
+    - installation
+    - data-processing
+    - clara-scaling
+    - farm-memory
+    - resources
+
+guides:
+  title: Guides
+  documents:
+    - intro
+    - framework
+    - proxies
+    - engine
+    - threading
+
+examples:
+  title: Examples
+  documents: [java, cpp, python]
+
+quickstart:
+  title: Quickstart
+  documents: [java, cpp, python]
+
+tutorials:
+  title: Tutorials
+  documents: [java, cpp, python]
+

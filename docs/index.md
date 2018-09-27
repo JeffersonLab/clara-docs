@@ -14,8 +14,7 @@ read the [**Guides**]({{ site.baseurl }}/docs/guides/) section.
 Or visit [Quick Start]({{ site.baseurl }}/docs/quickstart/)
 for an introduction to writing services in your preferred language.
 If you want your hands get dirty follow this step-by-step instruction
-to develop [multi-lingual application]({{ site.baseurl }}/docs/demo/steps.html).
-
+to develop [multi-lingual application](https://github.com/JeffersonLab/clara-demo).
 
 
 ## Supported Languages

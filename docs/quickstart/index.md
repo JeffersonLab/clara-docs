@@ -1,5 +1,4 @@
 ---
-layout: doc_quick
 title: Quick Start
 notoc: true
 ---

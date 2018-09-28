@@ -1,7 +1,6 @@
 ---
 title: Farm deployment
 ---
-## Farm deployment
 
 CLARA CLI default values were set to values that will work properly
 for majority of JLAB farm deployments.
@@ -11,9 +10,10 @@ Do not change default settings for *farm.memory*,
 *farm.disk*, *farm.os*, and *farm.track*, unless
 you are absolutely sure of the new values.
 
-### Basic steps
+## Basic steps
 
 First define your data set.
+
 ```
 clara> show files
 clara> edit files
@@ -43,6 +43,7 @@ Set desired vertical and horizontal scaling parameters.
 For *farm.cpu* of 4 or more, we recommend setting *farm.memory* to 37.
 We also suggest setting an horizontal scaling (*farm.scaling*) of 2 or more,
 due to the JIT compiler requiring time to setup environment for data-processing.
+
 ```
 clara> set farm.cpu 8
 clara> set farm.scaling 2
@@ -50,14 +51,17 @@ clara> set farm.stage /scartch/clara
 ```
 
 Start farm deployment:
+
 ```
 clara> run farm
 clara> sho farmStatus
 ```
-### Clara CLI JLAB farm setting example
+
+## Clara CLI JLAB farm setting example
 
 Memory requests are for virtual memory. The requests will be factor 2-3 less in case
 farm control software will react on actual physical memory usage.
+
 ```
 set session gurjyan
 set description test
@@ -71,7 +75,4 @@ set farm.os centos7
 set farm.track debug
 set farm.system jlab
 set farm.stage /scratch/clara
-
 ```
-
-

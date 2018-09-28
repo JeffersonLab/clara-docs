@@ -45,11 +45,11 @@ Change permission of this file to make it executable, and run:
 ```
 CLAS12 plugin distributions will be accessed at:
 
-https://clasweb.jlab.org/clas12offline/distribution/coatjava/
+<https://clasweb.jlab.org/clas12offline/distribution/coatjava/>
 
 CLARA framework distributions are accessed at:
 
-https://userweb.jlab.org/~gurjyan/clara-cre/
+<https://userweb.jlab.org/~gurjyan/clara-cre/>
 
 E.g. if you plat to install CLARA clara-cre-4.3.2 distribution and CLAS12
 coatjava-5c.6.3 plugin, you should run the installation script with the following options:

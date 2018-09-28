@@ -10,7 +10,7 @@ clas:
 guides:
   title: Guides
   documents:
-    - intro
+    - index
     - framework
     - proxies
     - engine

@@ -89,9 +89,13 @@ clara>
 </div>
 
 ## IMPORTANT
-Before we describe a data processing configuration options it is worthwhile to emphasize the importance of data set proper description. This includes path to the actual data-file input and output directories, full path to the data-set metadata file, and data-set description.
 
-Note: for every data processing these options must be set, and most importantly, options for `data-set description and data-set metadata file must be unique`.
+Before we describe a data processing configuration options it is worthwhile to emphasize
+the importance of a data-set proper description. This includes path to the actual data-file input and output directories, full path to the data-set metadata file, and data-set description.
+
+{: .note .info }
+For every data processing these options must be set, and most importantly,
+options for `data-set description` and `data-set metadata file` must be unique.
 
 ```
 clara> set fileList
@@ -213,8 +217,7 @@ set farm.track
 
 set farm.scaling
     Farm horizontal scaling factor. Split the list of input files into
-    chunks of the given size to be processed in parallel within separate
-    farm jobs.
+    chunks of the given size to be processed in parallel within separate farm jobs.
 
 set farm.system
     Farm batch system. Accepts pbs and jlab.
@@ -545,11 +548,12 @@ clara> help source
 
 ## JLAB farm running tips
 
-### Chefs: Production data processing jobs
+### Chef: Production data processing jobs
 
-We recommend using Clara’s JLAB data-processing auto-configuration option to insure optimized performance and efficient utilization of the farm resources. In this case the
-only requirement is to set the `farm.exclusive`, `fileList` and `description` (note: fileList and description must be unique for every farm job submission) options.
-E.g.
+We recommend using Clara’s JLAB data-processing auto-configuration option to insure
+optimized performance and efficient utilization of the farm resources. In this case the
+only requirement is to set the `farm.exclusive`, `fileList` and `description` options
+(note: fileList and description must be unique for every farm job submission). E.g.
 
 ```
 clara> set fileList
@@ -558,8 +562,9 @@ clara> set farm.exclusive farm18 (farm16, farm14, farm13, etc)
 clara> set outFilePrefix xyz_ (optional)
 clara> set farm.scaling N (optional)
 ```
-These settings will guarantee an exclusive access to a specified node flavor and will run hardware optimized (NUMA socket affinity, cores and memory) Clara processes.
-### Users: Private data processing jobs
+These settings will guarantee an exclusive access to a specified node-flavor
+and will run hardware optimized (NUMA socket affinity, cores and memory) Clara processes.
+### User: Private data processing jobs
 
 #### farm13, farm14 and farm16
 

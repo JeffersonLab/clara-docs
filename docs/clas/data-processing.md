@@ -32,6 +32,7 @@ $CLARA_HOME/bin/clara-shell
 This will start CLARA command line interactive interface (CLI).
 Hierarchical help will navigate you through commands to configure, run and monitor
 CLAS12 data processing applications.
+
 ```
 
    ██████╗██╗      █████╗ ██████╗  █████╗
@@ -86,6 +87,16 @@ clara>
 <code># Uncomment this if you are using an NCD Xterminal keyboard.
 </code></pre></div>
 </div>
+
+## IMPORTANT
+Before we describe a data processing configuration options it is worthwhile to emphasize the importance of data set proper description. This includes path to the actual data-file input and output directories, full path to the data-set metadata file, and data-set description.
+
+Note: for every data processing these options must be set, and most importantly, options for `data-set description and data-set metadata file must be unique`.
+
+```
+clara> set fileList
+clara> set description
+```
 
 
 ## CLI commands
@@ -189,7 +200,10 @@ set farm.os
     Farm resource OS.
 
 set farm.node
-    Preferred farm node name (JLAB specific, e.g. farm16, farm14, etc.)
+    Preferred farm node name (JLAB specific, e.g. farm18[16,14,13] etc.)
+
+set farm.exclusive
+    Exclusive farm node request (JLAB specific, e.g. farm18[16,14,13], etc.)
 
 set farm.stage
     Local directory to stage reconstruction files.
@@ -531,6 +545,22 @@ clara> help source
 
 ## JLAB farm running tips
 
+### Chefs: Production data processing jobs
+
+We recommend using Clara’s JLAB data-processing auto-configuration option to insure optimized performance and efficient utilization of the farm resources. In this case the
+only requirement is to set the `farm.exclusive`, `fileList` and `description` (note: fileList and description must be unique for every farm job submission) options.
+E.g.
+
+```
+clara> set fileList
+clara> set description
+clara> set farm.exclusive farm18 (farm16, farm14, farm13, etc)
+clara> set outFilePrefix xyz_ (optional)
+clara> set farm.scaling N (optional)
+```
+These settings will guarantee an exclusive access to a specified node flavor and will run hardware optimized (NUMA socket affinity, cores and memory) Clara processes.
+### Users: Private data processing jobs
+
 #### farm13, farm14 and farm16
 
 We suggest for an efficient utilization of the farm to use default core and memory settings:
@@ -538,8 +568,10 @@ We suggest for an efficient utilization of the farm to use default core and memo
 These are the suggested settings:
 
 ```
+clara> set fileList
+clara> set description
 clara> set farm.node farm16
-clara> set farm.stage /scratch/xyz
+clara> set farm.stage /scratch/clara/xyz
 clara> set outFilePrefix xyz_
 clara> set farm.disk 25
 clara> set farm.scaling N
@@ -553,8 +585,10 @@ The current suggestion (before implementing Slurm workload manager) is to use
 farm18 nodes in the `exclusive` mode, hence use the following settings:
 
 ```
+clara> set fileList
+clara> set description
 clara> set farm.node farm18
-clara> set farm.stage /scratch/xyz
+clara> set farm.stage /scratch/clara/xyz
 clara> set outFilePrefix xyz_
 clara> set farm.disk 25
 clara> set farm.cpu 80

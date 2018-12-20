@@ -32,6 +32,19 @@ to the directory where the CLARA CLAS12 distribution will be installed
 </div>
 
 ### CRE installation
+<div class="note info">
+<coda>
+Clara-v4.3.5 release notes: <br>
+(update existing installations are recommended)<br><br>
+- Thread affinity implementation: sleep 10sec. before starting the next NUMA attached process in a data-processing node.<br>
+
+- Run Clara process: coordinate DPE and associated Orchestrator start-up. Start Orchestrator after DPE successful startup only.<br>
+
+- Farm default parameters: farm.scale = disabled, farm.memory=0, farm.cpu=0, farm.disk=5GB, farm.time=24hours.<br>
+
+- CLAS12 plugin installation: user confirmation request before removing the old installation.
+</coda>
+</div>
 
 Download the following script:
 

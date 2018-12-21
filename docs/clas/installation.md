@@ -48,7 +48,7 @@ Clara-v4.3.5 release notes: <br>
 </coda>
 </div>
 
-Download the following script:
+Download  the following script:
 
 {% download file: install-claracre-clas.sh, name: install-claracre-clas %}
 

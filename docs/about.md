@@ -3,8 +3,8 @@ layout: page
 title: About CLARA
 ---
 
-{: style="font-size: 1.3em" }
-> ***We become what we love and who we love shapes what we become***
+{: style="font-size: 1.4em" }
+> ***We become what we love, and who we love shapes what we become.***
 
 ## Why CLARA?
 ![Figure 1. Santa Clara]({{ site.baseurl }}/assets/images/clara.png){: .saint-clara}

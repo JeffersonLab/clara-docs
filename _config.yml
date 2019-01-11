@@ -7,6 +7,7 @@ baseurl:      /clara
 # About/contact
 author:
   name:       Vardan Gyurjyan
+  email:      gurjyan@jlab.org
   url:        https://claraweb.jlab.org
 
 # Main Docs

@@ -1,28 +1,13 @@
 ---
-title: Data processing
+title: CLI and Processing
 ---
-
-Really, though,
-do we need to get our hands dirty and start processing the raw data?
-After all we did our fair share when we were post-docs.
-Just sit back, relax and listen Erik Satie.
-The DST will be ready soon...
-But OK, I know, I know you're one of the small minority of scientists that can't wait,
-who need to process subset of data quickly,
-define and customize data processing conditions (I am not suggesting post-doc mistrust here),
-or you think you do, or (more accurately) feel like you do.
-We're happy to exploit that feeling. I want to be clear though:
-we're not here to tell you what you want.
-Still, something in our science DNA compels us to be honest about this:
-you should follow the following instructions to start data processing yourself.
-
 ## CLARA CLI
 
 In this chapter we present instructions
-how to run CLARA based CLAS12 data processing application.
+how to run CLARA based data processing application.
 
 We assume that the `$CLARA_HOME` env variable is pointing to
-the CLARA run-time environment directory.
+the CLARA run-time environment (CRE) directory.
 
 Now just simply type:
 ```
@@ -60,7 +45,7 @@ Use help <command> for details about each command.
 clara>
 ```
 
-#### JLab terminal settings
+#### Terminal settings
 
 <div class="note warning">
 In some cases the wrong terminal settings
@@ -91,7 +76,9 @@ clara>
 ## IMPORTANT
 
 Before we describe a data processing configuration options it is worthwhile to emphasize
-the importance of a data-set proper description. This includes path to the actual data-file input and output directories, full path to the data-set metadata file, and data-set description.
+the importance of the `application service composition` and data-set proper description.
+This includes path to the actual data-file input and output directories,
+full path to the data-set metadata file, and data-set description.
 
 {: .note .info }
 For every data processing these options must be set, and most importantly,
@@ -225,12 +212,12 @@ set farm.system
 ```
 {: .scrolling-pre }
 
-#### The services YAML file
+#### Application service composition. Services YAML file
 
 This is known as the CLARA YAML file.
 It describes the application micro-services,
 their transient data format and their configuration parameters.
-The *servicesFile* location can by specified in the CLI by:
+The *servicesFile* location can by specified in the CLI by. E.g.
 ```
 clara> set servicesFile ~/clas12/exp1/services.yml
 ```

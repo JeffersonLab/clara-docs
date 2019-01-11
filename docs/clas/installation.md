@@ -93,66 +93,14 @@ CLAS12 plugin :    coatjava-5c.6.3
 ==========================================
 
 ```
-## CLARA Development Kit (CDK)
-
-If you are a prospective developer and would like to contribute in service
-development effort, you need to install the CDK.
-This will provide CLARA entire source base.
-However for CDK installation your system must be prepared.
-
-### Installation Prerequisites
-
-For the CDK successful installation,
-the following software components are required on the installation computer.
-
-1.  Git
-2.  Gradle
-
-As you can see prerequisite is not extensive
-and most likely they are already installed on majority of systems.
-
-### CDK installation
-
-Download the following script:
-
-{% download file: install-claradk, name: install-cdk %}
-
-In case you want to install CDK with CLAS12 software bundle, download the following:
-
-{% download file: install-claradk-clas.sh, name: install-claradk-clas %}
-
-So, for CDK installation copy downloaded scripts into your `<work_dir>` and type:
-
-```
-./install-claradk.sh
-```
-or
-```
-./install-claradk-clas.sh
-```
-
 
 ## Software update
 
 After receiving CLARA or CLAS12 software update notification
 the only thing you do is simply type:
 
-If you only installed CLARA CRE:
-```
-$CLARA_HOME/bin/install-claracre.sh
-```
-or
 ```
 $CLARA_HOME/bin/install-claracre-clas.sh -v <version>
-```
-
-For CDK:
-```
-$CLARA_HOME/bin/update-claradk.sh
-```
-or
-```
-$CLARA_HOME/bin/update-claradk-clas.sh
 ```
 
 

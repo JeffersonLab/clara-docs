@@ -1,5 +1,5 @@
 clas:
-  title: CLAS Data Processing
+  title: JLAB CLAS12    Instructions
   documents:
     - installation
     - data-processing
@@ -16,9 +16,9 @@ guides:
     - engine
     - threading
 
-examples:
-  title: Examples
-  documents: [java, cpp, python]
+services:
+  title: Services
+  documents: [Conduit, HIPOReader, HIPOWriter, Shell]
 
 quickstart:
   title: Quickstart
@@ -26,5 +26,5 @@ quickstart:
 
 tutorials:
   title: Tutorials
-  documents: [java, cpp, python]
+  documents: [installation, composition, running]
 

@@ -45,7 +45,7 @@ Use help <command> for details about each command.
 clara>
 ```
 
-#### Terminal settings
+### Terminal settings
 
 <div class="note warning">
 In some cases the wrong terminal settings
@@ -73,7 +73,7 @@ clara>
 </code></pre></div>
 </div>
 
-## IMPORTANT
+### Important
 
 Before we describe a data processing configuration options it is worthwhile to emphasize
 the importance of the `application service composition` and data-set proper description.
@@ -90,7 +90,7 @@ clara> set description
 ```
 
 
-## CLI commands
+### CLI commands
 
 Short description of the data processing commands can be obtained
 with the *help* command.
@@ -212,7 +212,7 @@ set farm.system
 ```
 {: .scrolling-pre }
 
-#### Application service composition. Services YAML file
+### Application service composition. Services YAML file
 
 This is known as the CLARA YAML file.
 It describes the application micro-services,
@@ -240,34 +240,13 @@ io-services:
   reader:
     class: org.jlab.clas.std.services.convertors.HipoToHipoReader
     name: HipoToHipoReader
-    # class: org.jlab.clas.std.services.convertors.EtRingToHipoReader
-    # name: EtRingToHipoReader
   writer:
     class: org.jlab.clas.std.services.convertors.HipoToHipoWriter
     name: HipoToHipoWriter
 services:
    - class: org.jlab.rec.ft.cal.FTCALEngine
      name: FTCAL
-   - class: org.jlab.rec.ft.hodo.FTHODOEngine
-     name: FTHODO
-   - class: org.jlab.rec.ft.FTEBEngine
-     name: FTEB
-   - class: org.jlab.service.dc.DCHBEngine
-     name: DCHB
-   - class: org.jlab.service.dc.DCTBEngine
-     name: DCTB
-   - class: org.jlab.service.ftof.FTOFEngine
-     name: FTOF
-   - class: org.jlab.rec.cvt.services.CVTReconstruction
-#  - class: org.jlab.rec.cvt.services.CVTCosmicsReconstruction
-     name: CVT
-   - class: org.jlab.service.ctof.CTOFEngine
-     name: CTOF
-   - class: org.jlab.service.htcc.HTCCReconstructionService
-     name: HTCC
-   - class: org.jlab.service.ltcc.LTCCEngine
-     name: LTCC
-   - class: org.jlab.service.ec.ECEngine
+    - class: org.jlab.service.ec.ECEngine
      name: EC
    - class: org.jlab.service.eb.EBHBEngine
      name: EBHB
@@ -309,7 +288,7 @@ as shown in the presented composition:
  ```
 
 
-#### Data set options
+### Data set options
 
 The options *files*, *fileList*, *inputDir* and *outputDir* are used
 to define the data-set to be processed.
@@ -378,7 +357,7 @@ sidis_0100_13.hipo
 The *outputDir* option is the path to the directory
 where processed files will be stored.
 
-#### Vertical scaling
+### Vertical scaling
 
 The options *threads* and *farm.cpu* define the **vertical scaling** factor, i.e.
 how many events will be processed in parallel within a single CLARA DPE.
@@ -386,7 +365,7 @@ how many events will be processed in parallel within a single CLARA DPE.
 The option *threads* defines vertical scaling for the local CLARA DPE,
 while *farm.cpu* defines the same for DPEs running on farm jobs.
 
-#### Horizontal scaling
+### Horizontal scaling
 
 The option *farm.scaling* sets the batch **horizontal scaling** factor.
 It defines a data set splitting factor into subsets of *N* files,
@@ -419,7 +398,7 @@ Job-4:
   dvcs_46.hipo
 ```
 
-#### The data processing monitoring server
+### The data processing monitoring server
 
 The option *monHost* sets the IP address of the CLARA monitoring server
 to which the processing DPEs will send periodic runtime and registration reports.

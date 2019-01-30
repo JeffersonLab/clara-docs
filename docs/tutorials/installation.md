@@ -3,10 +3,8 @@ title: Installation
 ---
 ## CLARA Run-time Environment (CRE)
 
-<div class="note info">
-<code>
+<div class="note warning">
 Installation instructions here are presented for the CLARA Java binding.
- </code>
 </div>
 
 For C++ and Python binding installation instructions can be found at:

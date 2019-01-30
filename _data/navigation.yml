@@ -5,6 +5,7 @@ clas:
     - data-processing
     - clara-scaling
     - farm-memory
+    - clara-scripts
     - resources
 
 guides:

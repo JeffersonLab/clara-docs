@@ -40,6 +40,13 @@ run local
 
 ## Farm shared processing (farm-shared.cls)
 
+Here we are not requesting a specific JLAB farm node flavor.
+If you need to run on a specific node add the following line to the script:
+```
+# supported farm node flavors: farm18, farm16, farm14, farm13, qcd12
+set farm.node farm18
+```
+
 ```
 # Clara script example
 # gurjyan 01.30.19
@@ -71,7 +78,7 @@ show farmStatus
 # for more details
 ```
 
-## Farm18 exclusive processing (farm18-exclusive.cls)
+## Exclusive processing (farm18-exclusive.cls)
 
 ```
 # Clara script example
@@ -93,43 +100,8 @@ set logDir /Users/gurjyan/Testbed/clara/log
 set session gurjyanSession
 set description gurjyanDescription
 set farm.stage /scratch/clara/gurjyan
-set farm.node farm18
-set farm.cpu 80
-set farm.disk 25
-set farm.scaling 2
-run farm
-show farmStatus
-
-# Refer to https://claraweb.jlab.org/clara/docs/clas/data-processing.html
-# for more details
-```
-
-## JLAB farm exclusive processing (farm16-exclusive.cls)
-
-```
-# Clara script example
-# gurjyan 01.30.19
-#
-# Note:
-# Data processing will fail in case composition and data-set description
-# files are not available.
-# In the case log and IO directories are not available Clara will
-# use default: $CLARA_HOME/log and $CLARA_HOME/data/input(output)
-# directories.
-
-set servicesFile /Users/gurjyan/Testbed/clara/services.yml
-set fileList /Users/gurjyan/Testbed/clara/files.list
-set inputDir /Users/gurjyan/Testbed/clara/data/input
-set outputDir /Users/gurjyan/Testbed/clara/data/out
-set outputFilePrefix gurjyan_
-set logDir /Users/gurjyan/Testbed/clara/log
-set session gurjyanSession
-set description gurjyanDescription
-set farm.stage /scratch/clara/gurjyan
-
-# JLAB farm accepted nodes: farm13, farm14 and qcd12
-set farm.node farm16
-set farm.disk 25
+# supported farm node flavors: farm18, farm16, farm14, farm13, qcd12
+set farm.exclusive farm18
 set farm.scaling 2
 run farm
 show farmStatus

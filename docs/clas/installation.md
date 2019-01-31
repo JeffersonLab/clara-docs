@@ -26,9 +26,15 @@ for the CLARA Java binding.
 First set the `CLARA_HOME` environmental variable that will point
 to the directory where the CLARA CLAS12 distribution will be installed
 (`/UserHome/myClara` or `/UserHome/clas12-v4`)
+Also you should specify a work directory where user specific data will be stored,
+including data processing application composition and data-set description files,
+farm deployment scripts, etc. For that assign `CLARA_USER` environmental variable to
+a user specific work directory.
+
 
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
+<code>setenv CLARA_USER <em>/UserHome</em>/work</code>
 </div>
 
 ### CRE installation

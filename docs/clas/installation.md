@@ -34,6 +34,7 @@ a user specific work directory.
 
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
+<div></div>
 <code>setenv CLARA_USER <em>/UserHome</em>/work</code>
 </div>
 

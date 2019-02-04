@@ -523,8 +523,6 @@ services:
   - class: my.own.service.dc.DCHBEngineVersion
     name: myDCHB1
   - class: my.own.service.dc.DCHBEngineVersion
-    name: myDCHB1
-  - class: my.own.service.dc.DCHBEngineVersion
     name: myDCHB2
 configuration:
   io-services:
@@ -551,5 +549,10 @@ Clara application composition YML file is a representation of a directed graph,
 where data flows from services described at the top to the bottom.
 </div>
 
+### Running on a farm
+*Old macdonald sends a farmJob e-i-e-i-o...*
+
+Yup, this is that easy. You do not have to write a farm submission scripts, and
+farm deployment can be done without leaving the Clara CLI.
 
 

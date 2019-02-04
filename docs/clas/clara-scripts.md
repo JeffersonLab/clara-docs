@@ -1,5 +1,5 @@
 ---
-title: Clara Scripting
+title: Scripting
 ---
 <div class="note info">
 <code>$CLARA_HOME/bin/clara-shell xyz.cls</code>

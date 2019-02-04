@@ -1,5 +1,5 @@
 ---
-title: Data processing
+title: Processing
 ---
 
 Really, though,

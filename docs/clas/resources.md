@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Additional resources
 notoc: true
 ---
 

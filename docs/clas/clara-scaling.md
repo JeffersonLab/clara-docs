@@ -1,5 +1,5 @@
 ---
-title: CLARA scaling
+title: Scaling
 ---
 
 CLARA framework is multi-dimensional elastic system,

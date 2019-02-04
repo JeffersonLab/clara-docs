@@ -1,12 +1,14 @@
 clas:
   title: JLAB CLAS12 Instructions
   documents:
+    - hadson
     - installation
     - data-processing
+    - farm-deployment
     - clara-scaling
-    - farm-memory
     - clara-scripts
     - resources
+    - release-notes
 
 guides:
   title: Guides

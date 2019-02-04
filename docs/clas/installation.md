@@ -28,32 +28,21 @@ to the directory where the CLARA CLAS12 distribution will be installed
 (`/UserHome/myClara` or `/UserHome/clas12-v4`)
 Also you should specify a work directory where user specific data will be stored,
 including data processing application composition and data-set description files,
-farm deployment scripts, etc. For that assign `CLARA_USER` environmental variable to
+farm deployment scripts, etc. For that assign `CLARA_USER_DATA` environmental variable to
 a user specific work directory.
 
 
 <div class="note info">
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
 <div></div>
-<code>setenv CLARA_USER <em>/UserHome</em>/work</code>
+<code>setenv CLARA_USER_DATA <em>/UserHome</em>/work</code>
+Note that CLARA_USER_DATA is optional, in case you are installing your own Clara environment.
+In all cases, if you forget to set CLARA_USER_DATA variable it will assume that it is pointing to
+the mandatory $CLARA_HOME variable. This means that if you are using the common Clara installation you might face
+permission exceptions at the run-time.
 </div>
 
 ### CRE installation
-<div class="note info">
-<coda>
-Clara-v4.3.5 release notes: <br>
-(update existing installations are recommended)<br><br>
-- Thread affinity implementation: Introduce a delay before starting the next NUMA attached Clara process in a data-processing node.<br>
-
-- Clara process: coordinate startup procedures for DPE and associated Orchestrator. Start an Orchestrator when DPE is fully operational.<br>
-
-- Farm default parameters: farm.scale=disabled, farm.memory=0, farm.cpu=0, farm.disk=5GB, farm.time=24hours.<br>
-
-- Farm horizontal scaling: verified and tested.<br>
-
-- CLAS12 plugin installation: request user confirmation before removing the old installation.
-</coda>
-</div>
 
 Download  the following script:
 

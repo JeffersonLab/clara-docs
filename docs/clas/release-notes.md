@@ -32,4 +32,7 @@ helps multiple users to use the common installation.
 service composition and data-set description files, as well as log files and farm deployment scripts will be
 accessed through a user defined directories.
 
+- clas installation script update. Script will remove the previous installation
+(after user confirmation) only in case installation has a proper directory structure.
+
 - User documentation update. Introduction of the new "Hands on" session.

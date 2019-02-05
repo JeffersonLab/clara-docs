@@ -36,9 +36,10 @@ a user specific work directory.
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
 <div></div>
 <code>setenv CLARA_USER_DATA <em>/UserHome</em>/work</code>
+<div></div>
 Note that CLARA_USER_DATA is optional, in case you are installing your own Clara environment.
 In all cases, if you forget to set CLARA_USER_DATA variable it will assume that it is pointing to
-the mandatory $CLARA_HOME variable. This means that if you are using the common Clara installation you might face
+the mandatory CLARA_HOME variable. This means that if you are using the common Clara installation you might face
 permission exceptions at the run-time.
 </div>
 

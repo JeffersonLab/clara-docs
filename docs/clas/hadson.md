@@ -621,14 +621,16 @@ To run a farm job execute the following command in the CLI:
 
 ```
 clara> run farm
+
 Parsing script ... (it may take while)
 <jsub><request><index>30283608</index><jobIndex>63238147</jobIndex></request></jsub>
 ```
 
-We can monitor the job submission by:
+Now we can monitor the job submission by:
 
 ```
 clara> show farmStatus
+
 JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT
 63238147  gurjyan     A    priority    --         ...urjyan-clara   Feb 05 13:55  --         --         clas12
 ```

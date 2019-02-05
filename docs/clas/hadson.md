@@ -553,6 +553,83 @@ where data flows from services described at the top to the bottom.
 *Old macdonald sends a farmJob e-i-e-i-o...*
 
 Yup, this is that easy. You do not have to write a farm submission scripts, and
-farm deployment can be done without leaving the Clara CLI.
+farm deployment can be done without leaving the Clara CLI. Let us show it on an example.
 
+I have a data set consisting of 4 files (I can see my data-set using the
+command: `show files`. see below), and I want to process it on the JLAB farm.
+```
+clara> show files
+clas_004013.0.hipo
+clas_004013.1.hipo
+clas_004013.2.hipo
+clas_004013.3.hipo
+
+clara>
+```
+The following settings will configure my farm deployment:
+
+- Make sure user data is  accessible from the farm mounted file system.
+This includes input/output data directories, application and data-set
+description files, log directory and farm-job PBS/SLIRM scripts.
+
+```
+clara> set inputDir /work/clas12/gurjyan/Testbed/clara/data/input
+clara> set outputDir /work/clas12/gurjyan/Testbed/clara/data/out
+clara> set servicesFile /work/clas12/gurjyan/Testbed/clara/services.yaml
+clara> set fileList /work/clas12/gurjyan/Testbed/clara/files.list
+clara> set logDir /work/clas12/gurjyan/Testbed/clara/log
+```
+
+
+<div class="note info">
+You can minimize manual settings in CLI (using default settings) by defining CLARA_USER_DATA environmental
+variable pointing to a user-data directory that is visible to the farm system. Note that
+this must be done prior running the `clara-shell` executable.
+</div>
+
+
+- Define the data-processing session and the description.
+
+```
+clara> set session gurjyanSession
+clara> set description gurjyanDescription
+```
+
+- Set the vertical scaling parameter (so called multi-threading, i.e.
+how many threads you wish will process the data in parallel).
+
+```
+clara> set farm.cpu 8
+```
+
+- Request the memory and the disk space for the job.
+
+```
+clara> set farm.memory 30
+clara> set farm.disk 10
+```
+
+These are typical settings for 8 core jobs that will work on all JLAB farm nodes.
+If you need to increase core count please refer to
+[Farm deployment](https://claraweb.jlab.org/clara/docs/clas/farm-deployment.html) for more information.
+
+
+That's it. Now we launch the farm job, yet, it is a good practise check
+the settings before a farm deployment (I am sure you remember the CLI command `show config`).
+
+To run a farm job execute the following command in the CLI:
+
+```
+clara> run farm
+Parsing script ... (it may take while)
+<jsub><request><index>30283608</index><jobIndex>63238147</jobIndex></request></jsub>
+```
+
+We can monitor the job submission by:
+
+```
+clara> show farmStatus
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT
+63238147  gurjyan     A    priority    --         ...urjyan-clara   Feb 05 13:55  --         --         clas12
+```
 

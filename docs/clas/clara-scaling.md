@@ -15,6 +15,29 @@ due to the data/event provisioning system latency.
 So, to guarantee linear scalability we must process in parallel
 data/events from different data sources or data provisioning systems.
 
+## Vertical scaling
+
+Vertical scaling is achieved by processing multiple events in parallel
+running threads (so called multi-threading). The only thing required from
+the user to vertically scale his/her engine code is to program it thread enabled.
+All the rest of the details, such as creating, maintaining threads and
+thread pools, event distribution and synchronization, etc. are hidden from
+users and is provided by the Clara framework.
+
+To enable the vertical scaling user sets the following parameters, for local running:
+
+
+```
+clara> set threads 8
+
+```
+
+and for farm deployment:
+
+```
+clara> set farm.cpu 8
+```
+
 ## Controlled horizontal scaling
 
 The CLARA CLI is designed to auto configure horizontal scaling,

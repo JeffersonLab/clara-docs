@@ -35,17 +35,20 @@ No problem can withstand the onslaught of unrelenting thinking.
 Just kidding... no thinking is required.
 
 Clara (including the CLAS12 plugin) installation is a simple, one-step process, that
-is described in [here](https://claraweb.jlab.org/clara/docs/clas/installation.html).
+is described in [here]({{ site.baseurl }}/docs/clas/installation.html).
 
 ### I want to use common installation
+
 Ok then, we have to perform the following steps:
 
-1. Set environmental variable CLARA_HOME pointing to the common installation directory.
-Make sure you have read and execute permissions in that file system.
-2. Set environmental variable CLARA_USER_DATA that points to a directory where you will store
-Clara application service composition and data-set description files, as well as data
-processing logs, and possibly actual data files.
-3. Run the Clara CLI:
+1.  Set environmental variable CLARA_HOME pointing to the common installation directory.
+    Make sure you have read and execute permissions in that file system.
+
+2.  Set environmental variable CLARA_USER_DATA that points to a directory where you will store
+    Clara application service composition and data-set description files, as well as data
+    processing logs, and possibly actual data files.
+
+3.  Run the Clara CLI.
 
 It is recommended for the CLARA_USER_DATA directory to have a specific file structure:
 
@@ -55,7 +58,7 @@ It is recommended for the CLARA_USER_DATA directory to have a specific file stru
  |____data
  | |____input
  | |____output
- ```
+```
 
 <div class="note info">
 It is OK not to create the structure by hand. Clara CLI (command line interface) will check/create
@@ -206,27 +209,17 @@ CLAS12 plugin :    coatjava-5c.7.5
 2019-01-31 16:35:24: started container = 129.57.70.24%7220_java:gurjyan
 [HipoDataSync] ---> dictionary size = 120
 [HipoDataSync] ---> dictionary size = 120
-2019-01-31 16:35:24: started service = 1
-29.57.70.24%7220_java:gurjyan:DataManager  pool_size = 1
+2019-01-31 16:35:24: started service = 129.57.70.24%7220_java:gurjyan:DataManager  pool_size = 1
  SVT geometry constants loaded ? true
-2019-01-31 16:35:24: started service =
-129.57.70.24%7220_java:gurjyan:HipoToHipoReader  pool_size = 1
-2019-01-31 16:35:24: started service =
-129.57.70.24%7220_java:gurjyan:HipoToHipoWriter  pool_size = 1
-2019-01-31 16:35:25: started service =
-129.57.70.24%7220_java:gurjyan:FTHODO  pool_size = 20
-2019-01-31 16:35:25: started service =
-129.57.70.24%7220_java:gurjyan:MAGFIELDS  pool_size = 20
-2019-01-31 16:35:25: started service =
-129.57.70.24%7220_java:gurjyan:FTOFHB  pool_size = 20
-2019-01-31 16:35:25: started service =
-129.57.70.24%7220_java:gurjyan:FTEB  pool_size = 20
-2019-01-31 16:35:25: started service =
-129.57.70.24%7220_java:gurjyan:DCHB  pool_size = 20
-2019-01-31 16:35:25: started service =
-129.57.70.24%7220_java:gurjyan:FTCAL  pool_size = 20
-2019-01-31 16:35:25: started service = 1
-29.57.70.24%7220_java:gurjyan:CTOF  pool_size = 20
+2019-01-31 16:35:24: started service = 129.57.70.24%7220_java:gurjyan:HipoToHipoReader  pool_size = 1
+2019-01-31 16:35:24: started service = 129.57.70.24%7220_java:gurjyan:HipoToHipoWriter  pool_size = 1
+2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:FTHODO  pool_size = 20
+2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:MAGFIELDS  pool_size = 20
+2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:FTOFHB  pool_size = 20
+2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:FTEB  pool_size = 20
+2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:DCHB  pool_size = 20
+2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:FTCAL  pool_size = 20
+2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:CTOF  pool_size = 20
 .....
 .....
 ```
@@ -246,46 +239,26 @@ average time spent by the entire application and time spent by workflow manageme
 
 ```
 2019-02-01 09:19:09.169: Benchmark results:
-2019-02-01 09:19:09.170:   READER           2000 events
-total time =     0.21 s    average event time =    0.10 ms
-2019-02-01 09:19:09.171:   MAGFIELDS        2000 events
-total time =     0.02 s    average event time =    0.01 ms
-2019-02-01 09:19:09.171:   FTCAL            2000 events
-total time =     0.35 s    average event time =    0.18 ms
-2019-02-01 09:19:09.172:   FTHODO           2000 events
-total time =     0.55 s    average event time =    0.27 ms
-2019-02-01 09:19:09.173:   FTEB             2000 events
-total time =     0.18 s    average event time =    0.09 ms
-2019-02-01 09:19:09.173:   DCHB             2000 events
-total time =  1088.39 s    average event time =  544.20 ms
-2019-02-01 09:19:09.174:   FTOFHB           2000 events
-total time =     3.19 s    average event time =    1.60 ms
-2019-02-01 09:19:09.175:   EC               2000 events
-total time =     2.57 s    average event time =    1.29 ms
-2019-02-01 09:19:09.176:   CVT              2000 events
-total time =    93.01 s    average event time =   46.51 ms
-2019-02-01 09:19:09.176:   CTOF             2000 events
-total time =     4.03 s    average event time =    2.02 ms
-2019-02-01 09:19:09.177:   CND              2000 events
-total time =    17.64 s    average event time =    8.82 ms
-2019-02-01 09:19:09.177:   HTCC             2000 events
-total time =     0.46 s    average event time =    0.23 ms
-2019-02-01 09:19:09.178:   LTCC             2000 events
-total time =     0.43 s    average event time =    0.21 ms
-2019-02-01 09:19:09.178:   RICH             2000 events
-total time =     0.92 s    average event time =    0.46 ms
-2019-02-01 09:19:09.179:   EBHB             2000 events
-total time =     4.43 s    average event time =    2.22 ms
-2019-02-01 09:19:09.179:   DCTB             2000 events
-total time =   281.84 s    average event time =  140.92 ms
-2019-02-01 09:19:09.180:   FTOFTB           2000 events
-total time =     3.93 s    average event time =    1.97 ms
-2019-02-01 09:19:09.180:   EBTB             2000 events
-total time =     6.48 s    average event time =    3.24 ms
-2019-02-01 09:19:09.181:   WRITER           2000 events
-total time =     6.76 s    average event time =    3.38 ms
-2019-02-01 09:19:09.181:   TOTAL            2000 events
-total time =  1515.40 s    average event time =  757.70 ms
+2019-02-01 09:19:09.170:   READER           2000 events   total time =     0.21 s    average event time =    0.10 ms
+2019-02-01 09:19:09.171:   MAGFIELDS        2000 events   total time =     0.02 s    average event time =    0.01 ms
+2019-02-01 09:19:09.171:   FTCAL            2000 events   total time =     0.35 s    average event time =    0.18 ms
+2019-02-01 09:19:09.172:   FTHODO           2000 events   total time =     0.55 s    average event time =    0.27 ms
+2019-02-01 09:19:09.173:   FTEB             2000 events   total time =     0.18 s    average event time =    0.09 ms
+2019-02-01 09:19:09.173:   DCHB             2000 events   total time =  1088.39 s    average event time =  544.20 ms
+2019-02-01 09:19:09.174:   FTOFHB           2000 events   total time =     3.19 s    average event time =    1.60 ms
+2019-02-01 09:19:09.175:   EC               2000 events   total time =     2.57 s    average event time =    1.29 ms
+2019-02-01 09:19:09.176:   CVT              2000 events   total time =    93.01 s    average event time =   46.51 ms
+2019-02-01 09:19:09.176:   CTOF             2000 events   total time =     4.03 s    average event time =    2.02 ms
+2019-02-01 09:19:09.177:   CND              2000 events   total time =    17.64 s    average event time =    8.82 ms
+2019-02-01 09:19:09.177:   HTCC             2000 events   total time =     0.46 s    average event time =    0.23 ms
+2019-02-01 09:19:09.178:   LTCC             2000 events   total time =     0.43 s    average event time =    0.21 ms
+2019-02-01 09:19:09.178:   RICH             2000 events   total time =     0.92 s    average event time =    0.46 ms
+2019-02-01 09:19:09.179:   EBHB             2000 events   total time =     4.43 s    average event time =    2.22 ms
+2019-02-01 09:19:09.179:   DCTB             2000 events   total time =   281.84 s    average event time =  140.92 ms
+2019-02-01 09:19:09.180:   FTOFTB           2000 events   total time =     3.93 s    average event time =    1.97 ms
+2019-02-01 09:19:09.180:   EBTB             2000 events   total time =     6.48 s    average event time =    3.24 ms
+2019-02-01 09:19:09.181:   WRITER           2000 events   total time =     6.76 s    average event time =    3.38 ms
+2019-02-01 09:19:09.181:   TOTAL            2000 events   total time =  1515.40 s    average event time =  757.70 ms
 2019-02-01 09:19:09.182: Average processing time  =   41.02 ms
 2019-02-01 09:19:09.182: Total processing time    =   82.04 s
 2019-02-01 09:19:09.182: Total orchestrator time  =   89.80 s
@@ -356,6 +329,7 @@ clara> show logOrchestrator
 ```
 
 ### Application customization
+
 While CLAS12 reconstruction application is the best-in-class :),
 it won't do you any good if it is missing one key feature.
 Clara provides application flexible customization to fit your needs.
@@ -448,6 +422,7 @@ Noticed that I am calling `show config` after every `set` command just
 to remind you about this useful command that shows data processing
 application configuration options. It does not have any other purpose
 other than that (arguably useful, ha ha).
+
 Ok, let us examine CLAS12 reconstruction official services.yml file, the default location being at:
 
 ```
@@ -457,68 +432,70 @@ servicesFile:        "$CLARA_HOME/config/services.yaml"
 ```
 
 The service composition file consists of the following sections:
-- Stream builder and stream consumer services. This are IO services
-that access a data source and create a stream of data quanta that are
-dispatched to data processing services.
 
-```
-io-services:
-  reader:
-    class: org.jlab.clas.std.services.convertors.HipoToHipoReader
-    name: HipoToHipoReader
-  writer:
-    class: org.jlab.clas.std.services.convertors.HipoToHipoWriter
-    name: HipoToHipoWriter
-```
+  * Stream builder and stream consumer services. This are IO services
+    that access a data source and create a stream of data quanta that are
+    dispatched to data processing services.
 
-- Data processing services
+    ```
+    io-services:
+      reader:
+        class: org.jlab.clas.std.services.convertors.HipoToHipoReader
+        name: HipoToHipoReader
+      writer:
+        class: org.jlab.clas.std.services.convertors.HipoToHipoWriter
+        name: HipoToHipoWriter
+    ```
 
-```
-services:
-  - class: org.jlab.clas.swimtools.MagFieldsEngine
-    name: MAGFIELDS
-  - class: org.jlab.rec.ft.cal.FTCALEngine
-    name: FTCAL
-```
+  * Data processing services.
 
-We describe a service by defining the service engine clas and a by giving a name.
-So, this means that we can have multiple services with different names sharing the same engine.
-May be not so useful, but one can configure the same engine differently and build and
-stream events through a limited cycle loop (note: no programing is necessary).
+    ```
+    services:
+      - class: org.jlab.clas.swimtools.MagFieldsEngine
+        name: MAGFIELDS
+      - class: org.jlab.rec.ft.cal.FTCALEngine
+        name: FTCAL
+    ```
 
-- Section describing configuration options for services.
-In this section users can describe configuration parameters for IO and
-processing services, as well as configuration options for a specific service
-(e.g. parameter `useStartTime`for DCHB service).
+    We describe a service by defining the service engine clas and a by giving a name.
+    So, this means that we can have multiple services with different names sharing the same engine.
+    May be not so useful, but one can configure the same engine differently and build and
+    stream events through a limited cycle loop (note: no programing is necessary).
 
-```
-configuration:
-  io-services:
-    writer:
-      compression: 2
-# settings below are for GEMC, compatible with 4a.2.4
-  services:
-    DCHB:
-      useStartTime: "true"
-      wireDistortionsFlag: "false"
-      geomDBVariation: may_2018_engineers
-    DCTB:
-      geomDBVariation: may_2018_engineers
-```
+  * Section describing configuration options for services.
+    In this section users can describe configuration parameters for IO and
+    processing services, as well as configuration options for a specific service
+    (e.g. parameter `useStartTime` for DCHB service).
 
-- Data tyoe of the streaming event (data quantum).
+    ```
+    configuration:
+      io-services:
+        writer:
+          compression: 2
+    # settings below are for GEMC, compatible with 4a.2.4
+      services:
+        DCHB:
+          useStartTime: "true"
+          wireDistortionsFlag: "false"
+          geomDBVariation: may_2018_engineers
+        DCTB:
+          geomDBVariation: may_2018_engineers
+    ```
 
-```
-mime-types:
-  - binary/data-hipo
-```
+  * Data tyoe of the streaming event (data quantum).
+
+    ```
+    mime-types:
+      - binary/data-hipo
+    ```
 
 So you can add a new service to the application by providing `clas`
 of the an engine and an arbitrary `name` (preferably something descriptive).
 Removing a service is as simple as deleting or commenting out the two lines in yml file, describing a service.
-  E.g. below shows the clas12 modified reconstruction application ,where we keep two standard services from
-  the reconstruction official application and add two services, sharing the same engine. Here we demonstrate
-  testing and debugging a new reconstruction engine with two different configuration options.
+
+E.g. below shows the clas12 modified reconstruction application ,where we keep two standard services from
+the reconstruction official application and add two services, sharing the same engine. Here we demonstrate
+testing and debugging a new reconstruction engine with two different configuration options.
 
 ```
 clara> set servicesFile /myOwnDir/myOwnService.yml
@@ -570,6 +547,7 @@ where data flows from services described at the top to the bottom.
 </div>
 
 ### Running on a farm
+
 *Old macdonald sends a farmJob e-i-e-i-o...*
 
 Yup, this is that easy. You do not have to write a farm submission scripts, and
@@ -577,6 +555,7 @@ farm deployment can be done without leaving the Clara CLI. Let us show it on an 
 
 I have a data set consisting of 4 files (I can see my data-set using the
 command: `show files`. see below), and I want to process it on the JLAB farm.
+
 ```
 clara> show files
 clas_004013.0.hipo
@@ -586,53 +565,52 @@ clas_004013.3.hipo
 
 clara>
 ```
+
 The following settings will configure my farm deployment:
 
-- Make sure user data is  accessible from the farm mounted file system.
-This includes input/output data directories, application and data-set
-description files, log directory and farm-job PBS/SLIRM scripts.
+  * Make sure user data is  accessible from the farm mounted file system.
+    This includes input/output data directories, application and data-set
+    description files, log directory and farm-job PBS/SLIRM scripts.
 
-```
-clara> set inputDir /work/clas12/gurjyan/Testbed/clara/data/input
-clara> set outputDir /work/clas12/gurjyan/Testbed/clara/data/out
-clara> set servicesFile /work/clas12/gurjyan/Testbed/clara/services.yaml
-clara> set fileList /work/clas12/gurjyan/Testbed/clara/files.list
-clara> set logDir /work/clas12/gurjyan/Testbed/clara/log
-```
-
-
-<div class="note info">
-You can minimize manual settings in CLI (using default settings) by defining CLARA_USER_DATA environmental
-variable pointing to a user-data directory that is visible to the farm system. Note that
-this must be done prior running the `clara-shell` executable.
-</div>
+    ```
+    clara> set inputDir /work/clas12/gurjyan/Testbed/clara/data/input
+    clara> set outputDir /work/clas12/gurjyan/Testbed/clara/data/out
+    clara> set servicesFile /work/clas12/gurjyan/Testbed/clara/services.yaml
+    clara> set fileList /work/clas12/gurjyan/Testbed/clara/files.list
+    clara> set logDir /work/clas12/gurjyan/Testbed/clara/log
+    ```
 
 
-- Define the data-processing session and the description.
+    <div class="note info">
+    You can minimize manual settings in CLI (using default settings) by defining CLARA_USER_DATA environmental
+    variable pointing to a user-data directory that is visible to the farm system. Note that
+    this must be done prior running the `clara-shell` executable.
+    </div>
 
-```
-clara> set session gurjyanSession
-clara> set description gurjyanDescription
-```
+  * Define the data-processing session and the description.
 
-- Set the vertical scaling parameter (so called multi-threading, i.e.
-how many threads you wish will process the data in parallel).
+    ```
+    clara> set session gurjyanSession
+    clara> set description gurjyanDescription
+    ```
 
-```
-clara> set farm.cpu 8
-```
+  * Set the vertical scaling parameter (so called multi-threading, i.e.
+    how many threads you wish will process the data in parallel).
 
-- Request the memory and the disk space for the job.
+    ```
+    clara> set farm.cpu 8
+    ```
 
-```
-clara> set farm.memory 30
-clara> set farm.disk 10
-```
+  * Request the memory and the disk space for the job.
+
+    ```
+    clara> set farm.memory 30
+    clara> set farm.disk 10
+    ```
 
 These are typical settings for 8 core jobs that will work on all JLAB farm nodes.
 If you need to increase core count please refer to
-[Farm deployment](https://claraweb.jlab.org/clara/docs/clas/farm-deployment.html) for more information.
-
+[Farm deployment]({{ site.baseurl }}/docs/clas/farm-deployment.html) for more information.
 
 That's it. Now we launch the farm job, yet, it is a good practise check
 the settings before a farm deployment (I am sure you remember the CLI command `show config`).
@@ -666,11 +644,10 @@ farm_gurjyan_clara.jsub	  farm_gurjyan_clara.sh  files.list  service.yml
 
 There are more farm-job control parameters that help users to further customize the farm deployments.
 E.g. user can process a given data set in multiple farm nodes in parallel (find more details in
-[here](https://claraweb.jlab.org/clara/docs/clas/clara-scaling.html)).
+[here]({{ site.baseurl }}/docs/clas/clara-scaling.html)).
 
 ```
 clara> set farm.scaling 4
-
 ```
 
 This command will divide entire data-set into groups of 4 files and
@@ -735,7 +712,6 @@ clara> set farm.node farm18
 clara> set farm.cpu 72
 clara> set farm.memory 60
 clara> set farm.disk 25
-
 ```
 
 #### Farm staging
@@ -757,7 +733,7 @@ specific for his/her processing (in the example subdir = gurjyan).
 </div>
 
 To get more information on farm deployment parameters
-[here](https://claraweb.jlab.org/clara/docs/clas/data-processing.html).
+[here]({{ site.baseurl }}/docs/clas/data-processing.html).
 
 #### Choosing between PBS and SLURM
 
@@ -800,10 +776,4 @@ The next time you start a shell you can type something like:
 vem:~ gurjyan$ $CLARA_HOME/bin/clara-shell myTest.cls
 ```
 
-You can get more on Clara scripting in [here](https://claraweb.jlab.org/clara/docs/clas/clara-scripts.html)
-
-
-
-
-
-
+You can get more on Clara scripting in [here]({{ site.baseurl }}/docs/clas/clara-scripts.html)

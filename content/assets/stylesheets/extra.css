@@ -1,0 +1,40 @@
+.md-typeset .admonition,
+.md-typeset .details {
+  font-size: 1.4rem
+}
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doc-lang-table th,
+.doc-lang-table td {
+  width: 16rem;
+}
+
+.scrolling-pre pre {
+  max-height: 30em
+}
+
+.saint-clara {
+  position: relative;
+  top: 0;
+}
+@media screen and (min-width: 48rem) {
+  .saint-clara {
+    float: right;
+    margin: 1rem 2.5rem;
+    left: 0;
+    width: 25%;
+    min-width: 8rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .saint-clara {
+    display: block;
+    margin: 0 auto;
+    min-width: 8rem;
+  }
+}

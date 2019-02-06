@@ -1,7 +1,7 @@
 # About CLARA
 
-{: style="font-size: 1.4em" }
 > ***We become what we love, and who we love shapes what we become.***
+{: style="font-size: 1.4em" }
 
 ## Why CLARA?
 ![Figure 1. Santa Clara](assets/images/clara.png){: .saint-clara}
@@ -45,7 +45,6 @@ So, how CLARA is different?
 
 ## CLARA related publications
 
-{: style="text-align: left" }
 * *CLARA: A Contemporary Approach to Physics Data Processing*, 2011,
   [J. Phys.: Conf. Ser. 331 032013 doi:10.1088/1742-6596/331/3/032013](http://iopscience.iop.org/article/10.1088/1742-6596/331/3/032013/pdf)
 

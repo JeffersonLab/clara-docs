@@ -212,7 +212,6 @@ set farm.scaling
 set farm.system
     Farm batch system. Accepts pbs and jlab.
 ```
-{: .scrolling-pre }
 
 #### Application service composition. Services YAML file
 

@@ -27,7 +27,7 @@ You need to provide only the location where it should be created.
 
 Download the following script:
 
-{% download file: install-claracre.sh, name: install-claracre %}
+<a href="../../_downloads/install-claracre.sh"><i class="fa fa-download"></i> install-claracre.sh</a>
 
 Change permission of this file to make it executable, and run:
 
@@ -65,7 +65,7 @@ and most likely they are already installed on majority of systems.
 
 Download the following script:
 
-{% download file: install-claradk, name: install-cdk %}
+<a href="../../_downloads/install-claradk.sh"><i class="fa fa-download"></i> install-claradk.sh</a>
 
 So, for CDK installation copy downloaded scripts into your `<work_dir>` and type:
 

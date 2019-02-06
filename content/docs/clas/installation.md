@@ -53,7 +53,7 @@ you might face permission exceptions at the run-time.
 
 Download the following script:
 
-{% download file: install-claracre-clas.sh, name: install-claracre-clas %}
+<a href="../../_downloads/install-claracre-clas.sh"><i class="fa fa-download"></i> install-claracre-clas.sh</a>
 
 Change permission of this file to make it executable, and run:
 

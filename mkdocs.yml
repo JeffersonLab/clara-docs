@@ -1,0 +1,50 @@
+site_name: CLARA Framework
+site_url: https://claraweb.jlab.org/clara/
+site_description: Reactive data-stream processing framework
+site_author: Vardan Gyurjyan
+
+copyright: Copyright &copy; 2019 Vardan Gyurjyan
+
+docs_dir: content           # Change default to keep "docs" directory inside
+use_directory_urls: false   # Change default to not break existing links to documentation
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - smarty
+  - toc:
+      permalink: true
+      toc_depth: 4
+
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.extrarawhtml
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+theme:
+  name: material
+  palette:
+    primary: blue grey
+    accent: indigo
+  favicon: assets/images/favicon.ico
+  logo: assets/images/logo.png
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - type: github
+      link: https://github.com/JeffersonLab/clara-docs

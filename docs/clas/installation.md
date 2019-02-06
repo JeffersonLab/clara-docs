@@ -1,6 +1,4 @@
----
-title: Installation
----
+# Installation
 
 One step installation y'all!!! Who's excited?
 Who's pumped to run data processing of your lifetime

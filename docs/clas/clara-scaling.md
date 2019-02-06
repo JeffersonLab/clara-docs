@@ -1,6 +1,4 @@
----
-title: Scaling
----
+# Scaling
 
 Clara framework is multi-dimensional elastic system,
 and is capable of auto-scaling vertically as well as horizontally.

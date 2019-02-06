@@ -1,6 +1,4 @@
----
-title: Tutorial
----
+# Tutorial
 
 *The future belongs to the few of us still willing to get our hands dirty.*
 
@@ -37,7 +35,7 @@ No problem can withstand the onslaught of unrelenting thinking.
 Just kidding... no thinking is required.
 
 Clara (including the CLAS12 plugin) installation is a simple, one-step process, that
-is described in [here]({{ site.baseurl }}/docs/clas/installation.html).
+is described in [here](installation.md).
 
 ### I want to use common installation
 
@@ -609,7 +607,7 @@ The following settings will configure my farm deployment:
 
 These are typical settings for 8 core jobs that will work on all JLAB farm nodes.
 If you need to increase core count please refer to
-[Farm deployment]({{ site.baseurl }}/docs/clas/farm-deployment.html) for more information.
+[Farm deployment](farm-deployment.md) for more information.
 
 That's it. Now we launch the farm job, yet,
 it is a good practise check the settings before a farm deployment
@@ -645,7 +643,7 @@ farm_gurjyan_clara.jsub	  farm_gurjyan_clara.sh  files.list  service.yaml
 
 There are more farm-job control parameters that help users to further customize the farm deployments.
 E.g. user can process a given data set in multiple farm nodes in parallel (find more details in
-[here]({{ site.baseurl }}/docs/clas/clara-scaling.html)).
+[here](clara-scaling.md)).
 
 ```
 clara> set farm.scaling 4
@@ -740,7 +738,7 @@ specific for his/her processing (in the example the subdir is `gurjyan`).
 </div>
 
 To get more information on farm deployment parameters
-[here]({{ site.baseurl }}/docs/clas/data-processing.html).
+[here](data-processing.md).
 
 #### Choosing between PBS and SLURM
 
@@ -784,4 +782,4 @@ The next time you start a shell you can type something like:
 $ $CLARA_HOME/bin/clara-shell myTest.cls
 ```
 
-You can get more on Clara scripting in [here]({{ site.baseurl }}/docs/clas/clara-scripts.html)
+You can get more on Clara scripting in [here](clara-scripts.md)

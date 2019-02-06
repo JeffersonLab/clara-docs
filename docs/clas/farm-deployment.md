@@ -1,6 +1,4 @@
----
-title: Farm deployment
----
+# Farm deployment
 
 Clara CLI default values were set to values that will work properly
 for majority of JLAB farm deployments.

@@ -1,7 +1,4 @@
----
-title: Python Quickstart
-link: Python
----
+# Python Quickstart
 
 ## Before you begin
 

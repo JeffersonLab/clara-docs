@@ -1,7 +1,4 @@
----
-title: Additional resources
-notoc: true
----
+# Additional resources
 
 * [CLARA Dashboard](http://claraweb.jlab.org:3000/dashboard/db/pdp-b)
 

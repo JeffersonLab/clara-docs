@@ -1,3 +1,1 @@
----
-title: HIPO Writer
----
+# HIPO Writer

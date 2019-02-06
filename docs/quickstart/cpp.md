@@ -1,7 +1,4 @@
----
-title: C++ Quickstart
-link: C++
----
+# C++ Quickstart
 
 ## Before you begin
 
@@ -231,5 +228,5 @@ const clara::EngineDataType CUSTOM_DATA_TYPE{
 * Read a more detailed tutorial in [C++ Tutorial][ct].
 * Explore the C++ API in the [reference documentation][cr].
 
-[ct]: {{ site.baseurl }}/docs/tutorials/cpp.html
-[cr]: {{ site.baseurl }}/api/cpp/
+[ct]: ../tutorials/cpp.md
+[cr]: /clara/api/cpp/

@@ -1,6 +1,4 @@
----
-title: Application Composition
----
+# Application Composition
 
 <div class="admonition warning" markdown="1">
 Instructions for using the Clara-UI graphical interface,

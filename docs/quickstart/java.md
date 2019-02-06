@@ -1,7 +1,4 @@
----
-title: Java Quickstart
-link: Java
----
+# Java Quickstart
 
 ## Before you begin
 
@@ -249,5 +246,5 @@ public static final EngineDataType CUSTOM_DATA_TYPE =
 * Read a more detailed tutorial in [Java Tutorial][jt].
 * Explore the Java API in the [reference documentation][jr].
 
-[jt]: {{ site.baseurl }}/docs/tutorials/java.html
-[jr]: {{ site.baseurl }}/api/java/current/
+[jt]: ../tutorials/java.md
+[jr]: /clara/api/java/current/

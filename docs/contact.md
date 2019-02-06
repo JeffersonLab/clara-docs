@@ -1,7 +1,3 @@
----
-layout: page
-title: Contact
----
+# Contact
 
-Contact Information
--------------------
+## Contact Information

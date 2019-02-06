@@ -1,6 +1,4 @@
----
-title: Scripting
----
+# Scripting
 
 <div class="admonition note" markdown="1">
 To start a data processing with a specified script, run:

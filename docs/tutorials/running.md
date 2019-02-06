@@ -1,6 +1,5 @@
----
-title: CLI and Processing
----
+# CLI and Processing
+
 ## Clara CLI
 
 In this chapter we present instructions

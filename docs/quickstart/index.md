@@ -1,7 +1,4 @@
----
-title: Quick Start
-notoc: true
----
+# Quick Start
 
 ## Get started with CLARA
 
@@ -9,10 +6,10 @@ These pages show how to quickly develop services with CLARA.
 There is a quick start page for each language supported by CLARA.
 
 To get an overview of CLARA concepts and architecture, see the
-[Guides section]({{ site.baseurl }}/docs/guides/).
+[Guides section](../guides/).
 For more detailed instructions about creating and running services
-see the [Tutorials]({{ site.baseurl }}/docs/tutorials/).
+see the [Tutorials](../tutorials/).
 
-* [Java]({{ site.baseurl }}/docs/quickstart/java.html)
-* [C++]({{ site.baseurl }}/docs/quickstart/cpp.html)
-* [Python]({{ site.baseurl }}/docs/quickstart/python.html)
+* [Java](java.md)
+* [C++](cpp.md)
+* [Python](python.md)

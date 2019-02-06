@@ -1,6 +1,4 @@
----
-title: User engine
----
+# User engine
 
 The CLARA service model assumes that the algorithm,
 as well as the solution itself is provided as a complete service.

@@ -1,6 +1,5 @@
----
-title: Background and Motivation
----
+# Background and Motivation
+
 Some of the contemporary scientific problems require multidisciplinary and/or trans-disciplinary
 approach to achieve satisfactory answers. Traditional intra-disciplinary research had evolved in
 quasi-isolation, providing scientists theoretical canons, methodologies and frameworks unique for

@@ -1,6 +1,4 @@
----
-title: Installation
----
+# Installation
 
 ## Clara Run-time Environment (CRE)
 

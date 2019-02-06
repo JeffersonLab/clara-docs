@@ -1,7 +1,4 @@
----
-layout: page
-title: FAQ
----
+# FAQ
 
 ### Where I can get the CLARA package?
 

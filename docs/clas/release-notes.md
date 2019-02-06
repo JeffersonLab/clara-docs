@@ -1,6 +1,4 @@
----
-title: Release notes
----
+# Release notes
 
 ### Clara v4.3.7
 

@@ -1,6 +1,4 @@
----
-title: Shell interface
----
+# Shell interface
 
 ## Command line interface
 

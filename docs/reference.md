@@ -1,14 +1,10 @@
----
-layout: page
-use_nav: 1
-title: Reference
----
+# Reference
 
 Links to the language specific automatically generated API reference documentation.
 
-* [Java API]({{ site.baseurl }}/api/java/current/)
+* [Java API](/clara/api/java/current/)
 
-* [C++ API]({{ site.baseurl }}/api/cpp/)
+* [C++ API](/clara/api/cpp/)
 
-* [Python API]({{ site.baseurl }}/api/python/)
+* [Python API](/clara/api/python/)
 

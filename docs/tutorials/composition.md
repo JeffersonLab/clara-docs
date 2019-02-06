@@ -2,7 +2,7 @@
 title: Application Composition
 ---
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 Instructions for using the Clara-UI graphical interface, that presents a seamless
 experience between designing, controlling and monitoring data processing
 applications is under construction.
@@ -35,7 +35,8 @@ services:
      name: FTHODO
    ...
 ```
-<div class="note info">
+
+<div class="admonition note" markdown="1">
 Note that if you need to remove a service from a composition you comment
 out the service description, as shown below:
 </div>

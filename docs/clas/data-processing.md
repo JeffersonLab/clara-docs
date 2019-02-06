@@ -49,41 +49,41 @@ clara>
 
 #### JLab terminal settings
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 In some cases the wrong terminal settings
 will affect proper functionality of the CLI.
 
-<p>You may be affected by this problem when the <code>run</code> command
-returns to the prompt without doing anything apparently.</p>
+You may be affected by this problem when the `run` command
+returns to the prompt without doing anything apparently.
 
-<div class="highlighter-rouge"><pre class="highlight">
-<code>clara> run local
+```
+clara> run local
 clara>
-</code></pre></div>
+```
 
-<p>To fix this, make sure the following line (or something similar)
-<b>is commented</b> in your <code>~/.login</code> file:</p>
+To fix this, make sure the following line (or something similar)
+**is commented** in your `~/.login` file:
 
-<div class="highlighter-rouge"><pre class="highlight">
-<code>stty erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop tabs
-</code></pre></div>
+```
+stty erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop tabs
+```
 
-<p>That line should be after a comment such as:</p>
+That line should be after a comment such as:
 
-<div class="highlighter-rouge"><pre class="highlight">
-<code># Uncomment this if you are using an NCD Xterminal keyboard.
-</code></pre></div>
+```
+# Uncomment this if you are using an NCD Xterminal keyboard.
+```
 </div>
 
-
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 Before we describe a data processing configuration options it is worthwhile to emphasize
 the importance of a data-set proper description. This includes path to the actual data-file input and output directories, full path to the data-set metadata file, and data-set description.
 </div>
 
-{: .note .info }
+<div class="admonition note" markdown="1">
 For every data processing these options must be set, and most importantly,
 options for `data-set description` and `data-set metadata file` must be unique.
+</div>
 
 ```
 clara> set fileList
@@ -458,11 +458,12 @@ usage: j_idr [options]
   --db-host <hostname>       the host where InfluxDB is running
 ```
 
-{: .note .info }
+<div class="admonition note" markdown="1">
 For the JLAB farm DPE reporting, as well as for user specific
 online data quality monitoring,
 the default CLARA monitoring server and data visualization dashboard is running at
 <http://claraweb.jlab.org:3000/dashboard/db/pdp-b>
+</div>
 
 ### The edit command
 

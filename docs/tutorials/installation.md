@@ -3,7 +3,7 @@ title: Installation
 ---
 ## CLARA Run-time Environment (CRE)
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 Installation instructions here are presented for the CLARA Java binding.
 </div>
 
@@ -17,11 +17,11 @@ First set the `CLARA_HOME` environmental variable that will point
 to the directory where the CLARA distribution will be installed
 ( E.g. `/UserHome/myClara`)
 
-<div class="note info">
-<code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
-</div>
+```
+setenv CLARA_HOME /UserHome/myClara
+```
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 Clara will create CLARA_HOME directory with a specific file structure.
 You need to provide only a location where it should be created.
 </div>
@@ -40,12 +40,10 @@ CLARA framework distributions are accessed at:
 
 <https://userweb.jlab.org/~gurjyan/clara-cre/>
 
-<div class="note info">
-<coda>
+<div class="admonition note" markdown="1">
 The default version is v4.3.5.
 
 Omit the <code>-f</code> option to install the default version.
-</coda>
 </div>
 
 ## CLARA Development Kit (CDK)

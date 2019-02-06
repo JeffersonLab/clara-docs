@@ -60,7 +60,7 @@ It is recommended for the CLARA_USER_DATA directory to have a specific file stru
  | |____output
 ```
 
-<div class="note info">
+<div class="admonition note" markdown="1">
 It is OK not to create the structure by hand. Clara CLI (command line interface) will check/create
 the necessary file structure at the startup.
 </div>
@@ -137,7 +137,7 @@ farm.system:         "jlab"
 
 Usually `show config` will show full path with environmental variables resolved.
 
-<div class="note info">
+<div class="admonition note" markdown="1">
 Note that these are default settings, and user can change to point to different locations.
 </div>
 
@@ -316,7 +316,7 @@ clara> set description myOwnDescription
 clara> show config
 ```
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 We recommend the session and the description to be unique for every new data-set processing.
 </div>
 
@@ -541,7 +541,7 @@ mime-types:
 clara>
 ```
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 Clara application composition YML file is a representation of a directed graph,
 where data flows from services described at the top to the bottom.
 </div>
@@ -581,7 +581,7 @@ The following settings will configure my farm deployment:
     ```
 
 
-    <div class="note info">
+    <div class="admonition note" markdown="1">
     You can minimize manual settings in CLI (using default settings) by defining CLARA_USER_DATA environmental
     variable pointing to a user-data directory that is visible to the farm system. Note that
     this must be done prior running the `clara-shell` executable.
@@ -657,14 +657,14 @@ will process each group in a different farm node. This is known as the Clara `ho
 
 Also user can request data processing on specific node flavor of the farm.
 
-<div class="note info">
+<div class="admonition note" markdown="1">
 The JLAB scientific computing farm consists of the following hardware systems:
-<div></div>
-<div> farm18, 6148 CPU   @ 2.4 Gz, cores = 80 </div>
-<div> farm16, E5-2697 v4 @ 2.3 Gz, cores = 72 </div>
-<div> farm14, E5-2670 v3 @ 2.3 Gz, cores = 48 </div>
-<div> farm13, E5-2650 v2 @ 2.6 Gz, cores = 32 </div>
-<div> qcd12s, E5-2650 0  @ 2.0 Gz, cores = 32 </div>
+
+- farm18, 6148 CPU   @ 2.4 Gz, cores = 80
+- farm16, E5-2697 v4 @ 2.3 Gz, cores = 72
+- farm14, E5-2670 v3 @ 2.3 Gz, cores = 48
+- farm13, E5-2650 v2 @ 2.6 Gz, cores = 32
+- qcd12s, E5-2650 0  @ 2.0 Gz, cores = 32
 </div>
 
 To run data processing on a specific farm hardware you need to set the `farm.node` parameter.
@@ -686,7 +686,7 @@ E.g. the command below requests an exclusive access to a farm18 node:
 clara> set farm.exclusive farm18
 ```
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 The exclusive mode works for only SLURM controlled farm nodes.
 For the exclusive mode on the SLURM farm, you do not have to define farm.memory and farm.cpu parameters,
 since Clara will set these values for you to guarantee maximum performance.
@@ -726,7 +726,7 @@ that shared file system IO. E.g.
 clara> set farm.stage /scratch/clara/gurjyan
 ```
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 The /scratch/clara is the created directory on all farm nodes (much like /scratch/pbs).
 For the proper staging and file transfers user must request a subdirectory
 specific for his/her processing (in the example subdir = gurjyan).

@@ -1,12 +1,13 @@
 ---
 title: Scripting
 ---
-<div class="note info">
-<code>$CLARA_HOME/bin/clara-shell xyz.cls</code>
-<div></div>
-to start a data processing with a specified script.
-</div>
+<div class="admonition note" markdown="1">
+To start a data processing with a specified script, run:
 
+```
+$CLARA_HOME/bin/clara-shell xyz.cls
+```
+</div>
 
 ## Local processing (local.cls)
 
@@ -74,7 +75,7 @@ show farmStatus
 ```
 
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 Clara settings are the same for PBS and SLIRM deployments.
 Clara makes deployment transparent across different batch control systems.
 Yet, it is recommended to decrease memory request (farm.memory) by
@@ -112,7 +113,7 @@ show farmStatus
 
 ```
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 You do not need to set memory or vertical scaling level when running is an exclusive mode on SLURM.
 </div>
 

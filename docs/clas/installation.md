@@ -27,7 +27,7 @@ First set the `CLARA_HOME` environmental variable that will point
 to the directory where the CLARA CLAS12 distribution will be installed
 (`/UserHome/myClara` or `/UserHome/clas12-v4`).
 
-<div class="note warning">
+<div class="admonition warning" markdown="1">
 Remember, Clara will create CLARA_HOME directory with a specific file structure.
 You need to provide only a location where it should be created.
 </div>
@@ -37,13 +37,12 @@ including data processing application composition and data-set description files
 farm deployment scripts, etc. For that assign `CLARA_USER_DATA` environmental variable to
 a user specific work directory.
 
+```
+setenv CLARA_HOME /UserHome/myClara
+setenv CLARA_USER_DATA /UserHome/work
+```
 
-<div class="note info">
-<code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
-<div></div>
-<code>setenv CLARA_USER_DATA <em>/UserHome</em>/work</code>
-<div></div>
-<br>
+<div class="admonition note" markdown="1">
 Note that CLARA_USER_DATA is optional, in case you are installing your own Clara environment.
 In all cases, if you forget to set CLARA_USER_DATA variable it will assume that it is pointing to
 the mandatory CLARA_HOME variable. This means that if you are using the common Clara installation you might face

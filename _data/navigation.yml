@@ -1,7 +1,7 @@
 clas:
   title: JLAB CLAS12 Instructions
   documents:
-    - hadson
+    - hands-on
     - installation
     - data-processing
     - clara-scaling

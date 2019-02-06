@@ -32,7 +32,7 @@ No problem can withstand the onslaught of unrelenting thinking.
 
 Just kidding...
 
-Clara with CLAS12 plugin installation is a simple one step process that
+Clara, with the CLAS12 plugin installation is a simple, one-step process that
 is described in [here](https://claraweb.jlab.org/clara/docs/clas/installation.html).
 
 ### I want to use common installation

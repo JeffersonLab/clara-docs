@@ -148,7 +148,7 @@ task deploy(type: Copy, overwrite: true, dependsOn: jar) {
 To compile and deploy the service run the following:
 
 ```
-./gradlew deploy
+$ ./gradlew deploy
 ```
 
 

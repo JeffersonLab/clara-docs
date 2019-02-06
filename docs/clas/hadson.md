@@ -1,15 +1,15 @@
 ---
 title: Tutorial
 ---
-*The future belongs to the few of us still willing to get our hands dirty*
 
-Really, though,
+*The future belongs to the few of us still willing to get our hands dirty.*
 
-do we need to get our hands dirty and start processing the raw data?
+Really, though.
+
+Do we need to get our hands dirty and start processing the raw data?
 After all we did our fair share when we were post-docs.
 Just sit back, relax and listen Erik Satie, while students will create
 DSTs through blood, sweat and tears.
-
 
 But OK, I know, I know you're one of the small minority of scientists that can't wait,
 who need to process subset of data quickly,
@@ -23,10 +23,12 @@ you should follow the following instructions to start data processing yourself.
 
 ### Were do we start?
 
-First you have to define if a) you are going to use Clara clas12 common (official) installation
+First you have to define
+if a) you are going to use Clara CLAS12 common (official) installation
 or b) you want to have your own installation (e.g. in your home institution or in your own laptop).
 
 ### I want to have my own installation
+
 Of course you do... with entire CLAS12 code base on your laptop.
 No problem!
 
@@ -41,43 +43,45 @@ is described in [here]({{ site.baseurl }}/docs/clas/installation.html).
 
 Ok then, we have to perform the following steps:
 
-1.  Set environmental variable CLARA_HOME pointing to the common installation directory.
+1.  Set environmental variable `CLARA_HOME` pointing to the common installation directory.
     Make sure you have read and execute permissions in that file system.
 
-2.  Set environmental variable CLARA_USER_DATA that points to a directory where you will store
+2.  Set environmental variable `CLARA_USER_DATA` that points to a directory where you will store
     Clara application service composition and data-set description files, as well as data
     processing logs, and possibly actual data files.
 
 3.  Run the Clara CLI.
 
-It is recommended for the CLARA_USER_DATA directory to have a specific file structure:
+It is recommended for the `$CLARA_USER_DATA` directory to have a specific file structure:
 
 ```
- |____config
- |____log
- |____data
- | |____input
- | |____output
+├── config
+├── data
+│   ├── input
+│   └── output
+└── log
 ```
 
 <div class="admonition note" markdown="1">
-It is OK not to create the structure by hand. Clara CLI (command line interface) will check/create
+It is OK not to create the structure by hand.
+Clara CLI (command line interface) will check/create
 the necessary file structure at the startup.
 </div>
 
 Let us start Clara CLI by typing the following:
 
 ```
-vem:~ gurjyan$ $CLARA_HOME/bin/clara-shell
+$ $CLARA_HOME/bin/clara-shell
 Warning: CLARA_USER_DATA environmental variable is not assigned.
          It will be set to point to the CLARA_HOME.
          Note that you might face permission exceptions.
 ```
 
-oops... I forgot to set CLARA_USER_DATA environmental variable. Let's try it one more time.
+Oops... I forgot to set `CLARA_USER_DATA` environmental variable.
+Let's try it one more time.
 
 ```
-vem:~ gurjyan$ $CLARA_HOME/bin/clara-shell
+$ $CLARA_HOME/bin/clara-shell
 
    ██████╗██╗      █████╗ ██████╗  █████╗
   ██╔════╝██║     ██╔══██╗██╔══██╗██╔══██╗  4.3
@@ -105,10 +109,10 @@ a given data file locally, i.e. on a local (on your own) computer.
 ### Processing a data file
 
 Clara considers default locations to access data files, the application
-service-composition file (usually services.yml, yet it can have any arbitrary name),
-data-set description file (e.g. files.list: this is text file containing the
+service-composition file (usually `services.yaml`, yet it can have any arbitrary name),
+data-set description file (e.g. `files.list`, a text file containing the
 names of all data files) as well as log files (usually for every data processing
-Clara creates 2 log files: DPE and workflow-manager logs). To see the default locations/settings,
+Clara creates two log files: DPE and workflow-manager logs). To see the default locations/settings,
 type in the CLI the following command:
 
 ```
@@ -138,30 +142,33 @@ farm.system:         "jlab"
 Usually `show config` will show full path with environmental variables resolved.
 
 <div class="admonition note" markdown="1">
-Note that these are default settings, and user can change to point to different locations.
+Note that these are the default settings,
+and user can change them to point to different locations.
 </div>
 
-Now let us switch to other workspace, or just simple exit the Clara CLI ( Ctrl-C ).
-First thing we have to do is to copy (or jget) our data file into the $CLARA_USER_DATA/data/input directory.
+Now let us switch to other workspace, or just simple exit the Clara CLI (`Ctrl-C`).
+First thing we have to do is to copy (or `jget`) our data file
+into the `$CLARA_USER_DATA/data/input` directory.
 E.g.
 
 ```
-cp /work/clas12/data/clas_004013.0.hipo $CLARA_USER_DATA/data/input/.
+$ cp /work/clas12/data/clas_004013.0.hipo $CLARA_USER_DATA/data/input/
 ```
 
-Next we create the files.txt file in the $CLARA_USER_DATA/config dir and add a single line to it:
+Next we create the `files.list` file in the `$CLARA_USER_DATA/config` dir
+and add a single line to it:
 
 ```
-gurjyan@clara1601:work/config$ more files.list
+$ cat $CLARA_USER_DATA/config/files.list
 clas_004013.0.hipo
 ```
 
 For this exercise we will be using the official (commonly distributed)
-CLAS12 reconstruction application service composition file ($CLARA_HOME/config/services.yaml).
+CLAS12 reconstruction application service composition file (`$CLARA_HOME/config/services.yaml`).
 That's it. Let us call again the Clara CLI and start the processing by typing `run local`:
 
 ```
-vem:~ gurjyan$ $CLARA_HOME/bin/clara-shell
+$ $CLARA_HOME/bin/clara-shell
 
    ██████╗██╗      █████╗ ██████╗  █████╗
   ██╔════╝██║     ██╔══██╗██╔══██╗██╔══██╗  4.3
@@ -220,8 +227,8 @@ CLAS12 plugin :    coatjava-5c.7.5
 2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:DCHB  pool_size = 20
 2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:FTCAL  pool_size = 20
 2019-01-31 16:35:25: started service = 129.57.70.24%7220_java:gurjyan:CTOF  pool_size = 20
-.....
-.....
+...
+...
 ```
 
 If you get this console printouts then congratulations!!!
@@ -263,32 +270,28 @@ average time spent by the entire application and time spent by workflow manageme
 2019-02-01 09:19:09.182: Total processing time    =   82.04 s
 2019-02-01 09:19:09.182: Total orchestrator time  =   89.80 s
 2019-02-01 09:19:09.183: Processing is complete.
-
-clara>
 ```
 
 ### Where is my output
 
-Reconstructed file will be physically stored in `outputDir:  "$CLARA_USER_DATA/data/output"`.
-(remember the CLI `show config` command?).
+Reconstructed file will be physically stored in the *outputDir:*
+`$CLARA_USER_DATA/data/output`.
+(Remember the CLI `show config` command?).
 
 ```
 clara> show outputDir
 total 81M
 -rw-r--r-- 1 gurjyan da 21M Feb  1 09:18 out_clas_004013.0.hipo
-
-clara>
 ```
 
-The data processing log files will be stored in `logDir: "$CLARA_USER_DATA/log"`.
+The data processing log files will be stored in the *logDir:*
+`$CLARA_USER_DATA/log`.
 
 ```
 clara> show logDir
 total 325M
 -rwxr-xr-x 1 gurjyan da 4.0K Jan 30 15:06 129.57.75.136_gurjyan_clara_orch.log
 -rwxr-xr-x 1 gurjyan da  89K Jan 30 15:12 129.57.75.136_gurjyan_clara_fe_dpe.log
-
-clara>
 ```
 
 Now a little bit about the file naming convention. As you can see the
@@ -304,9 +307,9 @@ clara> show config
 Clara log files are critical for data preservation, monitoring and debugging.
 So, that is the reason log file names some of the important information,
 such as the node where the processing was performed (in our example node
-IP = 129.57.75.136), data processing session(by default data processing
-session is set to be the user name. In our example session = gurjyan),
-and data processing description ( for this example description = clara).
+IP 129.57.75.136), data processing session(by default data processing
+session is set to be the user name. In our example *session=gurjyan*),
+and data processing description ( for this example *description=clara*).
 The data processing session and description are CLI configurable options
 and can be set by the following command set:
 
@@ -324,7 +327,7 @@ We can do a lot without exiting the Clara CLI. For e.g. we can analyse
 the log files using the following commands:
 
 ```
-clara> show loggDPE
+clara> show logDPE
 clara> show logOrchestrator
 ```
 
@@ -406,15 +409,13 @@ configuration:
 
 mime-types:
   - binary/data-hipo
-
-clara>
 ```
 
-The command above printed the content of the Clara application composition YML file,
+The command above printed the content of the Clara application composition YAML file,
 the location of which is configurable through the following command:
 
 ```
-clara> set servicesFile /myOwnDir/myOwnService.yml
+clara> set servicesFile /myOwnDir/myOwnService.yaml
 clara> show config
 ```
 
@@ -423,10 +424,12 @@ to remind you about this useful command that shows data processing
 application configuration options. It does not have any other purpose
 other than that (arguably useful, ha ha).
 
-Ok, let us examine CLAS12 reconstruction official services.yml file, the default location being at:
+Ok, let us examine CLAS12 reconstruction official `services.yaml` file,
+the default location being at:
 
 ```
 clara> show config
+...
 servicesFile:        "$CLARA_HOME/config/services.yaml"
 ...
 ```
@@ -437,7 +440,7 @@ The service composition file consists of the following sections:
     that access a data source and create a stream of data quanta that are
     dispatched to data processing services.
 
-    ```
+    ``` yaml
     io-services:
       reader:
         class: org.jlab.clas.std.services.convertors.HipoToHipoReader
@@ -449,7 +452,7 @@ The service composition file consists of the following sections:
 
   * Data processing services.
 
-    ```
+    ``` yaml
     services:
       - class: org.jlab.clas.swimtools.MagFieldsEngine
         name: MAGFIELDS
@@ -467,7 +470,7 @@ The service composition file consists of the following sections:
     processing services, as well as configuration options for a specific service
     (e.g. parameter `useStartTime` for DCHB service).
 
-    ```
+    ``` yaml
     configuration:
       io-services:
         writer:
@@ -484,21 +487,21 @@ The service composition file consists of the following sections:
 
   * Data tyoe of the streaming event (data quantum).
 
-    ```
+    ``` yaml
     mime-types:
       - binary/data-hipo
     ```
 
-So you can add a new service to the application by providing `clas`
+So you can add a new service to the application by providing `class`
 of the an engine and an arbitrary `name` (preferably something descriptive).
 Removing a service is as simple as deleting or commenting out the two lines in yml file, describing a service.
 
-E.g. below shows the clas12 modified reconstruction application ,where we keep two standard services from
+E.g. below shows the CLAS12 modified reconstruction application ,where we keep two standard services from
 the reconstruction official application and add two services, sharing the same engine. Here we demonstrate
 testing and debugging a new reconstruction engine with two different configuration options.
 
 ```
-clara> set servicesFile /myOwnDir/myOwnService.yml
+clara> set servicesFile /myOwnDir/myOwnService.yaml
 clara> show services
 
 io-services:
@@ -537,18 +540,16 @@ configuration:
       geomDBVariation: feb_2019_engineers
 mime-types:
   - binary/data-hipo
-
-clara>
 ```
 
 <div class="admonition warning" markdown="1">
-Clara application composition YML file is a representation of a directed graph,
+Clara application composition YAML file is a representation of a directed graph,
 where data flows from services described at the top to the bottom.
 </div>
 
 ### Running on a farm
 
-*Old macdonald sends a farmJob e-i-e-i-o...*
+*Old McDonald sends a farm job e-i-e-i-o...*
 
 Yup, this is that easy. You do not have to write a farm submission scripts, and
 farm deployment can be done without leaving the Clara CLI. Let us show it on an example.
@@ -562,15 +563,13 @@ clas_004013.0.hipo
 clas_004013.1.hipo
 clas_004013.2.hipo
 clas_004013.3.hipo
-
-clara>
 ```
 
 The following settings will configure my farm deployment:
 
   * Make sure user data is  accessible from the farm mounted file system.
     This includes input/output data directories, application and data-set
-    description files, log directory and farm-job PBS/SLIRM scripts.
+    description files, log directory and farm-job PBS/SLURM scripts.
 
     ```
     clara> set inputDir /work/clas12/gurjyan/Testbed/clara/data/input
@@ -580,11 +579,11 @@ The following settings will configure my farm deployment:
     clara> set logDir /work/clas12/gurjyan/Testbed/clara/log
     ```
 
-
     <div class="admonition note" markdown="1">
-    You can minimize manual settings in CLI (using default settings) by defining CLARA_USER_DATA environmental
-    variable pointing to a user-data directory that is visible to the farm system. Note that
-    this must be done prior running the `clara-shell` executable.
+    You can minimize manual settings in CLI (using default settings)
+    by defining `CLARA_USER_DATA` environmental variable
+    pointing to a user-data directory that is visible to the farm system.
+    Note that this must be done prior running the `clara-shell` executable.
     </div>
 
   * Define the data-processing session and the description.
@@ -612,8 +611,9 @@ These are typical settings for 8 core jobs that will work on all JLAB farm nodes
 If you need to increase core count please refer to
 [Farm deployment]({{ site.baseurl }}/docs/clas/farm-deployment.html) for more information.
 
-That's it. Now we launch the farm job, yet, it is a good practise check
-the settings before a farm deployment (I am sure you remember the CLI command `show config`).
+That's it. Now we launch the farm job, yet,
+it is a good practise check the settings before a farm deployment
+(I am sure you remember the CLI command `show config`).
 
 To run a farm job execute the following command in the CLI:
 
@@ -634,12 +634,13 @@ JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME 
 ```
 
 You can examine actual farm submission and shell executable scripts
-created by Clara in the $CLARA_USER_DATA/config directory (.jsub and .sh files).
+created by Clara in the `$CLARA_USER_DATA/config` directory
+(*.jsub* and *.sh* files).
 
 ```
-vem:~ gurjyan$ cd $CLARA_USER_DATA/config
-vem:~ gurjyan$ ls
-farm_gurjyan_clara.jsub	  farm_gurjyan_clara.sh  files.list  service.yml
+$ cd $CLARA_USER_DATA/config
+$ ls
+farm_gurjyan_clara.jsub	  farm_gurjyan_clara.sh  files.list  service.yaml
 ```
 
 There are more farm-job control parameters that help users to further customize the farm deployments.
@@ -650,8 +651,9 @@ E.g. user can process a given data set in multiple farm nodes in parallel (find 
 clara> set farm.scaling 4
 ```
 
-This command will divide entire data-set into groups of 4 files and
-will process each group in a different farm node. This is known as the Clara `horizontal scaling`.
+This command will divide entire data-set into groups of 4 files
+and will process each group in a different farm node.
+This is known as the Clara **horizontal scaling**.
 
 #### Farm node flavors
 
@@ -667,20 +669,24 @@ The JLAB scientific computing farm consists of the following hardware systems:
 - qcd12s, E5-2650 0  @ 2.0 Gz, cores = 32
 </div>
 
-To run data processing on a specific farm hardware you need to set the `farm.node` parameter.
+To run data processing on a specific farm hardware
+you need to set the *farm.node* parameter.
 E.g. the command below will request data processing only on farm.18 nodes.
 
 ```
 clara> set farm.node farm18
 ```
 
-Examples above will use farm in so called sharing mode, where in a single
-farm node there might be multiple jobs running owned by multiple users. In this mode
-data processing performance can not be properly optimized due to the unpredicted resource allocation requests.
-However, Clara can request an exclusive node for a data processing, where only your job will be running.
+Examples above will use farm in so called sharing mode,
+where in a single farm node
+there might be multiple jobs running owned by multiple users.
+In this mode data processing performance can not be properly optimized
+due to the unpredicted resource allocation requests.
+However, Clara can request an exclusive node for a data processing,
+where only your job will be running.
 In this case Clara will perform hardware level optimizations to achieve maximum performance.
 
-E.g. the command below requests an exclusive access to a farm18 node:
+E.g. the command below requests an exclusive access to a *farm18* node:
 
 ```
 clara> set farm.exclusive farm18
@@ -688,7 +694,8 @@ clara> set farm.exclusive farm18
 
 <div class="admonition warning" markdown="1">
 The exclusive mode works for only SLURM controlled farm nodes.
-For the exclusive mode on the SLURM farm, you do not have to define farm.memory and farm.cpu parameters,
+For the exclusive mode on the SLURM farm,
+you do not have to define *farm.memory* and *farm.cpu* parameters,
 since Clara will set these values for you to guarantee maximum performance.
 </div>
 
@@ -716,7 +723,7 @@ clara> set farm.disk 25
 
 #### Farm staging
 
-One other important parameter to be considered is the `farm.stage`.
+One other important parameter to be considered is the *farm.stage*.
 This will tell Clara workflow management system to stage files one-by-one
 in the local file system of the farm computing node. This operation is
 critical for IO optimizations, since local IO is considerably faster
@@ -727,9 +734,9 @@ clara> set farm.stage /scratch/clara/gurjyan
 ```
 
 <div class="admonition warning" markdown="1">
-The /scratch/clara is the created directory on all farm nodes (much like /scratch/pbs).
+The `/scratch/clara` is the created directory on all farm nodes (much like `/scratch/pbs`).
 For the proper staging and file transfers user must request a subdirectory
-specific for his/her processing (in the example subdir = gurjyan).
+specific for his/her processing (in the example the subdir is `gurjyan`).
 </div>
 
 To get more information on farm deployment parameters
@@ -741,15 +748,16 @@ All your actions and created Clara CLI command sets will not change to launch
 data processing jobs on a farm controlled by PBS or SLURM batch control systems.
 Clara is transparent in this sense. If you want your jobs to end up on
 SLURM or PBS controlled farms the only thing you need to do is to change
-the PATH variable in your startup script. E.g. changing PATH variable in the .cshrc file:
+the `PATH` variable in your startup script.
+E.g. changing `PATH` variable in the `.cshrc` file:
 
 ```
-gurjyan@clara1601$ set path = ( /site/scicomp/auger-slurm/bin $path )
+$ set path = ( /site/scicomp/auger-slurm/bin $path )
 ```
 
 That's it. now you are ready to process data on SLURM controlled farm.
 There are useful commands in SLURM, that are not ported into Clara CLI
-(there is no intention to make Clara `Jack of all trades`),
+(there is no intention to make Clara *Jack of all trades*),
 such as `slurmHosts`, `slurmJobs`, `slurmQueues`, etc, that help to see available nodes,
 running jobs and their statuses. Please refer to the
 [scicomp](https://scicomp.jlab.org/docs/getting_started) web site for more information.
@@ -773,7 +781,7 @@ clara> save myTest.cls
 The next time you start a shell you can type something like:
 
 ```
-vem:~ gurjyan$ $CLARA_HOME/bin/clara-shell myTest.cls
+$ $CLARA_HOME/bin/clara-shell myTest.cls
 ```
 
 You can get more on Clara scripting in [here]({{ site.baseurl }}/docs/clas/clara-scripts.html)

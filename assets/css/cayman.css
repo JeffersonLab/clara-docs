@@ -861,6 +861,15 @@ table {
 .admonition code {
   background-color: inherit;
 }
+.admonition pre {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 .scrolling-pre pre {
   max-height: 30em
+}
+h2 > .highlighter-rouge {
+  background-color: inherit;
+  font-weight: bold;
+  padding: 0;
 }

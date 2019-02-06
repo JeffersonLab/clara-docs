@@ -121,10 +121,10 @@ install(TARGETS ${SERVICES} DESTINATION $ENV{CLARA_HOME}/plugins/simple/lib)
 To compile and install the service run the following commands:
 
 ```
-mkdir build && cd build
-cmake -DCMAKE_INSTALL_PREFIX=$CLARA_HOME ..
-make
-make install
+$ mkdir build && cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=$CLARA_HOME ..
+$ make
+$ make install
 ```
 
 

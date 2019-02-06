@@ -28,7 +28,7 @@ to the directory where the CLARA CLAS12 distribution will be installed
 (`/UserHome/myClara` or `/UserHome/clas12-v4`).
 
 <div class="admonition warning" markdown="1">
-Remember, Clara will create CLARA_HOME directory with a specific file structure.
+Remember, Clara will create the `$CLARA_HOME` directory with a specific file structure.
 You need to provide only a location where it should be created.
 </div>
 
@@ -38,28 +38,30 @@ farm deployment scripts, etc. For that assign `CLARA_USER_DATA` environmental va
 a user specific work directory.
 
 ```
-setenv CLARA_HOME /UserHome/myClara
-setenv CLARA_USER_DATA /UserHome/work
+$ setenv CLARA_HOME /UserHome/myClara
+$ setenv CLARA_USER_DATA /UserHome/work
 ```
 
 <div class="admonition note" markdown="1">
-Note that CLARA_USER_DATA is optional, in case you are installing your own Clara environment.
-In all cases, if you forget to set CLARA_USER_DATA variable it will assume that it is pointing to
-the mandatory CLARA_HOME variable. This means that if you are using the common Clara installation you might face
-permission exceptions at the run-time.
+Note that `CLARA_USER_DATA` is optional,
+in case you are installing your own Clara environment.
+In all cases, if you forget to set `CLARA_USER_DATA` variable
+it will assume that it is pointing to `$CLARA_HOME`.
+This means that if you are using the common Clara installation
+you might face permission exceptions at the run-time.
 </div>
 
 ### CRE installation
 
-Download  the following script:
+Download the following script:
 
 {% download file: install-claracre-clas.sh, name: install-claracre-clas %}
 
 Change permission of this file to make it executable, and run:
 
 ```
-./install-claracre-clas.sh -v <CLAS12 plugin version>
-                           -f <CLARA distribution version>
+$ ./install-claracre-clas.sh [ -v <CLAS12 plugin version> ]
+                             [ -f <CLARA distribution version> ]
 ```
 
 CLAS12 plugin distributions will be accessed at:
@@ -74,10 +76,11 @@ E.g. if you plat to install CLARA clara-cre-4.3.2 distribution and CLAS12
 coatjava-5c.6.3 plugin, you should run the installation script with the following options:
 
 ```
-./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3
+$ ./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3
 ```
 
-Information about the framework and the plugin versions, used during the data processing, will be shown and logged:
+Information about the framework and the plugin versions,
+used during the data processing, will be shown and logged:
 
 ```
 Distribution  :    clara-cre-4.3.2
@@ -105,18 +108,18 @@ After receiving CLARA or CLAS12 software update notification
 the only thing you do is simply type:
 
 ```
-$CLARA_HOME/bin/install-claracre-clas.sh -v <version>
+$ $CLARA_HOME/bin/install-claracre-clas.sh -v <version>
 ```
 
 
 ## Under the hood
 
 After the successful installation steps you will get a structured directory
-pointed by the `$CLARA_HOME` environment variable
+pointed by the `CLARA_HOME` environment variable
 furnished with all necessary jars, scripts, data and configuration files.
 
 ```
-myClara/
+$CLARA_HOME/
 ├── bin
 │   ├── clara-orchestrator
 │   ├── clara-shell

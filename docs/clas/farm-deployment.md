@@ -33,7 +33,8 @@ clara> set description test1
 ```
 
 <div class="admonition note" markdown="1">
-Note that *session* and *description* MUST be unique for every farm deployment.
+Note that *session* and *description* MUST be unique
+for every farm deployment.
 </div>
 
 Set desired vertical and horizontal scaling parameters.
@@ -56,8 +57,9 @@ clara> sho farmStatus
 
 ## Clara CLI JLAB farm setting example
 
-Memory requests are for virtual memory. The requests will be factor 2-3 less in case
-farm control software will react on actual physical memory usage.
+Memory requests are for virtual memory.
+The requests will be factor 2-3 less
+in case farm control software will react on actual physical memory usage.
 
 ```
 set session gurjyan
@@ -80,8 +82,8 @@ set farm.stage /scratch/clara
 
 We recommend using Clara’s JLAB data-processing auto-configuration option to insure
 optimized performance and efficient utilization of the farm resources. In this case the
-only requirement is to set the `farm.exclusive`, `fileList` and `description` options
-(note: fileList and description must be unique for every farm job submission). E.g.
+only requirement is to set the *farm.exclusive*, *fileList* and *description* options
+(note: *fileList* and *description* must be unique for every farm job submission). E.g.
 
 ```
 clara> set fileList
@@ -92,12 +94,13 @@ clara> set farm.scaling N (optional)
 ```
 These settings will guarantee an exclusive access to a specified node-flavor
 and will run hardware optimized (NUMA socket affinity, cores and memory) Clara processes.
+
 ### User: Private data processing jobs
 
 #### farm13, farm14 and farm16
 
-We suggest for an efficient utilization of the farm to use default core and memory settings:
-`farm.cpu = 16, farm.memory = 40G`.
+We suggest for an efficient utilization of the farm
+to use default core and memory settings: *farm.cpu=16*, *farm.memory=40G*.
 These are the suggested settings:
 
 ```
@@ -110,12 +113,12 @@ clara> set farm.disk 25
 clara> set farm.scaling N
 ```
 
-N is the number defined based on the size of the data set.
+*N* is the number defined based on the size of the data set.
 
 #### farm18
 
 The current suggestion (before implementing Slurm workload manager) is to use
-farm18 nodes in the `exclusive` mode, hence use the following settings:
+*farm18* nodes in the `exclusive` mode, hence use the following settings:
 
 ```
 clara> set fileList
@@ -126,4 +129,5 @@ clara> set outFilePrefix xyz_
 clara> set farm.disk 25
 clara> set farm.cpu 80
 ```
+
 No need to set the memory since in the exclusive mode the memory request is ignored.

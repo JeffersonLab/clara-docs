@@ -9,6 +9,7 @@ to utilize all available cores of a node (vertical scaling),
 and the same time will also expand to available nodes in the network
 (accessible LAN or WAN)
 to consume cores on network distributed nodes (horizontal scaling).
+
 However, it is understood that this multi-dimensional scaling
 cannot go linearly forever,
 due to the data/event provisioning system latency.
@@ -28,7 +29,6 @@ To enable the vertical scaling user sets the following parameters, for local run
 
 ```
 clara> set threads 8
-
 ```
 
 and for farm deployment:
@@ -41,16 +41,18 @@ clara> set farm.cpu 8
 
 The CLARA CLI is designed to auto configure horizontal scaling,
 ensuring linear scalability of entire data processing.
-As usually *files.list* contains multiple data files to be processed.
+
+As usually, `files.list` contains multiple data files to be processed.
 If the CLI parameter: *farm.scaling* is set to 0,
 then the entire data set will be processed in a single CLARA DPE (single node),
 multi-threaded (vertically scaled) over all available cores of that single node.
+
 However, this processing will not be horizontally scaled,
-meaning that the data files in the *files.list* will be processed sequentially.
+meaning that the data files in the `files.list` will be processed sequentially.
 Yet, in case user sets *farm.scaling = n*, that will tell CLARA
-to process group of n files from the *files.list* data-set in parallel,
+to process group of *n* files from the `files.list` data-set in parallel,
 on different farm nodes.
-This will speed up processing of the entire data-set n times.
+This will speed up processing of the entire data-set *n* times.
 
 ### Example
 
@@ -58,7 +60,7 @@ For example a user prepares a data processing with the following CLARA
 CLI settings
 
 ```
-gurjyan@clara1602$ $CLARA_HOME/bin/clara-shell
+$ $CLARA_HOME/bin/clara-shell
 
    ██████╗██╗      █████╗ ██████╗  █████╗
   ██╔════╝██║     ██╔══██╗██╔══██╗██╔══██╗ 4.3.0
@@ -98,7 +100,7 @@ farm.system:         "jlab"
 farm.scaling:        0
 ```
 
-The files.list contains 11 files.
+The `files.list` contains 11 files.
 
 ```
 clara> show files
@@ -122,7 +124,7 @@ farm nodes.
 clara> set farm.scaling 2
 ```
 
-This will tell CLARA to split the *files.list* data-set in six subsets,
+This will tell CLARA to split the `files.list` data-set in six subsets,
 where the first five will have two files
 and the last one will have a single file.
 
@@ -133,8 +135,8 @@ under the name `.<session>` (in the presented example it would be
 
 
 ```
-gurjyan@clara1602$ cd $CLARA_HOME/plugins/clas12/config/.gurjyan
-gurjyan@clara1602$ ls
+$ cd $CLARA_HOME/plugins/clas12/config/.gurjyan
+$ ls
 clara_0  clara_1  clara_2  clara_3  clara_4  clara_5
 ```
 
@@ -164,4 +166,3 @@ JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME 
 42398577  gurjyan     A    priority    --         ...urjyan-clara   Aug 22 16:21  --         --         clas12
 42398579  gurjyan     A    priority    --         ...urjyan-clara   Aug 22 16:21  --         --         clas12
 ```
-

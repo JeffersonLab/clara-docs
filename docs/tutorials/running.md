@@ -6,13 +6,13 @@ title: CLI and Processing
 In this chapter we present instructions
 how to run CLARA based data processing application.
 
-We assume that the `$CLARA_HOME` env variable is pointing to
+We assume that the `CLARA_HOME` env variable is pointing to
 the CLARA run-time environment (CRE) directory.
 
 Now just simply type:
 
 ```
-$CLARA_HOME/bin/clara-shell
+$ $CLARA_HOME/bin/clara-shell
 ```
 
 This will start CLARA command line interactive interface (CLI).
@@ -76,14 +76,15 @@ That line should be after a comment such as:
 
 ### Important
 
-Before we describe a data processing configuration options it is worthwhile to emphasize
-the importance of the `application service composition` and data-set proper description.
+Before we describe a data processing configuration options
+it is worthwhile to emphasize the importance
+of the *application service composition* and data-set proper description.
 This includes path to the actual data-file input and output directories,
 full path to the data-set metadata file, and data-set description.
 
 <div class="admonition note" markdown="1">
 For every data processing these options must be set, and most importantly,
-options for `data-set description` and `data-set metadata file` must be unique.
+options for the data-set *description* and *metadata file* must be unique.
 </div>
 
 ```
@@ -211,7 +212,6 @@ set farm.scaling
 
 set farm.system
     Farm batch system. Accepts pbs and jlab.
-
 ```
 {: .scrolling-pre }
 
@@ -220,10 +220,10 @@ set farm.system
 This is known as the CLARA YAML file.
 It describes the application micro-services,
 their transient data format and their configuration parameters.
-The *servicesFile* location can by specified in the CLI by. E.g.
+The *servicesFile* location can by specified in the CLI by:
 
 ```
-clara> set servicesFile ~/clas12/exp1/services.yml
+clara> set servicesFile ~/clas12/exp1/services.yaml
 ```
 
 You can also modify the *servicesFile* from inside the CLI environment:
@@ -285,10 +285,11 @@ mime-types:
   - binary/data-hipo
 ```
 
-Note that if you need to remove a service from a composition you comment out the service description,
+Note that if you need to remove a service from a composition,
+you comment out the service description,
 as shown in the presented composition:
 
-```
+``` yaml
     # class: org.jlab.clas.std.services.convertors.EtRingToHipoReader
     # name: EtRingToHipoReader
 ```
@@ -413,7 +414,7 @@ Job-4:
 The option *monHost* sets the IP address of the CLARA monitoring server
 to which the processing DPEs will send periodic runtime and registration reports.
 
-Users can run it's own monitoring server by executing *$CLARA_HOME/bin/j_mproxy*.
+Users can run it's own monitoring server by executing `$CLARA_HOME/bin/j_mproxy`.
 
 ```
 $ $CLARA_HOME/bin/j_mproxy --help
@@ -439,10 +440,10 @@ usage: j_idr [options]
 ```
 
 <div class="admonition note" markdown="1">
-For the JLAB farm DPE reporting, as well as for user specific
-online data quality monitoring,
-the default CLARA monitoring server and data visualization dashboard is running at
-<http://claraweb.jlab.org:3000/dashboard/db/pdp-b>
+For the JLAB farm DPE reporting,
+as well as for user specific online data quality monitoring,
+the default CLARA monitoring server and data visualization dashboard
+is running at <http://claraweb.jlab.org:3000/dashboard/db/pdp-b>
 </div>
 
 ### The edit command
@@ -503,7 +504,7 @@ clara> help show
 
   show farmSub
     Show farm job submission file.
- ```
+```
 
 ### The save command
 
@@ -522,4 +523,3 @@ clara> help source
   source <file_path>
     Read and execute commands from file .
 ```
-

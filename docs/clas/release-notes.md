@@ -6,7 +6,7 @@ title: Release notes
 
 - Updated HIPO-4 IO services (CLAS12 plugin specific)
 
-- Introduced `$CLARA_USER_DATA` environment variable
+- Introduced `CLARA_USER_DATA` environment variable
   to separate Clara installation form the user specific data.
   Note that this feature helps multiple users to use a common installation.
 
@@ -36,8 +36,8 @@ title: Release notes
   for DPE and associated Orchestrator.
   Start an Orchestrator when DPE is fully operational.
 
-- Farm default parameters: `farm.scale=disabled`, `farm.memory=0`,
-  `farm.cpu=0`, `farm.disk=5GB`, `farm.time=24hours`.
+- Farm default parameters: *farm.scale=disabled*, *farm.memory=0*,
+  *farm.cpu=0*, *farm.disk=5GB*, *farm.time=24hours*.
 
 - Farm horizontal scaling: verified and tested.
 

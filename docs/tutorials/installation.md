@@ -1,39 +1,40 @@
 ---
 title: Installation
 ---
+
 ## CLARA Run-time Environment (CRE)
 
 <div class="admonition warning" markdown="1">
 Installation instructions here are presented for the CLARA Java binding.
-</div>
 
 For C++ and Python binding installation instructions can be found at:
 
-[Clara C++](https://github.com/JeffersonLab/clara-cpp)
+- [CLARA C++](https://github.com/JeffersonLab/clara-cpp)
 
-[Clara Python](https://github.com/JeffersonLab/clara-python)
+- [CLARA Python](https://github.com/JeffersonLab/clara-python)
+</div>
 
 First set the `CLARA_HOME` environmental variable that will point
 to the directory where the CLARA distribution will be installed
 ( E.g. `/UserHome/myClara`)
 
 ```
-setenv CLARA_HOME /UserHome/myClara
+$ setenv CLARA_HOME /UserHome/myClara
 ```
 
-<div class="admonition warning" markdown="1">
-Clara will create CLARA_HOME directory with a specific file structure.
-You need to provide only a location where it should be created.
+<div class="admonition info" markdown="1">
+Clara will create `$CLARA_HOME` directory with a specific file structure.
+You need to provide only the location where it should be created.
 </div>
 
-Download  the following script:
+Download the following script:
 
 {% download file: install-claracre.sh, name: install-claracre %}
 
 Change permission of this file to make it executable, and run:
 
 ```
-./install-claracre.sh  -f <CLARA distribution version>
+$ ./install-claracre.sh  -f <CLARA distribution version>
 ```
 
 CLARA framework distributions are accessed at:
@@ -43,7 +44,7 @@ CLARA framework distributions are accessed at:
 <div class="admonition note" markdown="1">
 The default version is v4.3.5.
 
-Omit the <code>-f</code> option to install the default version.
+Omit the `-f` option to install the default version.
 </div>
 
 ## CLARA Development Kit (CDK)
@@ -71,7 +72,7 @@ Download the following script:
 So, for CDK installation copy downloaded scripts into your `<work_dir>` and type:
 
 ```
-./install-claradk.sh
+$ ./install-claradk.sh
 ```
 
 ## Software update
@@ -80,13 +81,13 @@ After receiving CLARA update notification
 the only thing you do is simply type:
 
 ```
-$CLARA_HOME/bin/install-claracre.sh
+$ $CLARA_HOME/bin/install-claracre.sh
 ```
 
 For CDK:
 
 ```
-$CLARA_HOME/bin/update-claradk.sh
+$ $CLARA_HOME/bin/update-claradk.sh
 ```
 
 ## Under the hood

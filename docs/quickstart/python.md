@@ -38,10 +38,10 @@ $ p_dpe # or python clara/sys/Dpe.py
 ### Writing your Clara Engine
 
 This is a very simple example of a Clara engine in python. User should
-create an engine class with a proper name, then add it to the $CLARA_SERVICES
+create an engine class with a proper name, then add it to the `$CLARA_SERVICES`
 folder for the DPE to find it.
 
-```
+``` python
 from clara.base.ClaraUtils import ClaraUtils
 from clara.engine.Engine import Engine
 from clara.engine.EngineDataType import EngineDataType, Mimetype

@@ -722,9 +722,11 @@ data processing jobs on a farm controlled by PBS or SLURM batch control systems.
 Clara is transparent in this sense. If you want your jobs to end up on
 SLURM or PBS controlled farms the only thing you need to do is to change
 the PATH variable in your startup script. E.g. changing PATH variable in the .cshrc file:
- ```
+
+```
 gurjyan@clara1601$ set path = ( /site/scicomp/auger-slurm/bin $path )
- ```
+```
+
 That's it. now you are ready to process data on SLURM controlled farm.
 There are useful commands in SLURM, that are not ported into Clara CLI
 (there is no intention to make Clara `Jack of all trades`),

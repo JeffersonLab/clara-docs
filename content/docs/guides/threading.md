@@ -39,7 +39,7 @@ CLARA services can run at a full native speed and make full use of a core.
 ZeroMQ library (used in xMsg) being single threaded
 perfectly fits into the CLARA architecture.
 
-![Figure 14. CLARA Service multi-threading](../assets/images/Slide07.jpg){: .align-center }
+![Figure 14. CLARA Service multi-threading](../../assets/images/Slide07.jpg){: .align-center }
 
 In this particular implementation, depicted in the Figure 14,
 the only resource that requires synchronization

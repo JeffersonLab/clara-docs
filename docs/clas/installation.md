@@ -18,13 +18,13 @@ you can solve one of life's most boring petty problems:
 data analysis to understand how things are designed
 or (if you are an atheist) evolved.
 
-## CLARA CLAS12 Run-time Environment (CRE)
+## Clara CLAS12 Run-time Environment (CRE)
 
 Installation and data processing instructions are presented
-for the CLARA Java binding.
+for the Clara Java binding.
 
 First set the `CLARA_HOME` environmental variable that will point
-to the directory where the CLARA CLAS12 distribution will be installed
+to the directory where the Clara CLAS12 distribution will be installed
 (`/UserHome/myClara` or `/UserHome/clas12-v4`).
 
 <div class="admonition warning" markdown="1">
@@ -68,12 +68,12 @@ CLAS12 plugin distributions will be accessed at:
 
 <https://clasweb.jlab.org/clas12offline/distribution/coatjava/>
 
-CLARA framework distributions are accessed at:
+Clara framework distributions are accessed at:
 
 <https://userweb.jlab.org/~gurjyan/clara-cre/>
 
-E.g. if you plat to install CLARA clara-cre-4.3.2 distribution and CLAS12
-coatjava-5c.6.3 plugin, you should run the installation script with the following options:
+E.g. if you plat to install Clara `clara-cre-4.3.2` distribution and CLAS12
+`coatjava-5c.6.3` plugin, you should run the installation script with the following options:
 
 ```
 $ ./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3
@@ -104,7 +104,7 @@ CLAS12 plugin :    coatjava-5c.6.3
 
 ## Software update
 
-After receiving CLARA or CLAS12 software update notification
+After receiving Clara or CLAS12 software update notification
 the only thing you do is simply type:
 
 ```

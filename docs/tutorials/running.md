@@ -1,13 +1,13 @@
 ---
 title: CLI and Processing
 ---
-## CLARA CLI
+## Clara CLI
 
 In this chapter we present instructions
-how to run CLARA based data processing application.
+how to run Clara based data processing application.
 
 We assume that the `CLARA_HOME` env variable is pointing to
-the CLARA run-time environment (CRE) directory.
+the Clara run-time environment (CRE) directory.
 
 Now just simply type:
 
@@ -15,7 +15,7 @@ Now just simply type:
 $ $CLARA_HOME/bin/clara-shell
 ```
 
-This will start CLARA command line interactive interface (CLI).
+This will start Clara command line interactive interface (CLI).
 Hierarchical help will navigate you through commands to configure, run and monitor
 CLAS12 data processing applications.
 
@@ -217,7 +217,7 @@ set farm.system
 
 #### Application service composition. Services YAML file
 
-This is known as the CLARA YAML file.
+This is known as the Clara YAML file.
 It describes the application micro-services,
 their transient data format and their configuration parameters.
 The *servicesFile* location can by specified in the CLI by:
@@ -368,9 +368,9 @@ where processed files will be stored.
 #### Vertical scaling
 
 The options *threads* and *farm.cpu* define the **vertical scaling** factor, i.e.
-how many events will be processed in parallel within a single CLARA DPE.
+how many events will be processed in parallel within a single Clara DPE.
 
-The option *threads* defines vertical scaling for the local CLARA DPE,
+The option *threads* defines vertical scaling for the local Clara DPE,
 while *farm.cpu* defines the same for DPEs running on farm jobs.
 
 #### Horizontal scaling
@@ -385,7 +385,7 @@ For example, for the data set of twelve files defined above, the command
 clara> set farm.scaling 3
 ```
 
-will tell CLARA to request four jobs with the following file processing assignments:
+will tell Clara to request four jobs with the following file processing assignments:
 
 ```
 Job-1:
@@ -411,7 +411,7 @@ Job-4:
 
 #### The data processing monitoring server
 
-The option *monHost* sets the IP address of the CLARA monitoring server
+The option *monHost* sets the IP address of the Clara monitoring server
 to which the processing DPEs will send periodic runtime and registration reports.
 
 Users can run it's own monitoring server by executing `$CLARA_HOME/bin/j_mproxy`.
@@ -427,7 +427,7 @@ usage: jx_proxy [options]
 ```
 
 Also, for data archiving and visualization,
-the CLARA data reporting orchestrator must be running:
+the Clara data reporting orchestrator must be running:
 
 ```
 $ $CLARA_HOME/bin/j_idr --help
@@ -442,7 +442,7 @@ usage: j_idr [options]
 <div class="admonition note" markdown="1">
 For the JLAB farm DPE reporting,
 as well as for user specific online data quality monitoring,
-the default CLARA monitoring server and data visualization dashboard
+the default Clara monitoring server and data visualization dashboard
 is running at <http://claraweb.jlab.org:3000/dashboard/db/pdp-b>
 </div>
 

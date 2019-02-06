@@ -2,9 +2,9 @@
 title: Scaling
 ---
 
-CLARA framework is multi-dimensional elastic system,
+Clara framework is multi-dimensional elastic system,
 and is capable of auto-scaling vertically as well as horizontally.
-For example CLARA will multi-thread services within an application
+For example Clara will multi-thread services within an application
 to utilize all available cores of a node (vertical scaling),
 and the same time will also expand to available nodes in the network
 (accessible LAN or WAN)
@@ -39,24 +39,24 @@ clara> set farm.cpu 8
 
 ## Controlled horizontal scaling
 
-The CLARA CLI is designed to auto configure horizontal scaling,
+The Clara CLI is designed to auto configure horizontal scaling,
 ensuring linear scalability of entire data processing.
 
 As usually, `files.list` contains multiple data files to be processed.
 If the CLI parameter: *farm.scaling* is set to 0,
-then the entire data set will be processed in a single CLARA DPE (single node),
+then the entire data set will be processed in a single Clara DPE (single node),
 multi-threaded (vertically scaled) over all available cores of that single node.
 
 However, this processing will not be horizontally scaled,
 meaning that the data files in the `files.list` will be processed sequentially.
-Yet, in case user sets *farm.scaling = n*, that will tell CLARA
+Yet, in case user sets *farm.scaling = n*, that will tell Clara
 to process group of *n* files from the `files.list` data-set in parallel,
 on different farm nodes.
 This will speed up processing of the entire data-set *n* times.
 
 ### Example
 
-For example a user prepares a data processing with the following CLARA
+For example a user prepares a data processing with the following Clara
 CLI settings
 
 ```
@@ -124,7 +124,7 @@ farm nodes.
 clara> set farm.scaling 2
 ```
 
-This will tell CLARA to split the `files.list` data-set in six subsets,
+This will tell Clara to split the `files.list` data-set in six subsets,
 where the first five will have two files
 and the last one will have a single file.
 
@@ -140,7 +140,7 @@ $ ls
 clara_0  clara_1  clara_2  clara_3  clara_4  clara_5
 ```
 
-Now if we start farm processing in the CLI, CLARA will submit 5 farm jobs.
+Now if we start farm processing in the CLI, Clara will submit 5 farm jobs.
 
 ```
 clara> run farm

@@ -90,6 +90,6 @@ mime-types:
   - binary/data-hipo
 ```
 
-CLARA is designed for extension, You can build your own data processing
+Clara is designed for extension, You can build your own data processing
 services, and add them to an application composition. This approach
 enables rapid prototyping/development and effective testing.

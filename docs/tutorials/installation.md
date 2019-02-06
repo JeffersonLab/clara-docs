@@ -2,20 +2,20 @@
 title: Installation
 ---
 
-## CLARA Run-time Environment (CRE)
+## Clara Run-time Environment (CRE)
 
 <div class="admonition warning" markdown="1">
-Installation instructions here are presented for the CLARA Java binding.
+Installation instructions here are presented for the Clara Java binding.
 
 For C++ and Python binding installation instructions can be found at:
 
-- [CLARA C++](https://github.com/JeffersonLab/clara-cpp)
+- [Clara C++](https://github.com/JeffersonLab/clara-cpp)
 
-- [CLARA Python](https://github.com/JeffersonLab/clara-python)
+- [Clara Python](https://github.com/JeffersonLab/clara-python)
 </div>
 
 First set the `CLARA_HOME` environmental variable that will point
-to the directory where the CLARA distribution will be installed
+to the directory where the Clara distribution will be installed
 ( E.g. `/UserHome/myClara`)
 
 ```
@@ -37,7 +37,7 @@ Change permission of this file to make it executable, and run:
 $ ./install-claracre.sh  -f <CLARA distribution version>
 ```
 
-CLARA framework distributions are accessed at:
+Clara framework distributions are accessed at:
 
 <https://userweb.jlab.org/~gurjyan/clara-cre/>
 
@@ -47,10 +47,10 @@ The default version is v4.3.5.
 Omit the `-f` option to install the default version.
 </div>
 
-## CLARA Development Kit (CDK)
+## Clara Development Kit (CDK)
 
 If you are a prospective developer and would like to access entire code-base, you need to install the CDK.
-This will provide CLARA entire source base, including xMsg and JinFlux packages.
+This will provide Clara entire source base, including xMsg and JinFlux packages.
 
 ### Installation Prerequisites
 
@@ -77,7 +77,7 @@ $ ./install-claradk.sh
 
 ## Software update
 
-After receiving CLARA update notification
+After receiving Clara update notification
 the only thing you do is simply type:
 
 ```

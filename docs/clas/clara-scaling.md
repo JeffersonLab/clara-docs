@@ -131,6 +131,7 @@ in a temporary directory inside `$CLARA_HOME/plugins/clas12/config`,
 under the name `.<session>` (in the presented example it would be
 `$CLARA_HOME/plugins/clas12/config/.gurjyan`).
 
+
 ```
 gurjyan@clara1602$ cd $CLARA_HOME/plugins/clas12/config/.gurjyan
 gurjyan@clara1602$ ls

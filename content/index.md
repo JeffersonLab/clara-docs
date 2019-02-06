@@ -1,7 +1,8 @@
-# Documentation
+# CLARA Framework
 
 ## Welcome!
-In a few words CLARA is a data-in-motion platform to build streaming
+
+CLARA is a data-in-motion platform to build streaming
 scientific-data analytics applications. It enables scientist to collect,
 process, analyze and act on streaming data-quanta (user defined and framework agnostic)
 across data centers and clouds.
@@ -40,43 +41,47 @@ data processing applications without writing a single line of code.
 ![Figure 1. CLARA data processing application example](assets/images/application.jpg){: .align-center }
 
 
-### Get Started
-Through this page service engine developers can find the necessary reference materials
+## Getting Started
+
+Through this site service engine developers can find the necessary reference materials
 to develop service engines in all supported languages.
-Visit [Quick Start](quickstart/)
+For instructions to download the CLARA distribution,
+visit the [installation page](docs/tutorials/installation.md).
+
+The table below presents **quickstart guides**
 for an introduction to writing services in your preferred language.
-Application developers can learn how to use CLARA orchestration layer
+Application developers can learn how to use CLARA **orchestration layer**
 to compose services into a streaming data-processing applications.
-Visit [Guides](guides/) for more details.
-A complete working example to
-to develop [multi-lingual application](https://github.com/JeffersonLab/clara-demo)
-can be useful for advanced users.
 
+The [CLAS12 section](docs/clas/installation.md)
+contains specific information to run **CLAS12 data processing** with CLARA.
 
- <!-- ## Supported Languages -->
+A [complete working example](https://github.com/JeffersonLab/clara-demo)
+to develop a **multi-lingual application** can be useful for advanced users.
 
- <!-- | Java | C++ | Python | -->
- <!-- |:-----|:----|:-------| -->
- <!-- | [Quick Start][jq] | [Quick Start][cq] | [Quick Start][pq] | -->
- <!-- | [Tutorial][jt]    | [Tutorial][ct]    | [Tutorial][pt]    | -->
- <!-- | [Examples][je]    | [Examples][ce]    | [Examples][pe]    | -->
- <!-- | [Reference][jr]   | [Reference][cr]   | [Reference][pr]   | -->
- <!-- {: .doc-lang-table } -->
+Visit the [framework section](docs/guides/background.md) for more details about the
+design of CLARA.
 
- <!-- [jq]: quickstart/java.md -->
- <!-- [jt]: tutorials/java.md -->
- <!-- [je]: examples/java.md -->
- <!-- [jr]: /clara/api/java/current/ -->
+## Supported Languages
 
- <!-- [cq]: quickstart/cpp.md -->
- <!-- [ct]: tutorials/cpp.md -->
- <!-- [ce]: examples/cpp.md -->
- <!-- [cr]: /clara/api/cpp/ -->
+<div class="doc-lang-table" markdown="1">
 
- <!-- [pq]: quickstart/python.md -->
- <!-- [pt]: tutorials/python.md -->
- <!-- [pe]: examples/python.md -->
- <!-- [pr]: /clara/api/python/ -->
+| Java | C++ | Python |
+|:-----|:----|:-------|
+| [Quick Start][jq] | [Quick Start][cq] | [Quick Start][pq] |
+| [Source Code][js] | [Source Code][cs] | [Source Code][ps] |
+| [Reference][jr]   | [Reference][cr]   | [Reference][pr]   |
 
- <!-- ## Use cases -->
+</div>
 
+[jq]: docs/quickstart/java.md
+[js]: https://github.com/JeffersonLab/clara-java
+[jr]: /clara/api/java/current/
+
+[cq]: docs/quickstart/cpp.md
+[cs]: https://github.com/JeffersonLab/clara-cpp
+[cr]: /clara/api/cpp/
+
+[pq]: docs/quickstart/python.md
+[ps]: https://github.com/JeffersonLab/clara-python
+[pr]: /clara/api/python/

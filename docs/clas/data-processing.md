@@ -11,6 +11,7 @@ We assume that the `$CLARA_HOME` env variable is pointing to
 the CLARA run-time environment directory.
 
 Now just simply type:
+
 ```
 $CLARA_HOME/bin/clara-shell
 ```
@@ -94,6 +95,7 @@ clara> set description
 
 Short description of the data processing commands can be obtained
 with the *help* command.
+
 ```
 clara> help edit
 
@@ -110,12 +112,12 @@ clara> help run
 
   run farm
     Run CLARA data processing on the farm.
-
 ```
 
 ### The set command
 
 The *set* command is used to configure the data processing application.
+
 ```
 clara> help set
 
@@ -208,7 +210,6 @@ set farm.scaling
 
 set farm.system
     Farm batch system. Accepts pbs and jlab.
-
 ```
 {: .scrolling-pre }
 
@@ -218,11 +219,13 @@ This is known as the CLARA YAML file.
 It describes the application micro-services,
 their transient data format and their configuration parameters.
 The *servicesFile* location can by specified in the CLI by:
+
 ```
 clara> set servicesFile ~/clas12/exp1/services.yml
 ```
 
 You can also modify the *servicesFile* from inside the CLI environment:
+
 ```
 clara> edit services
 ```
@@ -234,6 +237,7 @@ to debug just a few specific ones,
 or add new services to expand the functionality of the application.
 
 To verify the application services composition run:
+
 ```
 clara> show services
 io-services:
@@ -298,8 +302,8 @@ configuration:
       timestamp: 333
 mime-types:
   - binary/data-hipo
-
 ```
+
 Note that if you need to remove a service from a composition you comment out the service description,
 as shown in the presented composition:
 
@@ -316,6 +320,7 @@ to define the data-set to be processed.
 
 The *inputDir* is the path where the data files are located.
 After this option is set, one can list the input directory with:
+
 ```
 clara> show inputDir
 total 241400
@@ -343,6 +348,7 @@ containing metadata of the data set (at the moment file names only),
 one file per line.
 
 Here is an example of the content of this file:
+
 ```
 clara> show files
 dvcs_35.hipo
@@ -393,10 +399,13 @@ It defines a data set splitting factor into subsets of *N* files,
 where each subset of the input files will be processed on a single DPE/farm-node.
 
 For example, for the data set of twelve files defined above, the command
+
 ```
 clara> set farm.scaling 3
 ```
+
 will tell CLARA to request four jobs with the following file processing assignments:
+
 ```
 Job-1:
   dvcs_35.hipo
@@ -425,6 +434,7 @@ The option *monHost* sets the IP address of the CLARA monitoring server
 to which the processing DPEs will send periodic runtime and registration reports.
 
 Users can run it's own monitoring server by executing *$CLARA_HOME/bin/j_mproxy*.
+
 ```
 $ $CLARA_HOME/bin/j_mproxy --help
 usage: jx_proxy [options]
@@ -437,6 +447,7 @@ usage: jx_proxy [options]
 
 Also, for data archiving and visualization,
 the CLARA data reporting orchestrator must be running:
+
 ```
 $ $CLARA_HOME/bin/j_idr --help
 usage: j_idr [options]
@@ -463,7 +474,6 @@ clara> help edit
 
   edit files
     Edit input file list.
-
 ```
 
 ### The run command
@@ -476,7 +486,6 @@ clara> help run
 
   run farm
     Run CLARA data processing on the farm.
-
 ```
 
 ### The show command

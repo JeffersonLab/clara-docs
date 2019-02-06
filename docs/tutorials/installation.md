@@ -42,8 +42,9 @@ CLARA framework distributions are accessed at:
 
 <div class="note info">
 <coda>
-Default version is v4.3.5. <br>
-Omit -f option to install the default version.<br><br>
+The default version is v4.3.5.
+
+Omit the <code>-f</code> option to install the default version.
 </coda>
 </div>
 
@@ -83,7 +84,9 @@ the only thing you do is simply type:
 ```
 $CLARA_HOME/bin/install-claracre.sh
 ```
+
 For CDK:
+
 ```
 $CLARA_HOME/bin/update-claradk.sh
 ```

@@ -26,7 +26,6 @@ users and is provided by the Clara framework.
 
 To enable the vertical scaling user sets the following parameters, for local running:
 
-
 ```
 clara> set threads 8
 
@@ -100,6 +99,7 @@ farm.scaling:        0
 ```
 
 The files.list contains 11 files.
+
 ```
 clara> show files
 sidisSkim100k.hipo
@@ -117,6 +117,7 @@ sidisSkim100k.hipo
 
 Now let us require processing groups of 2 files in parallel in different
 farm nodes.
+
 ```
 clara> set farm.scaling 2
 ```

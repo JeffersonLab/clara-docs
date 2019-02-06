@@ -62,6 +62,7 @@ Change permission of this file to make it executable, and run:
 ./install-claracre-clas.sh -v <CLAS12 plugin version>
                            -f <CLARA distribution version>
 ```
+
 CLAS12 plugin distributions will be accessed at:
 
 <https://clasweb.jlab.org/clas12offline/distribution/coatjava/>
@@ -76,6 +77,7 @@ coatjava-5c.6.3 plugin, you should run the installation script with the followin
 ```
 ./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3
 ```
+
 Information about the framework and the plugin versions, used during the data processing, will be shown and logged:
 
 ```
@@ -113,6 +115,7 @@ $CLARA_HOME/bin/install-claracre-clas.sh -v <version>
 After the successful installation steps you will get a structured directory
 pointed by the `$CLARA_HOME` environment variable
 furnished with all necessary jars, scripts, data and configuration files.
+
 ```
 myClara/
 ├── bin

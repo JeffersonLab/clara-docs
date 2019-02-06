@@ -7,12 +7,9 @@ title: FAQ
 
 CLARA with the following language bindings can be found at:
 
-[Java](https://github.com/JeffersonLab/clara-java)
-
-[C++](https://github.com/JeffersonLab/clara-cpp)
-
-[Python](https://github.com/JeffersonLab/clara-python)
-
+- [Java](https://github.com/JeffersonLab/clara-java)
+- [C++](https://github.com/JeffersonLab/clara-cpp)
+- [Python](https://github.com/JeffersonLab/clara-python)
 
 ### What if I need a support?
 

@@ -35,13 +35,13 @@ run local
 
 # Refer to https://claraweb.jlab.org/clara/docs/clas/data-processing.html
 # for more details
-
 ```
 
 ## Farm shared processing (farm-shared.cls)
 
 Here we are not requesting a specific JLAB farm node flavor.
 If you need to run on a specific node add the following line to the script:
+
 ```
 # supported farm node flavors: farm18, farm16, farm14, farm13, qcd12
 set farm.node farm18
@@ -122,4 +122,3 @@ show farmStatus
 <div class="note warning">
 You do not need to set memory or vertical scaling level when running is an exclusive mode.
 </div>
-

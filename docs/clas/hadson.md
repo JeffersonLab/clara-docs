@@ -3,14 +3,23 @@ title: Tutorial
 ---
 *The future belongs to the few of us still willing to get our hands dirty*
 
-Ah! Clara, Clara: the unicorn of data processing frameworks that everyone craves to learn it.
+Really, though,
 
-Just kidding...
+do we need to get our hands dirty and start processing the raw data?
+After all we did our fair share when we were post-docs.
+Just sit back, relax and listen Erik Satie, while students will create
+DSTs through blood, sweat and tears.
 
-No one wants to learn Clara, hmmm... may be except of the JLAB CLAS12 collaboration members,
-that for some unlucky circumstances signed up for a service work to process the experimental data.
 
-OK then, for those unlucky ones let's start!
+But OK, I know, I know you're one of the small minority of scientists that can't wait,
+who need to process subset of data quickly,
+define and customize data processing conditions,
+or you think you do, or (more accurately) feel like you do.
+I am happy to exploit that feeling. I want to be clear though:
+I am not here to tell you what you want.
+Still, something in our science DNA compels us to be honest about this:
+you should follow the following instructions to start data processing yourself.
+
 
 ### Were do we start?
 
@@ -634,4 +643,94 @@ clara> show farmStatus
 JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT
 63238147  gurjyan     A    priority    --         ...urjyan-clara   Feb 05 13:55  --         --         clas12
 ```
+
+There are more farm-job control parameters that help users to further customize the farm deployments.
+E.g. user can process a given data set in multiple farm nodes in parallel (find more details in
+[here](https://claraweb.jlab.org/clara/docs/clas/clara-scaling.html)).
+
+```
+clara> set farm.scaling 4
+
+```
+
+This command will divide entire data-set into groups of 4 files and
+will process each group in a different farm node. This is known as the Clara `horizontal scaling`.
+
+#### Farm node flavors
+
+Also user can request data processing on specific node flavor of the farm.
+
+<div class="note info">
+The JLAB scientific computing farm consists of the following hardware systems:
+<div></div>
+<div> farm18, 6148 CPU   @ 2.4 Gz, cores = 80 </div>
+<div> farm16, E5-2697 v4 @ 2.3 Gz, cores = 72 </div>
+<div> farm14, E5-2670 v3 @ 2.3 Gz, cores = 48 </div>
+<div> farm13, E5-2650 v2 @ 2.6 Gz, cores = 32 </div>
+<div> qcd12s, E5-2650 0  @ 2.0 Gz, cores = 32 </div>
+</div>
+
+To run data processing on a specific farm hardware you need to set the `farm.node` parameter.
+E.g. the command below will request data processing only on farm.18 nodes.
+
+```
+clara> set farm.node farm18
+```
+
+Examples above will use farm in so called sharing mode, where in a single
+farm node there might be multiple jobs running owned by multiple users. In this mode
+data processing performance can not be properly optimized due to the unpredicted resource allocation requests.
+However, Clara can request an exclusive node for a data processing, where only your job will be running.
+In this case Clara will perform hardware level optimizations to achieve maximum performance.
+
+E.g. the command below requests an exclusive access to a farm18 node:
+
+```
+clara> set farm.exclusive farm18
+```
+
+<div class="note warning">
+In the exclusive mode you do not have to define farm.memory and farm.cpu parameters,
+since Clara will set these values for you to guarantee maximum performance.
+</div>
+
+#### Farm staging
+
+One other important parameter to be considered is the `farm.stage`.
+This will tell Clara workflow management system to stage files one-by-one
+in the local file system of the farm computing node. This operation is
+critical for IO optimizations, since local IO is considerably faster
+that shared file system IO. E.g.
+
+```
+clara> set farm.stage /scratch/clara/gurjyan
+```
+
+<div class="note warning">
+The /scratch/clara is the created directory on all farm nodes (much like /scratch/pbs).
+For the proper staging and file transfers user must request a subdirectory
+specific for his/her processing (in the example subdir = gurjyan).
+</div>
+
+To get more information on farm deployment parameters
+[here](https://claraweb.jlab.org/clara/docs/clas/data-processing.html).
+
+#### Choosing between PBS and SLURM
+
+All your actions and created Clara CLI command sets will not change to launch
+data processing jobs on a farm controlled by PBS or SLURM batch control systems.
+Clara is transparent in this sense. If you want your jobs to end up on
+SLURM or PBS controlled farms the only thing you need to do is to change
+the PATH variable in your startup script. E.g. changing PATH variable in the .cshrc file:
+ ```
+gurjyan@clara1601$ set path = ( /site/scicomp/auger-slurm/bin $path )
+ ```
+That's it. now you are ready to process data on SLURM controlled farm.
+There are useful commands in SLURM, that are not ported into Clara CLI
+(there is no intention to make Clara `Jack of all trades`),
+such as `slurmHosts`, `slurmJobs`, `slurmQueues`, etc, that help to see available nodes,
+running jobs and their statuses. Please refer to the
+[scicomp](https://scicomp.jlab.org/docs/getting_started) web site for more information.
+
+
 

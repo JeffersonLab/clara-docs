@@ -4,7 +4,6 @@ clas:
     - hadson
     - installation
     - data-processing
-    - farm-deployment
     - clara-scaling
     - clara-scripts
     - resources

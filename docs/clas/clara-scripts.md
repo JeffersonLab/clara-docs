@@ -78,6 +78,15 @@ show farmStatus
 # for more details
 ```
 
+
+<div class="note warning">
+Clara settings are the same for PBS and SLIRM deployments.
+Clara makes deployment transparent across different batch control systems.
+Yet, it is recommended to decrease memory request (farm.memory) by
+factor of 2 when running on SLIRM.
+</div>
+
+
 ## Exclusive processing (farm18-exclusive.cls)
 
 ```
@@ -109,4 +118,8 @@ show farmStatus
 # Refer to https://claraweb.jlab.org/clara/docs/clas/data-processing.html
 # for more details
 ```
+
+<div class="note warning">
+You do not need to set memory or vertical scaling level when running is an exclusive mode.
+</div>
 

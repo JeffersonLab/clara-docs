@@ -47,31 +47,30 @@ clara>
 
 ### Terminal settings
 
-<div class="admonition warning" markdown="1">
-In some cases the wrong terminal settings
-will affect proper functionality of the CLI.
+!!! warning
+    In some cases the wrong terminal settings
+    will affect proper functionality of the CLI.
 
-You may be affected by this problem when the `run` command
-returns to the prompt without doing anything apparently.
+    You may be affected by this problem when the `run` command
+    returns to the prompt without doing anything apparently.
 
-```
-clara> run local
-clara>
-```
+    ```
+    clara> run local
+    clara>
+    ```
 
-To fix this, make sure the following line (or something similar)
-**is commented** in your `~/.login` file:
+    To fix this, make sure the following line (or something similar)
+    **is commented** in your `~/.login` file:
 
-```
-stty erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop tabs
-```
+    ```
+    stty erase "^?" kill "^U" intr "^C" eof "^D" susp "^Z" hupcl ixon ixoff tostop tabs
+    ```
 
-That line should be after a comment such as:
+    That line should be after a comment such as:
 
-```
-# Uncomment this if you are using an NCD Xterminal keyboard.
-```
-</div>
+    ```
+    # Uncomment this if you are using an NCD Xterminal keyboard.
+    ```
 
 ### Important
 
@@ -81,10 +80,9 @@ of the *application service composition* and data-set proper description.
 This includes path to the actual data-file input and output directories,
 full path to the data-set metadata file, and data-set description.
 
-<div class="admonition note" markdown="1">
-For every data processing these options must be set, and most importantly,
-options for the data-set *description* and *metadata file* must be unique.
-</div>
+!!! note
+    For every data processing these options must be set, and most importantly,
+    options for the data-set *description* and *metadata file* must be unique.
 
 ```
 clara> set fileList
@@ -437,12 +435,11 @@ usage: j_idr [options]
   --db-host <hostname>       the host where InfluxDB is running
 ```
 
-<div class="admonition note" markdown="1">
-For the JLAB farm DPE reporting,
-as well as for user specific online data quality monitoring,
-the default Clara monitoring server and data visualization dashboard
-is running at <http://claraweb.jlab.org:3000/dashboard/db/pdp-b>
-</div>
+!!! note
+    For the JLAB farm DPE reporting,
+    as well as for user specific online data quality monitoring,
+    the default Clara monitoring server and data visualization dashboard
+    is running at <http://claraweb.jlab.org:3000/dashboard/db/pdp-b>
 
 ### The edit command
 

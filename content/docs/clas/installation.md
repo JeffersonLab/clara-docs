@@ -25,10 +25,9 @@ First set the `CLARA_HOME` environmental variable that will point
 to the directory where the Clara CLAS12 distribution will be installed
 (`/UserHome/myClara` or `/UserHome/clas12-v4`).
 
-<div class="admonition warning" markdown="1">
-Remember, Clara will create the `$CLARA_HOME` directory with a specific file structure.
-You need to provide only a location where it should be created.
-</div>
+!!! note
+    Remember, Clara will create the `$CLARA_HOME` directory with a specific file structure.
+    You need to provide only a location where it should be created.
 
 Also you should specify a work directory where user specific data will be stored,
 including data processing application composition and data-set description files,
@@ -40,14 +39,13 @@ $ setenv CLARA_HOME /UserHome/myClara
 $ setenv CLARA_USER_DATA /UserHome/work
 ```
 
-<div class="admonition note" markdown="1">
-Note that `CLARA_USER_DATA` is optional,
-in case you are installing your own Clara environment.
-In all cases, if you forget to set `CLARA_USER_DATA` variable
-it will assume that it is pointing to `$CLARA_HOME`.
-This means that if you are using the common Clara installation
-you might face permission exceptions at the run-time.
-</div>
+!!! note
+    `CLARA_USER_DATA` is optional,
+    in case you are installing your own Clara environment.
+    In all cases, if you forget to set `CLARA_USER_DATA` variable
+    it will assume that it is pointing to `$CLARA_HOME`.
+    This means that if you are using the common Clara installation
+    you might face permission exceptions at the run-time.
 
 ### CRE installation
 

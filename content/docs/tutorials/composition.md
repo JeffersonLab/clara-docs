@@ -1,11 +1,10 @@
 # Application Composition
 
-<div class="admonition warning" markdown="1">
-Instructions for using the Clara-UI graphical interface,
-that presents a seamless experience between
-designing, controlling and monitoring data processing applications
-is under construction.
-</div>
+!!! warning
+    Instructions for using the Clara-UI graphical interface,
+    that presents a seamless experience between
+    designing, controlling and monitoring data processing applications
+    is under construction.
 
 Data processing application design can be performed by simply creating
 and/or editing composition yml text file. This file consists of 4 sections.
@@ -35,16 +34,14 @@ services:
    ...
 ```
 
-<div class="admonition note" markdown="1">
-Note that if you need to remove a service from a composition you comment
-out the service description, as shown below:
-</div>
+!!! note
+    If you need to remove a service from a composition,
+    you comment out the service description, as shown below:
 
-``` yaml
-    # class: org.jlab.clas.std.services.convertors.EtRingToHipoReader
-    # name: EtRingToHipoReader
-```
-
+    ``` yaml
+        # class: org.jlab.clas.std.services.convertors.EtRingToHipoReader
+        # name: EtRingToHipoReader
+    ```
 
 The ***configuration*** section describes configuration options required by
 services that will be passed to them at the Orchestrator's state-machine

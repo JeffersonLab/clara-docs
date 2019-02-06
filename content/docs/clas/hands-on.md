@@ -60,11 +60,10 @@ It is recommended for the `$CLARA_USER_DATA` directory to have a specific file s
 └── log
 ```
 
-<div class="admonition note" markdown="1">
-It is OK not to create the structure by hand.
-Clara CLI (command line interface) will check/create
-the necessary file structure at the startup.
-</div>
+!!! tip
+    It is OK not to create the structure by hand.
+    Clara CLI (command line interface) will check/create
+    the necessary file structure at the startup.
 
 Let us start Clara CLI by typing the following:
 
@@ -139,10 +138,9 @@ farm.system:         "jlab"
 
 Usually `show config` will show full path with environmental variables resolved.
 
-<div class="admonition note" markdown="1">
-Note that these are the default settings,
-and user can change them to point to different locations.
-</div>
+!!! note
+    These are default settings,
+    and the user can change them to point to different locations.
 
 Now let us switch to other workspace, or just simple exit the Clara CLI (`Ctrl-C`).
 First thing we have to do is to copy (or `jget`) our data file
@@ -317,9 +315,8 @@ clara> set description myOwnDescription
 clara> show config
 ```
 
-<div class="admonition warning" markdown="1">
-We recommend the session and the description to be unique for every new data-set processing.
-</div>
+!!! tip
+    We recommend the session and the description to be unique for every new data-set processing.
 
 We can do a lot without exiting the Clara CLI. For e.g. we can analyse
 the log files using the following commands:
@@ -540,10 +537,9 @@ mime-types:
   - binary/data-hipo
 ```
 
-<div class="admonition warning" markdown="1">
-Clara application composition YAML file is a representation of a directed graph,
-where data flows from services described at the top to the bottom.
-</div>
+!!! note
+    Clara application composition YAML file is a representation of a directed graph,
+    where data flows from services described at the top to the bottom.
 
 ### Running on a farm
 
@@ -577,12 +573,11 @@ The following settings will configure my farm deployment:
     clara> set logDir /work/clas12/gurjyan/Testbed/clara/log
     ```
 
-    <div class="admonition note" markdown="1">
-    You can minimize manual settings in CLI (using default settings)
-    by defining `CLARA_USER_DATA` environmental variable
-    pointing to a user-data directory that is visible to the farm system.
-    Note that this must be done prior running the `clara-shell` executable.
-    </div>
+    !!! tip
+        You can minimize manual settings in CLI (using default settings)
+        by defining `CLARA_USER_DATA` environmental variable
+        pointing to a user-data directory that is visible to the farm system.
+        Note that this must be done prior running the `clara-shell` executable.
 
   * Define the data-processing session and the description.
 
@@ -657,15 +652,14 @@ This is known as the Clara **horizontal scaling**.
 
 Also user can request data processing on specific node flavor of the farm.
 
-<div class="admonition note" markdown="1">
-The JLAB scientific computing farm consists of the following hardware systems:
+!!! info
+    The JLAB scientific computing farm consists of the following hardware systems:
 
-- farm18, 6148 CPU   @ 2.4 Gz, cores = 80
-- farm16, E5-2697 v4 @ 2.3 Gz, cores = 72
-- farm14, E5-2670 v3 @ 2.3 Gz, cores = 48
-- farm13, E5-2650 v2 @ 2.6 Gz, cores = 32
-- qcd12s, E5-2650 0  @ 2.0 Gz, cores = 32
-</div>
+    - farm18, 6148 CPU   @ 2.4 Gz, cores = 80
+    - farm16, E5-2697 v4 @ 2.3 Gz, cores = 72
+    - farm14, E5-2670 v3 @ 2.3 Gz, cores = 48
+    - farm13, E5-2650 v2 @ 2.6 Gz, cores = 32
+    - qcd12s, E5-2650 0  @ 2.0 Gz, cores = 32
 
 To run data processing on a specific farm hardware
 you need to set the *farm.node* parameter.
@@ -690,12 +684,11 @@ E.g. the command below requests an exclusive access to a *farm18* node:
 clara> set farm.exclusive farm18
 ```
 
-<div class="admonition warning" markdown="1">
-The exclusive mode works for only SLURM controlled farm nodes.
-For the exclusive mode on the SLURM farm,
-you do not have to define *farm.memory* and *farm.cpu* parameters,
-since Clara will set these values for you to guarantee maximum performance.
-</div>
+!!! info
+    The exclusive mode works for only SLURM controlled farm nodes.
+    For the exclusive mode on the SLURM farm,
+    you do not have to define *farm.memory* and *farm.cpu* parameters,
+    since Clara will set these values for you to guarantee maximum performance.
 
 How I can get then farm node exclusively in PBS you might ask?
 Even though `farm.exclusive` parameter is inactive for PBS jobs, you can
@@ -731,11 +724,10 @@ that shared file system IO. E.g.
 clara> set farm.stage /scratch/clara/gurjyan
 ```
 
-<div class="admonition warning" markdown="1">
-The `/scratch/clara` is the created directory on all farm nodes (much like `/scratch/pbs`).
-For the proper staging and file transfers user must request a subdirectory
-specific for his/her processing (in the example the subdir is `gurjyan`).
-</div>
+!!! info
+    The `/scratch/clara` is the created directory on all farm nodes (much like `/scratch/pbs`).
+    For the proper staging and file transfers user must request a subdirectory
+    specific for his/her processing (in the example the subdir is `gurjyan`).
 
 To get more information on farm deployment parameters
 [here](data-processing.md).

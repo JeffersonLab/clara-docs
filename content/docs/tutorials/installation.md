@@ -2,15 +2,14 @@
 
 ## Clara Run-time Environment (CRE)
 
-<div class="admonition warning" markdown="1">
-Installation instructions here are presented for the Clara Java binding.
+!!! warning
+    Installation instructions here are presented for the Clara Java binding.
 
-For C++ and Python binding installation instructions can be found at:
+    For C++ and Python binding installation instructions can be found at:
 
-- [Clara C++](https://github.com/JeffersonLab/clara-cpp)
+    - [Clara C++](https://github.com/JeffersonLab/clara-cpp)
 
-- [Clara Python](https://github.com/JeffersonLab/clara-python)
-</div>
+    - [Clara Python](https://github.com/JeffersonLab/clara-python)
 
 First set the `CLARA_HOME` environmental variable that will point
 to the directory where the Clara distribution will be installed
@@ -20,10 +19,9 @@ to the directory where the Clara distribution will be installed
 $ setenv CLARA_HOME /UserHome/myClara
 ```
 
-<div class="admonition info" markdown="1">
-Clara will create `$CLARA_HOME` directory with a specific file structure.
-You need to provide only the location where it should be created.
-</div>
+!!! info
+    Clara will create `$CLARA_HOME` directory with a specific file structure.
+    You need to provide only the location where it should be created.
 
 Download the following script:
 
@@ -39,11 +37,10 @@ Clara framework distributions are accessed at:
 
 <https://userweb.jlab.org/~gurjyan/clara-cre/>
 
-<div class="admonition note" markdown="1">
-The default version is v4.3.5.
+!!! note
+    The default version is v4.3.5.
 
-Omit the `-f` option to install the default version.
-</div>
+    Omit the `-f` option to install the default version.
 
 ## Clara Development Kit (CDK)
 

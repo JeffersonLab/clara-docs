@@ -30,10 +30,9 @@ clara> set session gurjyan1
 clara> set description test1
 ```
 
-<div class="admonition note" markdown="1">
-Note that *session* and *description* MUST be unique
-for every farm deployment.
-</div>
+!!! warning
+    The *session* and the *description* MUST be unique
+    for every farm deployment.
 
 Set desired vertical and horizontal scaling parameters.
 For *farm.cpu* of 4 or more, we recommend setting *farm.memory* to 37.

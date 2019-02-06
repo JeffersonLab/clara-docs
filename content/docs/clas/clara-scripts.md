@@ -1,10 +1,11 @@
 # Scripting
 
-<div class="admonition note" markdown="1">
-To start a data processing with a specified script, run:
+!!! info
+    To start a data processing with a specified script, run:
 
-`$ $CLARA_HOME/bin/clara-shell xyz.cls`
-</div>
+    ```
+    $ $CLARA_HOME/bin/clara-shell xyz.cls
+    ```
 
 
 ## Local processing (`local.cls`)
@@ -72,12 +73,11 @@ run farm
 show farmStatus
 ```
 
-<div class="admonition note" markdown="1">
-Clara settings are the same for PBS and SLURM deployments.
-Clara makes deployment transparent across different batch control systems.
-Yet, it is recommended to decrease memory request (*farm.memory*) by
-factor of 2 when running on SLURM.
-</div>
+!!! note
+    Clara settings are the same for PBS and SLURM deployments.
+    Clara makes deployment transparent across different batch control systems.
+    Yet, it is recommended to decrease memory request (*farm.memory*) by
+    factor of 2 when running on SLURM.
 
 
 ## Exclusive processing on SLURM (`farm18-exclusive.cls`)
@@ -110,10 +110,9 @@ show farmStatus
 
 ```
 
-<div class="admonition note" markdown="1">
-You do not need to set memory or vertical scaling level
-when running is an exclusive mode on SLURM.
-</div>
+!!! note
+    You do not need to set memory or vertical scaling level
+    when running is an exclusive mode on SLURM.
 
 
 ## Exclusive processing on farm18 PBS (`farm18-pbs-exclusive.cls`)

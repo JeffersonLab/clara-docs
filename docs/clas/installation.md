@@ -18,14 +18,20 @@ you can solve one of life's most boring petty problems:
 data analysis to understand how things are designed
 or (if you are an atheist) evolved.
 
-## CLARA Run-time Environment (CRE)
+## CLARA CLAS12 Run-time Environment (CRE)
 
 Installation and data processing instructions are presented
 for the CLARA Java binding.
 
 First set the `CLARA_HOME` environmental variable that will point
 to the directory where the CLARA CLAS12 distribution will be installed
-(`/UserHome/myClara` or `/UserHome/clas12-v4`)
+(`/UserHome/myClara` or `/UserHome/clas12-v4`).
+
+<div class="note warning">
+Remember, Clara will create CLARA_HOME directory with a specific file structure.
+You need to provide only a location where it should be created.
+</div>
+
 Also you should specify a work directory where user specific data will be stored,
 including data processing application composition and data-set description files,
 farm deployment scripts, etc. For that assign `CLARA_USER_DATA` environmental variable to

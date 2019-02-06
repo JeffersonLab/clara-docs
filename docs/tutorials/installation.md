@@ -21,6 +21,11 @@ to the directory where the CLARA distribution will be installed
 <code>setenv CLARA_HOME <em>/UserHome</em>/myClara</code>
 </div>
 
+<div class="note warning">
+Clara will create CLARA_HOME directory with a specific file structure.
+You need to provide only a location where it should be created.
+</div>
+
 Download  the following script:
 
 {% download file: install-claracre.sh, name: install-claracre %}
@@ -28,7 +33,7 @@ Download  the following script:
 Change permission of this file to make it executable, and run:
 
 ```
-./install-claracre-clas.sh  -f <CLARA distribution version>
+./install-claracre.sh  -f <CLARA distribution version>
 ```
 
 CLARA framework distributions are accessed at:

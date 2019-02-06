@@ -26,6 +26,15 @@ you should follow the following instructions to start data processing yourself.
 First you have to define if a) you are going to use Clara clas12 common (official) installation
 or b) you want to have your own installation (e.g. in your home institution or in your own laptop).
 
+### I want to have my own installation
+Of course you do... with entire CLAS12 code base on your laptop.
+No problem can withstand the onslaught of unrelenting thinking.
+
+Just kidding...
+
+Clara with CLAS12 plugin installation is a simple one step process that
+is described in [here](https://claraweb.jlab.org/clara/docs/clas/installation.html).
+
 ### I want to use common installation
 Ok then, we have to perform the following steps:
 

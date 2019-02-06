@@ -8,6 +8,40 @@ copyright: Copyright &copy; 2019 Vardan Gyurjyan
 docs_dir: content           # Change default to keep "docs" directory inside
 use_directory_urls: false   # Change default to not break existing links to documentation
 
+nav:
+  - Overview: index.md
+
+  - Get Started:
+    - Installation: docs/tutorials/installation.md
+    - Clara Shell: docs/tutorials/running.md
+    - Application Composition: docs/tutorials/composition.md
+    - Engine Development:
+      - Java: docs/quickstart/java.md
+      - C++: docs/quickstart/cpp.md
+      - Python: docs/quickstart/python.md
+    - Reference: docs/reference.md
+
+  - Framework:
+    - Background: docs/guides/background.md
+    - Overview: docs/guides/framework.md
+    - DPEs: docs/guides/proxies.md
+    - Services: docs/guides/engine.md
+    - Multithreading: docs/guides/threading.md
+
+  - Community:
+    - CLAS12:
+      - Installation: docs/clas/installation.md
+      - Tutorial: docs/clas/hands-on.md
+      - Shell Interface: docs/clas/data-processing.md
+      - Scaling: docs/clas/clara-scaling.md
+      - Scripting: docs/clas/clara-scripts.md
+      - Aditional Resources: docs/clas/resources.md
+      - Release Notes: release-notes.md
+    - NASA: docs/nasa/index.md
+
+  - FAQ: faq.md
+  - About: about.md
+
 markdown_extensions:
   - admonition
   - attr_list

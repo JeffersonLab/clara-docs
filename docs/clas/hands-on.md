@@ -608,8 +608,6 @@ The following settings will configure my farm deployment:
     ```
 
 These are typical settings for 8 core jobs that will work on all JLAB farm nodes.
-If you need to increase core count please refer to
-[Farm deployment]({{ site.baseurl }}/docs/clas/farm-deployment.html) for more information.
 
 That's it. Now we launch the farm job, yet,
 it is a good practise check the settings before a farm deployment

@@ -9,7 +9,7 @@ The clara framework needs xMsg v2.4.1 to run. xMsg is a lightweight,
 yet full featured publish/subscribe messaging system, presenting
 asynchronous publish/subscribe inter-process communication protocol:
 an API layer in Java, Python and C++. Please refer to
-[xMsg Python](https://github.com/JeffersonLab/xmsg_python) for
+[xMsg Python](https://github.com/JeffersonLab/xmsg-python) for
 installation instructions.
 
 To install clara-python in your system, run:

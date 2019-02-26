@@ -143,7 +143,10 @@ Usually `show config` will show full path with environmental variables resolved.
 
 <div class="admonition note" markdown="1">
 Note that these are the default settings,
-and user can change them to point to different locations.
+and user can change them to point to different locations, with the
+exception of the logDir during the farm deployment.<br>
+During the farm deployment the logDir will be defined buy the $CLARA_USER_DATA environmental variable.
+In case $CLARA_USER_DATA/log is not defined or accessible Clara will default to the $CLARA_HOME/log.
 </div>
 
 Now let us switch to other workspace, or just simple exit the Clara CLI (`Ctrl-C`).

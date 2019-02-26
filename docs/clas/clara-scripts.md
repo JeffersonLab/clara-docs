@@ -5,11 +5,11 @@ title: Scripting
 <div class="admonition note" markdown="1">
 To start a data processing with a specified script, run:
 
-`$ $CLARA_HOME/bin/clara-shell xyz.cls`
+`$ $CLARA_HOME/bin/clara-shell xyz.clara`
 </div>
 
 
-## Local processing (`local.cls`)
+## Local processing (`local.clara`)
 
 ```
 # Clara script example
@@ -36,7 +36,7 @@ run local
 ```
 
 
-## Farm shared processing (`farm-shared.cls`)
+## Farm shared processing (`farm-shared.clara`)
 
 Here we are not requesting a specific JLAB farm node flavor.
 If you need to run on a specific node add the following line to the script:
@@ -65,7 +65,7 @@ set outputFilePrefix gurjyan_
 set logDir /Users/gurjyan/Testbed/clara/log
 set session gurjyanSession
 set description gurjyanDescription
-set farm.stage /scratch/clara/gurjyan
+set farm.stage default
 set farm.cpu 8
 set farm.memory 30
 set farm.disk 10
@@ -82,7 +82,7 @@ factor of 2 when running on SLURM.
 </div>
 
 
-## Exclusive processing on SLURM (`farm18-exclusive.cls`)
+## Exclusive processing on SLURM (`farm18-exclusive.clara`)
 
 ```
 # Clara script example
@@ -103,7 +103,7 @@ set outputFilePrefix gurjyan_
 set logDir /Users/gurjyan/Testbed/clara/log
 set session gurjyanSession
 set description gurjyanDescription
-set farm.stage /scratch/clara/gurjyan
+set farm.stage default
 # supported farm node flavors: farm18, farm16, farm14, farm13, qcd12
 set farm.exclusive farm18
 set farm.scaling 2
@@ -118,7 +118,7 @@ when running is an exclusive mode on SLURM.
 </div>
 
 
-## Exclusive processing on farm18 PBS (`farm18-pbs-exclusive.cls`)
+## Exclusive processing on farm18 PBS (`farm18-pbs-exclusive.clara`)
 
 ```
 # Clara script example
@@ -139,7 +139,7 @@ set outputFilePrefix gurjyan_
 set logDir /Users/gurjyan/Testbed/clara/log
 set session gurjyanSession
 set description gurjyanDescription
-set farm.stage /scratch/clara/gurjyan
+set farm.stage default
 set farm.node farm18
 set farm.cpu 80
 set farm.memory 00
@@ -151,7 +151,7 @@ show farmStatus
 ```
 
 
-## Exclusive processing on farm16 PBS (`farm18-pbs-exclusive.cls`)
+## Exclusive processing on farm16 PBS (`farm18-pbs-exclusive.clara`)
 
 ```
 # Clara script example
@@ -172,7 +172,7 @@ set outputFilePrefix gurjyan_
 set logDir /Users/gurjyan/Testbed/clara/log
 set session gurjyanSession
 set description gurjyanDescription
-set farm.stage /scratch/clara/gurjyan
+set farm.stage default
 set farm.node farm16
 set farm.cpu 72
 set farm.memory 60

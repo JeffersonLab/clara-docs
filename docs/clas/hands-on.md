@@ -110,7 +110,7 @@ a given data file locally, i.e. on a local (on your own) computer.
 
 Clara considers default locations to access data files, the application
 service-composition file (usually `services.yaml`, yet it can have any arbitrary name),
-data-set description file (e.g. `files.list`, a text file containing the
+data-set description file (e.g. `files.txt`, a text file containing the
 names of all data files) as well as log files (usually for every data processing
 Clara creates two log files: DPE and workflow-manager logs). To see the default locations/settings,
 type in the CLI the following command:
@@ -119,7 +119,7 @@ type in the CLI the following command:
 clara> show config
 
 servicesFile:        "$CLARA_HOME/config/services.yaml"
-fileList:            "$CLARA_USER_DATA/config/files.list"
+fileList:            "$CLARA_USER_DATA/config/files.txt"
 inputDir:            "$CLARA_USER_DATA/data/input"
 outputDir:           "$CLARA_USER_DATA/data/output"
 outputFilePrefix:    "out_"
@@ -155,11 +155,11 @@ E.g.
 $ cp /work/clas12/data/clas_004013.0.hipo $CLARA_USER_DATA/data/input/
 ```
 
-Next we create the `files.list` file in the `$CLARA_USER_DATA/config` dir
+Next we create the `files.txt` file in the `$CLARA_USER_DATA/config` dir
 and add a single line to it:
 
 ```
-$ cat $CLARA_USER_DATA/config/files.list
+$ cat $CLARA_USER_DATA/config/files.txt
 clas_004013.0.hipo
 ```
 
@@ -575,7 +575,7 @@ The following settings will configure my farm deployment:
     clara> set inputDir /work/clas12/gurjyan/Testbed/clara/data/input
     clara> set outputDir /work/clas12/gurjyan/Testbed/clara/data/out
     clara> set servicesFile /work/clas12/gurjyan/Testbed/clara/services.yaml
-    clara> set fileList /work/clas12/gurjyan/Testbed/clara/files.list
+    clara> set fileList /work/clas12/gurjyan/Testbed/clara/files.txt
     clara> set logDir /work/clas12/gurjyan/Testbed/clara/log
     ```
 
@@ -638,7 +638,7 @@ created by Clara in the `$CLARA_USER_DATA/config` directory
 ```
 $ cd $CLARA_USER_DATA/config
 $ ls
-farm_gurjyan_clara.jsub	  farm_gurjyan_clara.sh  files.list  service.yaml
+farm_gurjyan_clara.jsub	  farm_gurjyan_clara.sh  files.txt  service.yaml
 ```
 
 There are more farm-job control parameters that help users to further customize the farm deployments.
@@ -732,10 +732,17 @@ clara> set farm.stage /scratch/clara/gurjyan
 ```
 
 <div class="admonition warning" markdown="1">
-The `/scratch/clara` is the created directory on all farm nodes (much like `/scratch/pbs`).
+The `/scratch/clara` is the created directory on all  JLAB farm nodes (much like `/scratch/pbs`).
 For the proper staging and file transfers user must request a subdirectory
 specific for his/her processing (in the example the subdir is `gurjyan`).
 </div>
+
+In case you are running on JLAB farm, the easies and safest would be to
+request default staging directory: /scratch/clara/$USER.
+
+```
+clara> set farm.stage default
+```
 
 To get more information on farm deployment parameters
 [here]({{ site.baseurl }}/docs/clas/data-processing.html).
@@ -754,6 +761,14 @@ $ set path = ( /site/scicomp/auger-slurm/bin $path )
 ```
 
 That's it. now you are ready to process data on SLURM controlled farm.
+
+<div class="admonition note" markdown="1">
+The default farm job .out and .err files are no longer copied to the home
+directory of a user (as in case of the PBS), instead it will be directly written to the central
+location under /lustre/expphy/farm_out/<user>, name pattern will be
+JOB_NAME-AUGER_JOB_ID-HOSTNAME.out and JOB_NAME-AUGER_JOB_ID-HOSTNAME.err.
+</div>
+
 There are useful commands in SLURM, that are not ported into Clara CLI
 (there is no intention to make Clara *Jack of all trades*),
 such as `slurmHosts`, `slurmJobs`, `slurmQueues`, etc, that help to see available nodes,
@@ -773,13 +788,13 @@ But wait... do not try to get easy exercise by jumping into conclusions.
 Before exiting the CLI I recommend you save whatever you typed in the shell as a clara script by:
 
 ```
-clara> save myTest.cls
+clara> save myTest.clara
 ```
 
 The next time you start a shell you can type something like:
 
 ```
-$ $CLARA_HOME/bin/clara-shell myTest.cls
+$ $CLARA_HOME/bin/clara-shell myTest.clara
 ```
 
 You can get more on Clara scripting in [here]({{ site.baseurl }}/docs/clas/clara-scripts.html)

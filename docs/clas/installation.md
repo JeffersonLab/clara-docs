@@ -60,8 +60,13 @@ Download the following script:
 Change permission of this file to make it executable, and run:
 
 ```
-$ ./install-claracre-clas.sh [ -v <CLAS12 plugin version> ]
-                             [ -f <CLARA distribution version> ]
+$ ./install-claracre-clas.sh --help
+  usage: install-claracre-clas.sh [ OPTION ]... [ Value ]...
+
+   -h, --help         print this help.
+   -f, --framework    Clara framework version (default = 4.3.8).
+   -v, --version      Clas12 plugin version   (default = 5a.2.0).
+   -g, --grapes       Grapes plugin version   (default = 1.0).
 ```
 
 CLAS12 plugin distributions will be accessed at:
@@ -76,7 +81,7 @@ E.g. if you plat to install Clara `clara-cre-4.3.2` distribution and CLAS12
 `coatjava-5c.6.3` plugin, you should run the installation script with the following options:
 
 ```
-$ ./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3
+$ ./install-claracre-clas.sh -f 4.3.2 -v 5c.6.3 -g 2.0
 ```
 
 Information about the framework and the plugin versions,

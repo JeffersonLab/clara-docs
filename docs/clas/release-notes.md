@@ -2,9 +2,10 @@
 title: Release notes
 ---
 
-### Clara v4.4
+### Clara v4.3.10
 
-- Includes latest HIPO-4 updates. HIPO-4 IO services. This is the default for CLAS12 installation.
+- Includes latest HIPO-4 bug fixes. This is the default for CLAS12 installation.
+
 
 ### Clara v4.3.9
 

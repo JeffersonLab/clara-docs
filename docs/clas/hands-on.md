@@ -716,7 +716,7 @@ clara> set farm.disk 25
 or request the farm16 exclusive node on PBS:
 
 ```
-clara> set farm.node farm18
+clara> set farm.node farm16
 clara> set farm.cpu 72
 clara> set farm.memory 60
 clara> set farm.disk 25

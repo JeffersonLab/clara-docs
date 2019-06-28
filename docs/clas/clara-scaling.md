@@ -52,7 +52,7 @@ meaning that the data files in the `files.list` will be processed sequentially.
 Yet, in case user sets *farm.scaling = n*, that will tell Clara
 to process group of *n* files from the `files.list` data-set in parallel,
 on different farm nodes.
-This will speed up processing of the entire data-set *Ndata_files/n* times.
+This will speed up processing of the entire data-set *N-data_files/n* times.
 
 ### Example
 

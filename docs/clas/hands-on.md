@@ -557,6 +557,11 @@ where data flows from services described at the top to the bottom.
 Yup, this is that easy. You do not have to write a farm submission scripts, and
 farm deployment can be done without leaving the Clara CLI. Let us show it on an example.
 
+<div class="admonition warning" markdown="1">
+Before we continue remember that a farm submission must have a unique session.
+This is critical in case farm control system lands your jobs on the same node.
+</div>
+
 I have a data set consisting of 4 files (I can see my data-set using the
 command: `show files`. see below), and I want to process it on the JLAB farm.
 

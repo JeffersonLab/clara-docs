@@ -2,9 +2,18 @@
 title: Release notes
 ---
 
+### Clara v4.3.11. Default for the CLAS12 installation
+
+- Handles multiple output files
+
+- Limits default vertical scaling factor to 4 for local data-processing
+
+- Includes HIPO-4 CLAS12 IO services
+
+
 ### Clara v4.3.10
 
-- Includes latest HIPO-4 bug fixes. This is the default for CLAS12 installation.
+- Includes latest HIPO-4 bug fixes.
 
 
 ### Clara v4.3.9

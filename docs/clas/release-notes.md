@@ -2,6 +2,11 @@
 title: Release notes
 ---
 
+### Clara v4.3.12. 
+
+- Detects data-processing “freeze” state and stops DPE and orchestrator of a deployment.
+
+
 ### Clara v4.3.11. Default for the CLAS12 installation
 
 - Handles multiple output files

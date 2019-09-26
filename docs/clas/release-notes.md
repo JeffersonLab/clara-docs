@@ -13,6 +13,14 @@ title: Release notes
 
 - Limits default vertical scaling factor to 4 for local data-processing
 
+- introduced the WatchDog service
+
+- implements staging into the job specific local directory
+
+- increased some of the Orchestrator timeouts for handling slow network conditions.
+
+- exclusive mode will log everything in /far_out online.
+
 - Includes HIPO-4 CLAS12 IO services
 
 

@@ -2,12 +2,12 @@
 title: Release notes
 ---
 
-### Clara v4.3.12. 
-
-- Detects data-processing “freeze” state and stops DPE and orchestrator of a deployment.
-
 
 ### Clara v4.3.11. Default for the CLAS12 installation
+
+- Group log files based on the slurm job ID (farm deployment)
+
+- Implements proper exit codes (framework level)
 
 - Handles multiple output files
 
@@ -19,7 +19,7 @@ title: Release notes
 
 - increased some of the Orchestrator timeouts for handling slow network conditions.
 
-- exclusive mode will log everything in /far_out online.
+- exclusive mode will log everything in /farm_out online.
 
 - Includes HIPO-4 CLAS12 IO services
 

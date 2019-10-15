@@ -33,6 +33,7 @@ title: Release notes
 
 - Includes HIPO-4 IO services (CLAS12 plugin specific)
 
+
 ### Clara v4.3.8
 
 - Includes HIPO-3 IO services (CLAS12 plugin specific)
@@ -40,6 +41,7 @@ title: Release notes
 - Tested *common installation*.
 
 - Minor bug fixes.
+
 
 ### Clara v4.3.7
 
@@ -59,9 +61,11 @@ title: Release notes
 
 - User documentation update. Introduction of the new "Hands on" session.
 
+
 ### Clara v4.3.6
 
 - IO services use HIPO-4 data format (CLAS12 plugin specific)
+
 
 ### Clara v4.3.5
 

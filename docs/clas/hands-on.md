@@ -469,16 +469,24 @@ The service composition file consists of the following sections:
     stream events through a limited cycle loop (note: no programing is necessary).
 
   * Section describing configuration options for services.
-    In this section users can describe configuration parameters for IO and
+    In this section users can describe configuration parameters for IO and general for all
     processing services, as well as configuration options for a specific service
     (e.g. parameter `useStartTime` for DCHB service).
 
     ``` yaml
     configuration:
-      io-services:
-        writer:
-          compression: 2
-    # settings below are for GEMC, compatible with 4a.2.4
+     global:
+       magnet:
+         torus: -1
+         solenoid: -1
+       ccdb:
+         run: 101
+         variation: custom
+       runtype: mc
+       runmode: calibration
+       io-services:
+          writer:
+            compression: 2
       services:
         DCHB:
           useStartTime: "true"

@@ -2,6 +2,10 @@
 title: Release notes
 ---
 
+### Clara v4.3.12
+
+- Implements service engine state = SevereError and exit code 13
+
 
 ### Clara v4.3.11. Default for the CLAS12 installation
 

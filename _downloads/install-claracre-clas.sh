@@ -180,6 +180,7 @@ case $OS in
 
         curl "https://userweb.jlab.org/~gurjyan/clara-cre/clara-cre-$FV.tar.gz" -o clara-cre-$FV.tar.gz
 
+
        if [ "$is_local" == "false" ]; then
             echo "getting coatjava-$PLUGIN"
             curl "https://clasweb.jlab.org/clas12offline/distribution/coatjava/coatjava-$PLUGIN.tar.gz" -o coatjava-$PLUGIN.tar.gz

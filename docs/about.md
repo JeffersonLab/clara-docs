@@ -64,6 +64,9 @@ So, how CLARA is different?
 * *CLARA: The CLAS12 Reconstruction and Analysis framework*, 2016,
   [J. Phys.: Conf. Ser. 762 012009 doi:10.1088/1742-6596/762/1/012009](http://iopscience.iop.org/article/10.1088/1742-6596/762/1/012009/pdf)
 
+* *Heterogeneous data-processing optimization with CLARA's adaptive workflow orchestrator*, 2020,
+  [J. Phys.: Conf. Ser. EPJ Web of Conferences 245, 05020 (2020)](https://doi.org/10.1051/epjconf/202024505020)
+
 
 ## License
 

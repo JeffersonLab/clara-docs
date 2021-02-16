@@ -5,15 +5,15 @@ title: Release notes
 ### Clara v4.3.13
 
 - Fixed service name collision in the declaration and configuration sections of the YAML
-- Presented JDK8 and JDK11 compiled versions, selectable through Clara CLAS12 installation script
-  Note: to select use option -f with the following choices: 4.3.13.jdk8 or 4.3.13.jdk11
+- Presented JDK8 and JDK11 compiled versions, selectable through Clara CLAS12 installation script.<br>
+  Note: use option -f to select 4.3.13.jdk8 or 4.3.13.jdk11 releases.
 
 ### Clara v4.3.12
 
-- Implements service engine state = SevereError and exit code 13
+- Implements service engine state = SevereError, and exit code 13.
 
 
-### Clara v4.3.11. Default for the CLAS12 installation
+### Clara v4.3.11. <br>Default for the CLAS12 installation
 
 - Group log files based on the slurm job ID (farm deployment)
 

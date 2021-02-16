@@ -4,7 +4,7 @@
 BUILDDIR      = _site
 
 # Docker variables
-DOCKER_COMPOSE = docker-compose
+DOCKER_COMPOSE = sudo docker-compose
 DOCKER_SERVICE = jekyll
 
 JEKYLL_BUILD   = jekyll build --verbose

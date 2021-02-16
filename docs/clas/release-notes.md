@@ -6,7 +6,7 @@ title: Release notes
 
 - Fixed service name collision in the declaration and configuration sections of the YAML
 - Presented JDK8 and JDK11 compiled versions, selectable through Clara CLAS12 installation script.<br>
-  Note: use option -f to select 4.3.13.jdk8 or 4.3.13.jdk11 releases.
+  Note: use option -f to select 4.3.13.jdk8 or 4.3.13.jdk11 compilation.
 
 ### Clara v4.3.12
 

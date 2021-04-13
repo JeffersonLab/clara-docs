@@ -1,6 +1,14 @@
 ---
 title: Release notes
 ---
+### Clara v5.0.1
+
+- Compiled using JDK-11
+- Fixed the synchronization between a thread that waits for the event synchronization at the 
+  end of a file, and a thread that assigns a new file to the worker node. 
+- Implemented user plugin dir support. Users have an option to specify their own dependency tree.<br>
+  Note: This release does not include the clasrec-io package, assuming the package is part of the 
+  CLAS12 coat-java plugin.
 
 ### Clara v4.3.13
 

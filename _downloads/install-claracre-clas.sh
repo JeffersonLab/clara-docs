@@ -179,6 +179,7 @@ case $OS in
 
         curl "https://userweb.jlab.org/~gurjyan/clara-cre/clara-cre-$FV.tar.gz" -o clara-cre-$FV.tar.gz
 
+
        if [ "$is_local" == "false" ]; then
             echo "getting coatjava-$PLUGIN"
             curl "https://clasweb.jlab.org/clas12offline/distribution/coatjava/coatjava-$PLUGIN.tar.gz" -o coatjava-$PLUGIN.tar.gz
@@ -226,31 +227,31 @@ esac
 
 mv clara-cre "$CLARA_HOME"
 
+mkdir -p $CLARA_HOME/plugins/clas12/lib/clas
+mkdir -p $CLARA_HOME/plugins/clas12/lib/services
+mkdir -p $CLARA_HOME/plugins/clas12/config
+
+
 echo "Installing coatjava ..."
 tar xvzf coatjava-$PLUGIN.tar.gz
-
-#(
-mv coatjava "$CLARA_HOME"/plugins/clas12
-mkdir "$CLARA_HOME"/plugins/clas12/config
-
-#cd coatjava || exit
-#cp -p etc "$CLARA_HOME"/plugins/clas12/.
-#cp -p bin "$CLARA_HOME"/plugins/clas12/.
-#cp -p lib/utils "$CLARA_HOME"/plugins/clas12/lib/.
-#cp -p lib/clas/* "$CLARA_HOME"/plugins/clas12/lib/clas/.
-#cp -p lib/services/* "$CLARA_HOME"/plugins/clas12/lib/services/.
-#)
-#rm -rf coatjava
+(
+cd coatjava || exit
+cp -rp etc "$CLARA_HOME"/plugins/clas12/.
+cp -rp bin "$CLARA_HOME"/plugins/clas12/.
+cp -rp lib/utils "$CLARA_HOME"/plugins/clas12/lib/.
+cp -rp lib/clas/* "$CLARA_HOME"/plugins/clas12/lib/clas/.
+cp -rp lib/services/* "$CLARA_HOME"/plugins/clas12/lib/services/.
+)
+rm -rf coatjava
 rm coatjava-$PLUGIN.tar.gz
 
 echo "Installing grapes ..."
 tar xvzf grapes-$GRAPES.tar.gz
 mv grapes-$GRAPES "$CLARA_HOME"/plugins/grapes
-cp -p "$CLARA_HOME"/plugins/grapes/bin/clara-grapes "$CLARA_HOME"/bin/.
+cp -rp "$CLARA_HOME"/plugins/grapes/bin/clara-grapes "$CLARA_HOME"/bin/.
 rm -f "$CLARA_HOME"/plugins/clas12/bin/clara-rec
 rm -f "$CLARA_HOME"/plugins/clas12/README
-cp -p "$CLARA_HOME"/plugins/clas12/etc/services/*.yaml "$CLARA_HOME"/plugins/clas12/config/.
-mv "$CLARA_HOME"/plugins/clas12/config/reconstruction.yaml "$CLARA_HOME"/plugins/clas12/config/services.yaml
+cp -rp "$CLARA_HOME"/plugins/clas12/etc/services/*.yaml "$CLARA_HOME"/plugins/clas12/config/.
 rm -rf "$CLARA_HOME"/plugins/clas12/etc/services
 rm grapes-$GRAPES.tar.gz
 

@@ -12,7 +12,7 @@ case "$1" in
         echo " -f, --framework    Clara framework version (default = 4.3.12)."
         echo " -v, --version      Clas12 plugin version   (default = 6b.4.1)."
         echo " -g, --grapes       Grapes plugin version   (default = 2.1)."
-        echo " -j, --jre          JAVA Runtime version    (default = 8)."
+        echo " -j, --jre          JAVA Runtime version    (default = 17)."
         exit 1
         ;;
 esac
@@ -40,8 +40,8 @@ fi
 
 PLUGIN=6b.4.1
 GRAPES=2.1
-FV=4.3.12
-JRE=8
+FV=5.0.2
+JRE=11
 
 case "$1" in
     -f | --framework)

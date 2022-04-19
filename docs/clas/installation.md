@@ -64,9 +64,10 @@ $ ./install-claracre-clas.sh --help
   usage: install-claracre-clas.sh [ OPTION ]... [ Value ]...
 
    -h, --help         print this help.
-   -f, --framework    Clara framework version (default = 4.3.8).
+   -f, --framework    Clara framework version (default = 5.0.2).
    -v, --version      Clas12 plugin version   (default = 5a.2.0).
    -g, --grapes       Grapes plugin version   (default = 1.0).
+   -j, --jre          JAVA Runtime version    (default = 11).
 ```
 
 CLAS12 plugin distributions will be accessed at:

@@ -2,7 +2,6 @@
 title: Release notes
 ---
 ### Clara v5.0.3
-
 - Compiled using JDK-17 LTS
 - Updated Gradle build system to support JDK17
 - AbstractOrchestrator upgrade. 

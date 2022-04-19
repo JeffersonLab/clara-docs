@@ -1,6 +1,18 @@
 ---
 title: Release notes
 ---
+### Clara v5.0.3
+
+- Compiled using JDK-17 LTS
+- Updated Gradle build system to support JDK17
+- AbstractOrchestrator upgrade. 
+- Failed file detection and re-processing
+
+### Clara v5.0.2
+
+- Minor bug fixes. 
+- Timeout implementation defined for a specific services in the application composition.
+- 
 ### Clara v5.0.1
 
 - Compiled using JDK-11

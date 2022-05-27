@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # author Vardan Gyurjyan
-# date 1.13.19
+# date 5.27.22
 
 is_local="false"
 
@@ -41,7 +41,7 @@ fi
 PLUGIN=6b.4.1
 GRAPES=2.1
 FV=5.0.2
-JRE=11
+JRE=system
 
 case "$1" in
     -f | --framework)
@@ -157,13 +157,14 @@ case $OS in
             echo "getting grapes-$GRAPES"
             wget https://clasweb.jlab.org/clas12offline/distribution/grapes/grapes-$GRAPES.tar.gz
         fi
-
+      if [ $JRE == "system" ]; then
         MACHINE_TYPE=$(uname -m)
         if [ "$MACHINE_TYPE" == "x86_64" ]; then
             wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-64-$JRE.tar.gz
         else
             wget https://userweb.jlab.org/~gurjyan/clara-cre/linux-i586-$JRE.tar.gz
         fi
+      fi
         ;;
 
     #  'WindowsNT')
@@ -190,7 +191,9 @@ case $OS in
             curl "https://clasweb.jlab.org/clas12offline/distribution/grapes/grapes-$GRAPES.tar.gz" -o grapes-$GRAPES.tar.gz
        fi
 
+      if [ $JRE == "system" ]; then
         curl "https://userweb.jlab.org/~gurjyan/clara-cre/macosx-64-$JRE.tar.gz" -o macosx-64-$JRE.tar.gz
+      fi
         ;;
 
     *) ;;
@@ -199,6 +202,7 @@ esac
 tar xvzf clara-cre-$FV.tar.gz
 rm -f clara-cre-$FV.tar.gz
 
+if [ $JRE == "system" ]; then
 mkdir clara-cre/jre
 (
 cd clara-cre/jre || exit
@@ -224,6 +228,7 @@ case $OS in
     *) ;;
 esac
 )
+fi
 
 mv clara-cre "$CLARA_HOME"
 

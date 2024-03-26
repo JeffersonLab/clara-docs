@@ -18,7 +18,31 @@ you can solve one of life's most boring petty problems:
 data analysis to understand how things are designed
 or (if you are an atheist) evolved.
 
-## Clara CLAS12 Run-time Environment (CRE)
+## Compile and package a CLARA Run-Time Environment (CRE) 
+First setup the environment for compiling CLARA.
+```
+$ unset CLASSPATH
+$ unset JAVA_HOME
+$ export JAVA_HOME=jdk-17.x.x
+$ export PATH=${JAVA_HOME}/bin:${PATH}
+$ export CLARA_HOME=[installation dir]/clara-cre
+```
+Initiate by cloning the clara-java repository from GitHub into a
+specified source directory. Within this designated source directory,
+execute the command ./gradlew deploy.
+
+```
+$ git clone https://github.com/JeffersonLab/clara-java.git
+$ cd clara-java 
+$ ./gradlew deploy
+```
+This will install compile and install it in the defined $CLARA_HOME directory
+To encapsulate CRE, proceed with the execution of the prescribed command.
+```
+$ tar -czvf clara-cre-xxx.tar.gz $CLARA_HOME
+```
+
+## Preparing to run 
 
 Installation and data processing instructions are presented
 for the Clara Java binding.
